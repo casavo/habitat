@@ -2,6 +2,8 @@
 
 > Welcome to the Casavo design system repository! This is where you can find all the components, guidelines and resources to create amazing user experiences for Casavo. Whether you are a developer, a designer or a product manager, you will find everything you need to get started. Explore the repository and have fun!
 
+![docs/images/meme.png](docs/images/meme.png)
+
 ## Design first
 
 This project is a design driven project, which means we care a lot about the user experience and the aesthetics of our product. We want to create something that is beautiful, functional and easy to use.
