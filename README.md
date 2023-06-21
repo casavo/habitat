@@ -10,6 +10,13 @@ This project is a design driven project, which means we care a lot about the use
 
 Everything in this codebase is a reflection of what has been defined on the related [Figma board](https://www.figma.com/file/0vYcLbHGHFIJ44hFI45WQJ/%F0%9F%9A%80-Habitat?type=design).
 
+## Built on top of
+
+- [React](https://react.dev/) + [Typescript](https://www.typescriptlang.org/) - the library for web and native user interfaces
+- [Vanilla Extract](https://vanilla-extract.style/) / Emotion - zero-runtime stylesheets in typeScript
+- [Storybook](https://storybook.js.org/) - frontend workshop for building UI components and pages in isolation
+- [Vite.js](https://vitejs.dev/) - next Generation Frontend Tooling
+
 ## Local setup
 
 Clone the repo and cd into it
