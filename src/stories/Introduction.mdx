@@ -1,17 +1,24 @@
-import { Meta } from '@storybook/blocks';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import { Meta } from "@storybook/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
 
 <Meta title="Example/Introduction" />
 
 <style>
   {`
+    h1 {
+      font-size: 150px;
+      font-family: Bagoss Condensed;
+      font-weight: 300;
+      line-height: 120%;
+    }
+
     .subheading {
       --mediumdark: '#999999';
       font-weight: 700;
@@ -116,14 +123,23 @@ import StackAlt from './assets/stackalt.svg';
   `}
 </style>
 
-# Welcome to Storybook
+# Welcome to Habitat!
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+This comprehensive resource is designed to help you create beautiful, functional, and user-friendly designs that are consistent with our brand identity.
+Here you can find a library of reusable components, guidelines, and best practices that will help you streamline your design process and improve your workflow.
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+<svg
+  width="470"
+  height="115"
+  viewBox="0 0 189 49"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0.161003 10.9059C3.61834 16.9359 8.0159 22.4245 13.1808 27.1582C18.1813 31.7443 23.8859 35.5879 29.9784 38.6686C36.1088 41.7697 42.644 44.0956 49.3394 45.7446C56.174 47.4265 63.1856 48.4151 70.2184 48.8048C77.289 49.1986 84.3934 48.9894 91.4346 48.2428C98.383 47.5044 105.277 46.2492 112.018 44.4607C118.452 42.7542 124.756 40.5596 130.802 37.8154C136.346 35.2926 141.688 32.2981 146.587 28.7211C150.968 25.5215 155.016 21.8297 158.3 17.5512C161.247 13.7117 163.575 9.36765 164.781 4.70362C165.063 3.60017 165.282 2.48441 165.443 1.35635C164.878 1.03639 164.308 0.716428 163.743 0.396468C165.662 11.4269 177.889 18.5275 188.691 18.7203C189.589 18.7367 188.307 17.1903 187.662 17.178C178.024 17.0016 167.171 11.1233 165.443 1.19637C165.371 0.777958 163.849 -0.530595 163.743 0.236489C163.098 4.8513 161.344 9.24049 158.827 13.1908C156.057 17.5348 152.452 21.3415 148.472 24.6601C144.011 28.3807 139.053 31.5064 133.863 34.1769C128.154 37.1098 122.154 39.4972 116.007 41.417C109.531 43.4393 102.882 44.9488 96.1568 45.962C89.4319 46.9752 82.2642 47.5085 75.2821 47.4552C68.3 47.4019 61.3094 46.7948 54.4496 45.5108C47.5897 44.2269 41.2063 42.3892 34.962 39.7597C28.8737 37.1919 23.0764 33.9184 17.8988 29.8656C12.599 25.7143 7.9653 20.8001 4.22126 15.2746C3.26839 13.8676 2.37032 12.4237 1.52707 10.9551C1.16025 10.3111 -0.513602 9.73682 0.156783 10.9018L0.161003 10.9059Z"
+    fill="#1D1D1B"
+  />
+</svg>
 
 <div className="subheading">Configure</div>
 
@@ -184,14 +200,22 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
       Configure, customize, and extend
     </span>
   </a>
-  <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
+  <a
+    className="link-item"
+    href="https://storybook.js.org/tutorials/"
+    target="_blank"
+  >
     <img src={Direction} alt="direction" />
     <span>
       <strong>In-depth guides</strong>
       Best practices from leading teams
     </span>
   </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
+  <a
+    className="link-item"
+    href="https://github.com/storybookjs/storybook"
+    target="_blank"
+  >
     <img src={Code} alt="code" />
     <span>
       <strong>GitHub project</strong>
@@ -205,9 +229,4 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
       Chat with maintainers and the community
     </span>
   </a>
-</div>
-
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>stories/Introduction.stories.mdx</code>
 </div>
