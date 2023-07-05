@@ -1,5 +1,7 @@
 # Habitat - Casavo Design System Library
 
+## 🚧🚧 WORK IN PROGRESS 🚧🚧
+
 > Welcome to the Casavo design system repository! This is where you can find all the components, guidelines and resources to create amazing user experiences for Casavo. Whether you are a developer, a designer or a product manager, you will find everything you need to get started. Explore the repository and have fun!
 
 ![docs/images/meme.png](docs/images/meme.png)
