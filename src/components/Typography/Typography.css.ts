@@ -1,15 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
+import { mq } from "../../utils/mediaqueries";
 
 const whiteSpace = "pre-line";
-
-const shared = {
-  strong: {
-    true: { fontWeight: 600 },
-  },
-  underline: {
-    true: { textDecoration: "underline" },
-  },
-};
 
 export const HeadingsStyle = recipe({
   base: {
@@ -21,28 +13,65 @@ export const HeadingsStyle = recipe({
   },
   variants: {
     element: {
-      display: { fontSize: 40 },
-      h1: { fontSize: 32 },
-      h2: { fontSize: 28 },
-      h3: { fontSize: 24 },
-      h4: { fontSize: 20 },
+      display: {
+        "@media": {
+          [mq.desktop]: { fontSize: 52 },
+        },
+        fontSize: 40,
+      },
+      h1: {
+        "@media": {
+          [mq.desktop]: { fontSize: 40 },
+        },
+        fontSize: 32,
+      },
+      h2: {
+        "@media": {
+          [mq.desktop]: { fontSize: 32 },
+        },
+        fontSize: 28,
+      },
+      h3: {
+        "@media": {
+          [mq.desktop]: { fontSize: 28 },
+        },
+        fontSize: 24,
+        fontWeight: 600,
+      },
+      h4: {
+        "@media": {
+          [mq.desktop]: { fontSize: 24 },
+        },
+        fontSize: 20,
+        fontWeight: 600,
+      },
     },
   },
 });
 
 export const BodyStyle = recipe({
   base: {
-    fontWeight: 400,
     fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+    fontWeight: 400,
     lineHeight: 1.5,
     textDecoration: "none",
     whiteSpace,
   },
   variants: {
-    ...shared,
     size: {
+      l: {
+        "@media": {
+          [mq.desktop]: { fontSize: 20 },
+        },
+        fontSize: 18,
+      },
       m: { fontSize: 16 },
-      l: { fontSize: 18 },
+    },
+    strong: {
+      true: { fontWeight: 600 },
+    },
+    underline: {
+      true: { textDecoration: "underline" },
     },
   },
 });

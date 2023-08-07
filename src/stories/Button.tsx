@@ -38,11 +38,11 @@ export const Button = ({
     : "storybook-button--secondary";
   return (
     <button
-      type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
       style={{ backgroundColor }}
+      type="button"
       {...props}
     >
       {label}

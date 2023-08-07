@@ -1,2 +1,2 @@
 /* eslint-disable react-refresh/only-export-components */
-export { Display, H1, Body } from "./Typography";
+export { Display, H1, H2, H3, H4, Body } from "./Typography";

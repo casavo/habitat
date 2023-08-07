@@ -19,6 +19,23 @@ Everything in this codebase is a reflection of what has been defined on the rela
 - [Storybook](https://storybook.js.org/) - frontend workshop for building UI components and pages in isolation
 - [Vite.js](https://vitejs.dev/) - next Generation Frontend Tooling
 
+## What's included?
+Brief checklist of the component that will be included in the project:
+
+- Typography
+  - `<Display />`, `<H1 />`, `<H2 />`, `<H3 />`, `<H4 />` will represent the matching entities
+  - `<Body />` will act as counterpart of `BodyL` and `BodyM`
+  - `Description`, `Caption` and `Small` are still under discussion
+- UI Components
+  - `<Button />`
+  - `<Badge />`
+  - `<TextLink />` ??
+  - `<Navbar />`
+  - `<Link />`
+- Utilities
+  - media queries
+  - color tokens
+
 ## Local setup
 
 Clone the repo and cd into it

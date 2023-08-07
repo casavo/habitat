@@ -3,8 +3,8 @@ import React from "react";
 import { BodyStyle, HeadingsStyle } from "./Typography.css";
 
 type BaseProps = {
-  color?: string;
   children?: React.ReactElement | string;
+  color?: string;
 };
 
 type TextProps = BaseProps & {
@@ -42,7 +42,7 @@ export const Body = ({
   strong = false,
   underline,
 }: BodyProps) => (
-  <p className={BodyStyle({ strong, underline, size })}>{children}</p>
+  <p className={BodyStyle({ size, strong, underline })}>{children}</p>
 );
 
 export const Description = ({ children }: TextProps) => <p>{children}</p>;
