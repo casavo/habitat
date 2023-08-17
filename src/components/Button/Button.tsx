@@ -13,11 +13,11 @@ type Props = {
 export const Button = (props: Props) => {
   const ref = useRef<HTMLButtonElement>(null);
   const { buttonProps } = useButton(props, ref);
-  const { children } = props;
+  const { children, loading } = props;
 
   return (
     <button {...buttonProps} ref={ref} disabled={props.disabled}>
-      {children}
+      {loading ? "loading" : children}
     </button>
   );
 };

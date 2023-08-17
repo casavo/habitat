@@ -7,21 +7,19 @@ import { Button } from "./../components/Button";
 const meta: Meta<typeof Button> = {
   argTypes: {
     "data-testid": {
-      control: { type: "text" },
+      control: "text",
       description: "an ID mostly used for E2E testing",
     },
     disabled: {
-      control: { type: "boolean" },
-      defaultValue: false,
+      control: "boolean",
       description: "toggle the standard disabled state",
     },
     loading: {
-      control: { type: "boolean" },
-      defaultValue: false,
+      control: "boolean",
       description: "toggle the loading state",
     },
     type: {
-      control: { type: "select" },
+      control: "select",
       description: "the standard HTML button types",
       options: ["button", "submit", "reset"],
     },
@@ -51,9 +49,3 @@ export const _Button: Story = {
     </Button>
   ),
 };
-
-/*export const _Display: Story = {
-  render: ({ ...args }) => (
-    <Display>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Display>
-  ),
-};*/
