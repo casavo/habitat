@@ -20,18 +20,29 @@ Everything in this codebase is a reflection of what has been defined on the rela
 - [Vite.js](https://vitejs.dev/) - next Generation Frontend Tooling
 
 ## What's included?
+
 Brief checklist of the component that will be included in the project:
 
 - Typography
   - `<Display />`, `<H1 />`, `<H2 />`, `<H3 />`, `<H4 />` will represent the matching entities
   - `<Body />` will act as counterpart of `BodyL` and `BodyM`
   - `Description`, `Caption` and `Small` are still under discussion
+  - `<List />`
 - UI Components
   - `<Button />`
   - `<Badge />`
   - `<TextLink />` ??
   - `<Navbar />`
   - `<Link />`
+  - `<Switch />`
+  - `<Tags />`
+  - `<Toast />`
+- Form components
+  - `<Input />`
+  - `<Checkbox />`
+  - `<Radio />`
+  - `<Alert />`
+  - `<Chip />`
 - Utilities
   - media queries
   - color tokens
