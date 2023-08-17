@@ -4,7 +4,10 @@ import { ButtonHTMLAttributes, useRef } from "react";
 type Props = {
   children: React.ReactNode;
   "data-testid"?: string;
+  disabled: boolean;
+  loading: boolean;
   type?: ButtonHTMLAttributes<object>["type"];
+  variant?: "primary" | "secondary";
 };
 
 export const Button = (props: Props) => {
@@ -13,7 +16,7 @@ export const Button = (props: Props) => {
   const { children } = props;
 
   return (
-    <button {...buttonProps} ref={ref}>
+    <button {...buttonProps} ref={ref} disabled={props.disabled}>
       {children}
     </button>
   );

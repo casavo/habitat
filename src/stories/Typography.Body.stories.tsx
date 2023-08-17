@@ -41,9 +41,3 @@ export const _Body: Story = {
     </Body>
   ),
 };
-
-/*export const _Display: Story = {
-  render: ({ ...args }) => (
-    <Display>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Display>
-  ),
-};*/

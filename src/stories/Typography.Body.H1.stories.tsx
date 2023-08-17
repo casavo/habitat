@@ -20,7 +20,7 @@ type Story = StoryObj<typeof H1>;
  */
 
 export const _H1: Story = {
-  render: ({ ...args }) => (
+  render: () => (
     <H1>
       Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris facere
     </H1>
