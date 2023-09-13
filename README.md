@@ -75,7 +75,7 @@ Please refert to the [docs](docs/development.md) for in depth info on how to wor
 ## How to participate?
 
 Before opening issues or pull requests plaese read our [code of conduct](CODE_OF_CONDUCT.md), then
-refer to the guidelines described in the "[Contributing](contributing.md)" section.
+refer to the guidelines described in the "[Contributing](CONTRIBUTING.md)" section.
 
 For information, requests, bug and inconsistencies alerts join the `#habitat-design-system` Slack channel.
 
