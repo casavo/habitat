@@ -45,9 +45,9 @@ Brief checklist of the component that will be included in the project:
   - `<Chip />`
 - Utilities
   - media queries
-  - color tokens
+  - design tokens
 
-## Local setup
+## Local development
 
 Clone the repo and cd into it
 
@@ -60,16 +60,12 @@ install the NPM dependencies
 
 ```bash
 $ npm ci
--- or --
-$ yarn
 ```
 
 start the Storybook development server
 
 ```bash
 $ npm run dev
--- or --
-$ yarn dev
 ```
 
 the Storybook instance will automatically open in your browser at `http://localhost:6006/`.
