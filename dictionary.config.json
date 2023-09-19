@@ -1,0 +1,15 @@
+{
+	"source": [
+		"./design-tokens.tokens.json"
+	],
+	"platforms": {
+		"json": {
+			"files": [
+				{
+					"destination": "./src/utils/tokens.json",
+					"format": "json/nested"
+				}
+			]
+		}
+	}
+}

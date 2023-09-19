@@ -1,6 +1,5 @@
 {
   "foundations": {
-    "value": {
       "colors": {
         "orange": {
           "20": {
@@ -695,8 +694,7 @@
           }
         }
       }
-    }
-  },
+    },
   "tokens": {
     "marketplace": {
       "backgrounds": {
