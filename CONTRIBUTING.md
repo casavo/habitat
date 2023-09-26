@@ -1,5 +1,21 @@
 # Contributing to Habitat
 
+### Coding guidelines
+
+- be sure to checkout the shared conventions defined in the [CoP guidelines](https://github.com/casavo/community-of-practice/
+- always aim for the simpler and most effective solution and then iterate on making it more elegant, over-engineering from the start will rarely give you any advantage
+- styles are defined using [Vanilla Extract](https://vanilla-extract.style/)
+  - for complex/dynamic classes take a look at [Recipes](https://vanilla-extract.style/documentation/packages/recipes/)
+  - in-line styles should only be considered as a last resort
+- new components **must** be built on top of the [react-aria](https://react-spectrum.adobe.com/react-aria/) package
+- being low level components, the resulting `HTML` code must be the most semantic as possible
+  - always refer to the [official HTML tags reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+  - generic tags like `<div>` and `<span>` should be always used as a last resort
+- this repo is shared with many teams, before adding a new NPM package, double check if its really necessary
+  - if the same result can be obtained in few lines of JS code, avoid adding extra packages
+  - if the package is really proving to be time-saver, please detail the use case in the PR
+  - when in doubt, you can always ask in the `#cop-frontend` Slack channel
+
 ### How to request changes
 
 - join the `#design-system-taskforce` channel on Slack
