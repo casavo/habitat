@@ -3,6 +3,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./../components/Button";
+import { HabitatTheme } from "./../utils/theme.css";
 
 const meta: Meta<typeof Button> = {
   argTypes: {
@@ -39,13 +40,15 @@ type Story = StoryObj<typeof Button>;
 
 export const _Button: Story = {
   render: ({ ...args }) => (
-    <Button
-      type={args.type}
-      data-testid={args["data-testid"]}
-      disabled={args.disabled}
-      loading={args.loading}
-    >
-      Example button
-    </Button>
+    <div className={HabitatTheme}>
+      <Button
+        type={args.type}
+        data-testid={args["data-testid"]}
+        disabled={args.disabled}
+        loading={args.loading}
+      >
+        Example button
+      </Button>
+    </div>
   ),
 };
