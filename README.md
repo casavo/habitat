@@ -47,6 +47,54 @@ Brief checklist of the component that will be included in the project:
   - media queries
   - design tokens
 
+## Using Habitat in your project
+
+> **NOTE:** currently Habitat is **not** available as a public NPM package.
+
+install the package in your project (_you can use whatever package manager you prefer_)
+
+```bash
+$ npm i @casavo/habitat
+```
+
+import the `HabitatTheme` global class and apply it to top level node of you application
+
+```typescript
+// App.tsx - assuming it is a Next.js application
+
+import { FC } from "react";
+import { HabitatTheme } from "@casavo/habitat";
+
+const App = ({ children }): FC => {
+  return (
+    <div id="app" className={HabitatTheme}>
+      {children}
+    </div>
+  );
+};
+
+export default App;
+```
+
+then import and use the components that you need in yout code
+
+```typescript
+// MyComponent.tsx
+import { Button } from "@casavo/habitat";
+
+export const MyComponent = (): FC => {
+  const variant: string = "secondary";
+
+  const doSomething = (): void => window.alert("button clicked!");
+
+  return (
+    <div>
+      <Button variant={variant} onClick={doSomething} />
+    </div>
+  );
+};
+```
+
 ## Local development
 
 Clone the repo and cd into it

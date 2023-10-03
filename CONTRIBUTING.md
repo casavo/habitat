@@ -16,6 +16,32 @@
   - if the package is really proving to be time-saver, please detail the use case in the PR
   - when in doubt, you can always ask in the `#cop-frontend` Slack channel
 
+### How to use theme values
+
+When developing an Habitat component you must always give priority to the current theme values for defining colors, spacing and mediaqueries.
+
+To use them just import the `vars` helper from the utils folder and get the desired value, for instance:
+
+```typescript
+// component.css.ts
+import { style } from "@vanilla-extract/css"
+import { vars } from "@/utils/theme.css"
+
+export const container = style({
+  backgroundColor: vars.colors.green.60
+  "@media": {
+    [vars.mq.desktop]: {
+      backgroundColor: vars.colors.orange.20
+    },
+  },
+})
+
+```
+
+in the above example you have created a class that applies a different background color based on the resolution without specifying an hard-coded value.
+
+This allows consumer of the library to overwrite the values of theme without the need of editing the components source file.
+
 ### How to request changes
 
 - join the `#design-system-taskforce` channel on Slack
