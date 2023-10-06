@@ -15,6 +15,6 @@ const spacing = objectMap(
 
 export const [HabitatTheme, vars] = createTheme({
   colors,
-  spacing,
   mq,
+  spacing,
 });
