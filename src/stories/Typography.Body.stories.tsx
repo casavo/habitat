@@ -20,6 +20,11 @@ const meta: Meta<typeof Body> = {
       description: "define the font size",
     },
   },
+  args: {
+    strong: false,
+    size: "m",
+    underline: false,
+  },
   component: Body,
   title: "Typography/Body",
 };
