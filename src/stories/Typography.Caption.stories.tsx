@@ -1,31 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Body } from "./../components/Typography";
+import { Caption } from "./../components/Typography";
 
-const meta: Meta<typeof Body> = {
+const meta: Meta<typeof Caption> = {
   argTypes: {
     strong: {
       control: { type: "boolean" },
       defaultValue: false,
-      description: "toggle the strong/bold font type",
+      caption: "toggle the strong/bold font type",
     },
     underline: {
       control: { type: "boolean" },
       defaultValue: false,
-      description: "toggle the underline text decoration",
-    },
-    size: {
-      control: { type: "radio", options: ["s", "m", "l"] },
-      defaultValue: "m",
-      description: "define the font size",
+      caption: "toggle the underline text decoration",
     },
   },
-  component: Body,
-  title: "Typography/Body",
+  args: {
+    strong: false,
+    underline: false,
+  },
+  component: Caption,
+  title: "Typography/Caption",
 };
 
 export default meta;
-type Story = StoryObj<typeof Body>;
+type Story = StoryObj<typeof Caption>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -33,14 +32,14 @@ type Story = StoryObj<typeof Body>;
  * to learn how to use render functions.
  */
 
-export const _Body: Story = {
+export const _Caption: Story = {
   render: ({ ...args }) => (
-    <Body size={args.size} strong={args.strong} underline={args.underline}>
+    <Caption strong={args.strong} underline={args.underline}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam
       lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt enim.
       Phasellus et diam tincidunt est semper mattis. Ut sed nulla non leo
       posuere aliquam eu ac velit. Cras rutrum felis est. Nam eleifend malesuada
       purus, non finibus libero.
-    </Body>
+    </Caption>
   ),
 };
