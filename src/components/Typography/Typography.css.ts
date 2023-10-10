@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
+import { style } from "@vanilla-extract/css";
 
 const whiteSpace = "pre-line";
 
@@ -49,14 +50,25 @@ export const HeadingsStyle = recipe({
   },
 });
 
+// shared styles for non heading elements
+const base = style({
+  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+  fontWeight: 400,
+  lineHeight: 1.5,
+  textDecoration: "none",
+  whiteSpace,
+});
+
+const strong = {
+  true: { fontWeight: 600 },
+};
+
+const underline = {
+  true: { textDecoration: "underline" },
+};
+
 export const BodyStyle = recipe({
-  base: {
-    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-    fontWeight: 400,
-    lineHeight: 1.5,
-    textDecoration: "none",
-    whiteSpace,
-  },
+  base,
   variants: {
     size: {
       l: {
@@ -66,12 +78,35 @@ export const BodyStyle = recipe({
         fontSize: 18,
       },
       m: { fontSize: 16 },
+      s: { fontSize: 11 },
     },
-    strong: {
-      true: { fontWeight: 600 },
+    strong,
+    underline,
+  },
+});
+
+export const DescriptionStyle = recipe({
+  base: [
+    base,
+    {
+      fontSize: 14,
     },
-    underline: {
-      true: { textDecoration: "underline" },
+  ],
+  variants: {
+    strong,
+    underline,
+  },
+});
+
+export const CaptionStyle = recipe({
+  base: [
+    base,
+    {
+      fontSize: 12,
     },
+  ],
+  variants: {
+    strong,
+    underline,
   },
 });

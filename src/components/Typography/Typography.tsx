@@ -1,6 +1,11 @@
 import React from "react";
 
-import { BodyStyle, HeadingsStyle } from "./Typography.css";
+import {
+  BodyStyle,
+  CaptionStyle,
+  DescriptionStyle,
+  HeadingsStyle,
+} from "./Typography.css";
 
 type BaseProps = {
   children?: React.ReactElement | string;
@@ -13,7 +18,7 @@ type TextProps = BaseProps & {
 };
 
 type BodyProps = TextProps & {
-  size?: "m" | "l";
+  size?: "s" | "m" | "l";
 };
 
 export const Display = ({ children }: BaseProps) => (
@@ -40,13 +45,27 @@ export const Body = ({
   children,
   size = "m",
   strong = false,
-  underline,
+  underline = false,
 }: BodyProps) => (
   <p className={BodyStyle({ size, strong, underline })}>{children}</p>
 );
 
-export const Description = ({ children }: TextProps) => <p>{children}</p>;
+export const Description = ({
+  children,
+  strong = false,
+  underline = false,
+}: TextProps) => (
+  <legend className={DescriptionStyle({ strong, underline })}>
+    {children}
+  </legend>
+);
 
-export const Caption = ({ children }: TextProps) => <p>{children}</p>;
-
-export const Small = ({ children }: TextProps) => <small>{children}</small>;
+export const Caption = ({
+  children,
+  strong = false,
+  underline = false,
+}: TextProps) => (
+  <figcaption className={CaptionStyle({ strong, underline })}>
+    {children}
+  </figcaption>
+);
