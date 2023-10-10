@@ -50,6 +50,12 @@ const meta: Meta<typeof Badge> = {
       options: ["light", "dark"],
     },
   },
+  args: {
+    children: "Mimmo",
+    icon: "defaultIcon",
+    status: undefined,
+    theme: "light",
+  },
   component: Badge,
   title: "Components/Badge",
 };
@@ -72,7 +78,7 @@ export const _Badge: Story = {
           theme={args.theme}
           icon={Icons[args.icon as keyof typeof Icons]}
         >
-          <>{args.children ? args.children : "Badge"}</>
+          <>{args.children}</>
         </Badge>
       </div>
     </div>
