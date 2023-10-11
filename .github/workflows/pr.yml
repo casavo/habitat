@@ -1,0 +1,36 @@
+name: Storybook preview on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  publish_release:
+    name: Build & Publish Storbyook to Chromatic
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{secrets.CHROMATIC_PROJECT_TOKEN}}
+          exitZeroOnChanges: true
+          exitOnceUploaded: true
+          buildScriptName: "build:storybook"
