@@ -14,17 +14,11 @@ export const HeadingsStyle = recipe({
   },
   variants: {
     element: {
-      display: {
+      h1: {
         "@media": {
           [mq.desktop]: { fontSize: 52 },
         },
         fontSize: 40,
-      },
-      h1: {
-        "@media": {
-          [mq.desktop]: { fontSize: 40 },
-        },
-        fontSize: 32,
       },
       h2: {
         "@media": {

@@ -21,10 +21,6 @@ type BodyProps = TextProps & {
   size?: "s" | "m" | "l";
 };
 
-export const Display = ({ children }: BaseProps) => (
-  <h1 className={HeadingsStyle({ element: "display" })}>{children}</h1>
-);
-
 export const H1 = ({ children }: BaseProps) => (
   <h1 className={HeadingsStyle({ element: "h1" })}>{children}</h1>
 );
@@ -55,9 +51,7 @@ export const Description = ({
   strong = false,
   underline = false,
 }: TextProps) => (
-  <legend className={DescriptionStyle({ strong, underline })}>
-    {children}
-  </legend>
+  <p className={DescriptionStyle({ strong, underline })}>{children}</p>
 );
 
 export const Caption = ({
@@ -65,7 +59,5 @@ export const Caption = ({
   strong = false,
   underline = false,
 }: TextProps) => (
-  <figcaption className={CaptionStyle({ strong, underline })}>
-    {children}
-  </figcaption>
+  <p className={CaptionStyle({ strong, underline })}>{children}</p>
 );
