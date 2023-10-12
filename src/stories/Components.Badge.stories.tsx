@@ -1,5 +1,6 @@
 // Badge.stories.ts|tsx
 
+import "./../utils/reset.css";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "../components/Badge/Badge";
 import { HabitatTheme } from "../utils/theme.css";
