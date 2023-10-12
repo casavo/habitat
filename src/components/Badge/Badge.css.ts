@@ -7,12 +7,8 @@ export const BadgeContainer = recipe({
     alignItems: "center",
     borderRadius: 20,
     display: "inline-flex",
-    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-    fontSize: 12,
-    fontWeight: 400,
     gap: 8,
     justifyContent: "center",
-    lineHeight: 1.5,
     padding: "8px 16px",
   },
   variants: {

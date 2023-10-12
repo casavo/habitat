@@ -3,6 +3,7 @@ import { ErrorIcon } from "../../assets/badge/ErrorIcon";
 import { SuccessIcon } from "../../assets/badge/SuccessIcon";
 import { WarningIcon } from "../../assets/badge/WarningIcon";
 import { BadgeContainer } from "./Badge.css";
+import { Body } from "../Typography";
 
 type BadgeProps = {
   children: React.ReactNode;
@@ -32,7 +33,7 @@ export const Badge = ({
   return (
     <span className={BadgeContainer({ status, theme })}>
       {status ? statusIcon[status] : icon}
-      {children}
+      <Body size="s">{children}</Body>
     </span>
   );
 };

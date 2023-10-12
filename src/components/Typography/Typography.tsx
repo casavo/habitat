@@ -8,7 +8,7 @@ import {
 } from "./Typography.css";
 
 type BaseProps = {
-  children?: React.ReactElement | string;
+  children?: React.ReactNode | string;
   color?: string;
 };
 
