@@ -2,6 +2,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
+import "./../utils/reset.css";
 import { Button } from "./../components/Button";
 import { HabitatTheme } from "./../utils/theme.css";
 

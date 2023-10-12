@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import "./../utils/reset.css";
 import { Caption } from "./../components/Typography";
 
 const meta: Meta<typeof Caption> = {
