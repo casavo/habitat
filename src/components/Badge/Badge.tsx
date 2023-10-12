@@ -5,17 +5,17 @@ import { WarningIcon } from "../../assets/badge/WarningIcon";
 import { BadgeContainer } from "./Badge.css";
 import { Body } from "../Typography";
 
+type Status = "success" | "error" | "warning";
+
 type BadgeProps = {
   children: React.ReactNode;
   icon?: React.ReactNode;
-  status?: "success" | "error" | "warning";
+  status?: Status;
   theme?: "light" | "dark";
 };
 
 type StatusIcon = {
-  error: React.ReactNode;
-  success: React.ReactNode;
-  warning: React.ReactNode;
+  [key in Status]: React.ReactNode;
 };
 
 const statusIcon: StatusIcon = {
