@@ -2,6 +2,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
+import "./../utils/reset.css";
 import { H4 } from "./../components/Typography";
 
 const meta: Meta<typeof H4> = {

@@ -57,13 +57,16 @@ install the package in your project (_you can use whatever package manager you p
 $ npm i @casavo/habitat
 ```
 
-import the `HabitatTheme` global class and apply it to top level node of you application
+import the `HabitatTheme` global class and apply it to top level node of you application.
+
+> **HEADS UP!** If it's a new project from scratch it is **highly recomended** that you also import the provided CSS reset, if you are importing Habitat in an existing project that already has a reset you may skip it and keep you current one.
 
 ```typescript
 // App.tsx - assuming it is a Next.js application
 
 import { FC } from "react";
 import { HabitatTheme } from "@casavo/habitat";
+import "@casavo/habitat/utils/reset.css";
 
 const App = ({ children }): FC => {
   return (
