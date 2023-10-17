@@ -2,6 +2,8 @@
 
 ### Coding guidelines
 
+> ⚠️ **this project uses the `main` branch as a primary one instead of `master`!** ⚠️
+
 - be sure to checkout the shared conventions defined in the [CoP guidelines](https://github.com/casavo/community-of-practice/
 - always aim for the simpler and most effective solution and then iterate on making it more elegant, over-engineering from the start will rarely give you any advantage
 - styles are defined using [Vanilla Extract](https://vanilla-extract.style/)
