@@ -69,6 +69,8 @@
     "prop-types": "15.8.1",
     "storybook": "7.5.3",
     "style-dictionary": "3.9.0",
+    "react-aria": "3.29.0",
+    "react-aria-components": "1.0.0-beta.1",
     "typescript": "5.2.2",
     "vite": "4.5.0",
     "vite-plugin-dts": "3.6.3"
