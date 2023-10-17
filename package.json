@@ -4,11 +4,22 @@
   "private": false,
   "version": "1.0.0-beta.1",
   "type": "module",
+  "license": "Apache 2.0",
   "homepage": "https://github.com/casavo/habitat",
+  "author": "Casavo Developers <info@casavo.com>",
   "engines": {
     "node": "18"
   },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/index.d.ts",
+  "style": "./dist/style.css",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
+    "start": "npm run dev",
     "dev": "npm run storybook",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006",
