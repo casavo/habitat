@@ -2,8 +2,6 @@ name: Release the components on NPM
 
 on:
   push:
-    branches:
-      - "**"
     tags:
       - "*"
 
@@ -36,5 +34,4 @@ jobs:
       - name: Build components
         run: |
           npm run build:components
-          cp package.json lib/package.json
-          npm publish lib
+          npm publish --access private
