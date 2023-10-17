@@ -20,11 +20,18 @@ const meta: Meta<typeof Switch> = {
       description: "Change the switch size",
       defaultValue: "normal",
       options: ["normal", "small"]
+    },
+    theme: {
+      control: "inline-radio",
+      description: "Change the switch size",
+      defaultValue: "b2c",
+      options: ["b2c", "b2b", "neutral"]
     }
   },
   args: {
     disabled: false,
     size: "normal",
+    theme: "b2c"
   },
   component: Switch,
   title: "Components/Switch",
@@ -42,11 +49,7 @@ type Story = StoryObj<typeof Switch>;
 export const _Switch: Story = {
   render: ({ ...args }) => (
     <div className={HabitatTheme}>
-      <Switch 
-        size={args.size}
-        disabled={args.disabled}
-        isSelected={args.isSelected}
-      />
+      <Switch {...args} />
     </div>
-  ),
+  )
 };

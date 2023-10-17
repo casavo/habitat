@@ -1,5 +1,6 @@
+import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "../../utils/theme.css";
-import { style, styleVariants } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 
 export const base = style({
   display: 'flex',
@@ -20,7 +21,7 @@ const indicatorBase = style({
   width: '40px',
   height: '22px',
   border: 'none',
-  background: '#B3B3B2', // atm missing in vars
+  background: vars.colors.neutral[40], // atm missing in vars
   borderRadius: '11px',
   transition: 'all 300ms',
   '::before': {
@@ -29,7 +30,7 @@ const indicatorBase = style({
     margin: '0.143rem',
     width: '18px',
     height: '18px',
-    background: 'white',
+    background: vars.colors.neutral[0],
     borderRadius: '16px',
     transition: 'all 200ms',
   },
@@ -48,21 +49,53 @@ const indicatorBase = style({
   }
 })
 
-export const indicator = styleVariants({
-  normal: [indicatorBase, {
-    width: '40px',
-    height: '22px',
-    '::before': {
-      width: '18px',
-      height: '18px'
+export const indicator = recipe({
+  base: indicatorBase,
+  variants: {
+    size: {
+      normal: {
+        width: '40px',
+        height: '22px',
+        '::before': {
+          width: '18px',
+          height: '18px'
+        }
+      },
+      small: {
+        width: '28px',
+        height: '16px',
+        '::before': {
+          width: '12px',
+          height: '12px'
+        }
+      }
+    },
+    theme: {
+      b2c: {
+        selectors: {
+          [`${base}[data-selected] &`]: {
+            borderColor: vars.colors.orange[100],
+            background:  vars.colors.orange[100],
+          }
+        }
+      },
+      b2b: {
+        selectors: {
+          [`${base}[data-selected] &`]: {
+            borderColor: vars.colors.green[100],
+            background:  vars.colors.green[100],
+          }
+        }
+      },
+      neutral: {
+        selectors: {
+          [`${base}[data-selected] &`]: {
+            borderColor: vars.colors.neutral[100],
+            background:  vars.colors.neutral[100],
+          }
+        }
+      },
+      
     }
-  }],
-  small: [indicatorBase, {
-    width: '28px',
-    height: '16px',
-    '::before': {
-      width: '12px',
-      height: '12px'
-    }
-  }],
+  }
 })
