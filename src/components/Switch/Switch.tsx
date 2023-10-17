@@ -5,6 +5,7 @@ import { base, indicator } from "./Switch.css";
 
 type Props = {
   size?: 'normal' | 'small'
+  theme?: 'b2c' | 'b2b' | 'neutral'
   disabled?: boolean
   onChange?: VoidFunction
   isSelected?: boolean
@@ -12,7 +13,8 @@ type Props = {
 
 
 
-export const Switch:React.FC<Props> = ({size = 'normal', onChange, isSelected, disabled}) => {
+export const Switch:React.FC<Props> =
+  ({size = 'normal', theme = 'b2c', onChange, isSelected, disabled}) => {
   const optionalProps = {
     ...(onChange ? {onChange: onChange}: {}),
     ...(typeof isSelected !== 'undefined' ? {isSelected: isSelected}: {})
@@ -23,7 +25,7 @@ export const Switch:React.FC<Props> = ({size = 'normal', onChange, isSelected, d
       isDisabled={disabled || false}
       {...optionalProps}
     >
-      <div className={indicator[size]} />
+      <div className={indicator({size,theme})} />
     </SwitchAria>
   )
 }
