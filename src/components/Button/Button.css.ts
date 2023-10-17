@@ -1,28 +1,42 @@
-import { style } from '@vanilla-extract/css'
+/* eslint-disable sort-keys-fix/sort-keys-fix */
+import { recipe } from "@vanilla-extract/recipes";
+import { vars } from "../../utils/theme.css";
 
-export const base = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '0.571rem',
-  fontSize: '1.143rem',
-  color: 'hotpink'
-})
-
-export const indicator = style({
-  width: '2rem',
-  height: '1.143rem',
-  border: '2px solid red',
-  background: 'greenyellow',
-  borderRadius: '1.143rem',
-  transition: 'all 200ms',
-  '::before': {
-    content: '',
-    display: 'block',
-    margin: '0.143rem',
-    width: '0.857rem',
-    height: '0.857rem',
-    background: 'plum',
-    borderRadius: '16px',
-    transition: 'all 200ms',
-  }
-})
+export const ButtonContainer = recipe({
+  base: {
+    alignItems: "center",
+    alignSelf: "stretch",
+    borderRadius: 4,
+    display: "inline-flex",
+    gap: 8,
+    justifyContent: "center",
+    padding: "12px 16px",
+  },
+  variants: {
+    theme: {
+      dark: {
+        backgroundColor: vars.colors.neutral[100],
+        color: vars.colors.neutral[0],
+        fill: vars.colors.neutral[0],
+      },
+      light: {
+        backgroundColor: vars.colors.neutral[0],
+        color: vars.colors.neutral[100],
+        fill: vars.colors.neutral[100],
+      },
+    },
+    variant: {
+      primary: {},
+      secondary: {},
+      tertiary: {},
+    },
+    iconLayout: {
+      sx: {
+        flexDirection: "row",
+      },
+      dx: {
+        flexDirection: "row-reverse",
+      },
+    },
+  },
+});
