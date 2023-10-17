@@ -77,4 +77,20 @@ This allows consumer of the library to overwrite the values of theme without the
 
 ### How to release a new version of Habitat
 
-**TBD**
+### Generate a preview Storybook for fix/feature branches
+
+Code pushed on any `branch` of this repo will trigger a new Storybook build that will be pushed to [Chromatic](https://www.chromatic.com/builds?appId=6492c41db7cb00cf0539e3b6). Uou can preview the changes and check the related Storybook from the Chromatic dashboard.
+
+### Update the public Storybook
+
+Any update on the `main` branch (_that should be done through PRs_) will trigger an update to the main public Storybook visible at [casavo.github.io/habitat](https://casavo.github.io/habitat/).
+
+### Publish a new NPM release
+
+To publish a new version of the package to the Casavo NPM registry, [create a new Github Release](https://github.com/casavo/habitat/releases/new) containing:
+
+- the new tag version (_it should match the `version` key of the `package.json` file_)
+- the name of the release (_99% of the cases it will be the tag version_)
+- the release notes
+  - use the _"generate release notes"_ button to summarize the changes
+  - eventually add some manual notes if its required
