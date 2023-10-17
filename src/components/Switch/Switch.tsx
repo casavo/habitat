@@ -12,18 +12,18 @@ type Props = {
 
 
 
-export const Switch:React.FC<Props> = (props) => {
+export const Switch:React.FC<Props> = ({size = 'normal', onChange, isSelected, disabled}) => {
   const optionalProps = {
-    ...(props.onChange ? {onChange: props.onChange}: {}),
-    ...(typeof props.isSelected !== 'undefined' ? {isSelected: props.isSelected}: {})
+    ...(onChange ? {onChange: onChange}: {}),
+    ...(typeof isSelected !== 'undefined' ? {isSelected: isSelected}: {})
   }
   return (
     <SwitchAria
       className={base}
-      isDisabled={props.disabled || false}
+      isDisabled={disabled || false}
       {...optionalProps}
     >
-      <div className={indicator} />
+      <div className={indicator[size]} />
     </SwitchAria>
   )
 }

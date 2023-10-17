@@ -15,6 +15,16 @@ const meta: Meta<typeof Switch> = {
       control: "boolean",
       description: "Toggle the standard disabled state",
     },
+    size: {
+      control: "inline-radio",
+      description: "Change the switch size",
+      defaultValue: "normal",
+      options: ["normal", "small"]
+    }
+  },
+  args: {
+    disabled: false,
+    size: "normal",
   },
   component: Switch,
   title: "Components/Switch",
@@ -33,7 +43,7 @@ export const _Switch: Story = {
   render: ({ ...args }) => (
     <div className={HabitatTheme}>
       <Switch 
-        
+        size={args.size}
         disabled={args.disabled}
         isSelected={args.isSelected}
       />
