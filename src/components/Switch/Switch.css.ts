@@ -36,15 +36,16 @@ const indicatorBase = style({
   },
   selectors: {
     [`${base}[data-selected] &`]:{
-      borderColor: vars.colors.orange[100],
       background:  vars.colors.orange[100],
+      borderColor: vars.colors.orange[100],
     },
     [`${base}[data-selected] &:before`]: {
       background: 'white',
       transform: 'translateX(100%)'
     },
     [`${base}[data-disabled] &`]: {
-      opacity: '0.4'
+      background: vars.colors.neutral[10],
+      borderColor: vars.colors.neutral[10],
     }
   }
 })
@@ -76,6 +77,10 @@ export const indicator = recipe({
           [`${base}[data-selected] &`]: {
             borderColor: vars.colors.orange[100],
             background:  vars.colors.orange[100],
+          },
+          [`${base}[data-disabled][data-selected] &`]: {
+            background: '#FFCE78',
+            borderColor: '#FFCE78',
           }
         }
       },
@@ -84,6 +89,10 @@ export const indicator = recipe({
           [`${base}[data-selected] &`]: {
             borderColor: vars.colors.green[100],
             background:  vars.colors.green[100],
+          },
+          [`${base}[data-disabled][data-selected] &`]: {
+            background: vars.colors.green[40],
+            borderColor: vars.colors.green[40],
           }
         }
       },
@@ -92,6 +101,10 @@ export const indicator = recipe({
           [`${base}[data-selected] &`]: {
             borderColor: vars.colors.neutral[100],
             background:  vars.colors.neutral[100],
+          },
+          [`${base}[data-disabled][data-selected] &`]: {
+            background: vars.colors.neutral[60],
+            borderColor: vars.colors.neutral[60],
           }
         }
       },
