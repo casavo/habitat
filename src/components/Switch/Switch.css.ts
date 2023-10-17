@@ -1,5 +1,5 @@
 import { vars } from "../../utils/theme.css";
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 
 export const base = style({
   display: 'flex',
@@ -16,7 +16,7 @@ export const base = style({
   }
 })
 
-export const indicator = style({
+const indicatorBase = style({
   width: '40px',
   height: '22px',
   border: 'none',
@@ -46,4 +46,23 @@ export const indicator = style({
       opacity: '0.4'
     }
   }
+})
+
+export const indicator = styleVariants({
+  normal: [indicatorBase, {
+    width: '40px',
+    height: '22px',
+    '::before': {
+      width: '18px',
+      height: '18px'
+    }
+  }],
+  small: [indicatorBase, {
+    width: '28px',
+    height: '16px',
+    '::before': {
+      width: '12px',
+      height: '12px'
+    }
+  }],
 })
