@@ -21,17 +21,10 @@ const meta: Meta<typeof Switch> = {
       defaultValue: "normal",
       options: ["normal", "small"]
     },
-    theme: {
-      control: "inline-radio",
-      description: "Change the switch size",
-      defaultValue: "b2c",
-      options: ["b2c", "b2b", "neutral"]
-    }
   },
   args: {
     disabled: false,
     size: "normal",
-    theme: "b2c"
   },
   component: Switch,
   title: "Components/Switch",
