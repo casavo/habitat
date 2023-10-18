@@ -36,17 +36,22 @@ const indicatorBase = style({
   },
   selectors: {
     [`${base}[data-selected] &`]:{
-      background:  vars.colors.orange[100],
-      borderColor: vars.colors.orange[100],
+      borderColor: vars.colors.neutral[100],
+      background:  vars.colors.neutral[100],
     },
     [`${base}[data-selected] &:before`]: {
-      background: 'white',
+      background: vars.colors.neutral[0],
       transform: 'translateX(100%)'
     },
     [`${base}[data-disabled] &`]: {
       background: vars.colors.neutral[10],
       borderColor: vars.colors.neutral[10],
-    }
+    },
+    [`${base}[data-selected][data-disabled] &`]: {
+      background: vars.colors.neutral[60],
+      borderColor: vars.colors.neutral[60],
+    },
+    
   }
 })
 
@@ -70,45 +75,6 @@ export const indicator = recipe({
           height: '12px'
         }
       }
-    },
-    theme: {
-      b2c: {
-        selectors: {
-          [`${base}[data-selected] &`]: {
-            borderColor: vars.colors.orange[100],
-            background:  vars.colors.orange[100],
-          },
-          [`${base}[data-disabled][data-selected] &`]: {
-            background: '#FFCE78',
-            borderColor: '#FFCE78',
-          }
-        }
-      },
-      b2b: {
-        selectors: {
-          [`${base}[data-selected] &`]: {
-            borderColor: vars.colors.green[100],
-            background:  vars.colors.green[100],
-          },
-          [`${base}[data-disabled][data-selected] &`]: {
-            background: vars.colors.green[40],
-            borderColor: vars.colors.green[40],
-          }
-        }
-      },
-      neutral: {
-        selectors: {
-          [`${base}[data-selected] &`]: {
-            borderColor: vars.colors.neutral[100],
-            background:  vars.colors.neutral[100],
-          },
-          [`${base}[data-disabled][data-selected] &`]: {
-            background: vars.colors.neutral[60],
-            borderColor: vars.colors.neutral[60],
-          }
-        }
-      },
-      
     }
   }
 })
