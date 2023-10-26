@@ -25,6 +25,7 @@ const meta: Meta<typeof Switch> = {
   args: {
     disabled: false,
     size: "normal",
+    isSelected: false
   },
   component: Switch,
   title: "Components/Switch",
