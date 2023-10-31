@@ -10,6 +10,7 @@ type Props = {
   icon?: React.ReactNode;
   iconLayout?: "sx" | "dx";
   loading: boolean;
+  size?: "small" | "medium" | "large";
   theme?: "light" | "dark";
   type?: ButtonHTMLAttributes<object>["type"];
   variant?: "primary" | "secondary" | "tertiary";
@@ -22,13 +23,14 @@ export const Button = ({
   theme = "dark",
   icon,
   iconLayout = "sx",
+  size = "medium",
   ...props
 }: Props) => {
   return (
     <ButtonAria
       {...props}
       isDisabled={props.disabled}
-      className={ButtonContainer({ iconLayout, theme, variant })}
+      className={ButtonContainer({ iconLayout, size, theme, variant })}
     >
       {icon && icon}
       {loading ? "loading" : children}
