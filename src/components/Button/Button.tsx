@@ -2,6 +2,7 @@ import { Button as ButtonAria } from "react-aria-components";
 import type { ButtonProps } from "react-aria-components";
 import { ButtonHTMLAttributes } from "react";
 import { ButtonContainer } from "./Button.css";
+import { Body } from "../Typography";
 
 type Props = {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ type Props = {
 
 export const Button = ({
   children,
-  loading,
+  loading = false,
   variant = "primary",
   theme = "dark",
   icon,
@@ -33,7 +34,17 @@ export const Button = ({
       className={ButtonContainer({ iconLayout, size, theme, variant })}
     >
       {icon && icon}
-      {loading ? "loading" : children}
+      {loading && "loading"}
+      {!loading && (size === "small" || size === "medium") ? (
+        <Body size="m" strong={true}>
+          {children}
+        </Body>
+      ) : null}
+      {!loading && size === "large" ? (
+        <Body size="l" strong={true}>
+          {children}
+        </Body>
+      ) : null}
     </ButtonAria>
   );
 };
