@@ -51,6 +51,11 @@ const meta: Meta<typeof Button> = {
       control: "boolean",
       description: "toggle the loading state",
     },
+    size: {
+      control: "radio",
+      description: "Choose the size",
+      options: ["small", "medium", "large"],
+    },
     theme: {
       control: "radio",
       description: "Choose the theme",
@@ -86,6 +91,7 @@ export const _Button: Story = {
         theme={args.theme}
         icon={Icons[args.icon as keyof typeof Icons]}
         iconLayout={args.iconLayout}
+        size={args.size}
         onPress={() => alert("Button pressed")}
       >
         Example button
