@@ -1,9 +1,10 @@
 {
   "name": "@casavo/habitat",
+  "description": "Casavo Design System Library",
   "private": false,
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-beta.1",
   "type": "module",
-  "homepage": "http://casavo.github.io/habitat",
+  "homepage": "https://github.com/casavo/habitat",
   "engines": {
     "node": "18"
   },
@@ -16,10 +17,13 @@
     "update:tokens": "style-dictionary build -c ./dictionary.config.json"
   },
   "dependencies": {
+    "react-aria": "3.29.0",
+    "react-aria-components": "1.0.0-beta.1"
+  },
+  "peerdependencies": {
     "@vanilla-extract/css": "1.13.0",
     "@vanilla-extract/recipes": "0.5.0",
     "react": "18.2.0",
-    "react-aria-components": "1.0.0-beta.1",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
@@ -46,7 +50,6 @@
     "eslint-plugin-storybook": "0.6.15",
     "eslint-plugin-typescript-sort-keys": "3.1.0",
     "prop-types": "15.8.1",
-    "react-aria": "3.29.0",
     "storybook": "7.4.6",
     "style-dictionary": "3.8.0",
     "typescript": "5.2.2",
