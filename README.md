@@ -1,6 +1,6 @@
 # Habitat - Casavo Design System Library
 
-## 🚧🚧 WORK IN PROGRESS 🚧🚧
+## 🚧🚧 v1.0 BETA - WORK IN PROGRESS 🚧🚧
 
 > Welcome to the Casavo design system repository! This is where you can find all the components, guidelines and resources to create amazing user experiences for Casavo. Whether you are a developer, a designer or a product manager, you will find everything you need to get started. Explore the repository and have fun!
 
@@ -21,35 +21,13 @@ Everything in this codebase is a reflection of what has been defined on the rela
 
 ## What's included?
 
-Brief checklist of the component that will be included in the project:
+You can check the [public Storybook](https://casavo.github.io/habitat) to test and experiment with the currently available components.
 
-- Typography
-  - `<Display />`, `<H1 />`, `<H2 />`, `<H3 />`, `<H4 />` will represent the matching entities
-  - `<Body />` will act as counterpart of `BodyL` and `BodyM`
-  - `Description`, `Caption` and `Small` are still under discussion
-  - `<List />`
-- UI Components
-  - `<Button />`
-  - `<Badge />`
-  - `<TextLink />` ??
-  - `<Navbar />`
-  - `<Link />`
-  - `<Switch />`
-  - `<Tags />`
-  - `<Toast />`
-- Form components
-  - `<Input />`
-  - `<Checkbox />`
-  - `<Radio />`
-  - `<Alert />`
-  - `<Chip />`
-- Utilities
-  - media queries
-  - design tokens
+To sneak peek the incoming new features or components and participate in the discussions you can [visit the issue section](https://github.com/casavo/habitat/issues) of this repo, or you can checkout [the project's board](https://github.com/orgs/casavo/projects/20) to have a quick overview of the development status.
 
 ## Using Habitat in your project
 
-> **NOTE:** currently Habitat is **not** available as a public NPM package.
+> **HEADS UP!** currently you need to [add the Casavo private NPM registry token](https://github.com/casavo/community-of-practice/blob/master/frontend/best-practices/setup-project.md#package-registry), but we are planning to release this package as a public NPM one in the near future.
 
 install the package in your project (_you can use whatever package manager you prefer_)
 
@@ -166,6 +144,12 @@ the Storybook instance will automatically open in your browser at `http://localh
 
 Please refert to the [docs](docs/development.md) for in depth info on how to work locally.
 
+## v1.0-BETA dev team
+
+- [Salvatore Laisa](https://github.com/moebiusmania)
+- [Pietro Grandi](https://github.com/pietrograndi)
+- [Sergio Bergamo](https://github.com/Serse2)
+
 ## How to participate?
 
 > Before opening issues or pull requests plaese read our [code of conduct](CODE_OF_CONDUCT.md), then
@@ -185,6 +169,20 @@ This library heavily relies on a set of Design Tokens defined in the Figma board
 2. from the terminal execute `$ npm run update:tokens`
 3. this will generate a new plain `.json` token file in the `src/utils` folder
 4. commit the changes, push the code and create a new PR as described in the "[Contributing](CONTRIBUTING.md)" section
+
+## (Very short) FAQ
+
+> Why 1.0 `BETA`?
+
+Because we prefered to release an initial version earlier and get actual feedbacks rather than spend some other months chasing an abstract concept of perfection to then realize we were doing something wrong.
+
+> Can I use this library in a non React or Node.js environment?
+
+**Currently no**, but we are considering the idea of adopting [this package](https://github.com/bitovi/react-to-web-component) to export a second version of the components as standard [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components#custom_elements) that can be used in any HTML context. If you feel this might be very useful, share a feedback.
+
+> Can this be used in a React Native project?
+
+**No.** We did some R&D with the dev involved in React Native and we didn't found out a way to make the components RN compatibile without compromising the DX for all the other users. However the Design Tokens can be easily reused and wen can eventually identify other code snippets that could be shared and exposed.
 
 ## License
 
