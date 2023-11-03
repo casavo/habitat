@@ -67,6 +67,16 @@ const meta: Meta<typeof Button> = {
       options: ["button", "submit", "reset"],
     },
   },
+  args: {
+    children: "Mimmo",
+    disabled: false,
+    icon: "empty",
+    loading: false,
+    size: "medium",
+    theme: "dark",
+    type: "button",
+    variant: "primary",
+  },
   component: Button,
   title: "Components/Button",
 };
@@ -83,19 +93,28 @@ type Story = StoryObj<typeof Button>;
 export const _Button: Story = {
   render: ({ ...args }) => (
     <div className={HabitatTheme}>
-      <Button
-        type={args.type}
-        data-testid={args["data-testid"]}
-        disabled={args.disabled}
-        loading={args.loading}
-        theme={args.theme}
-        icon={Icons[args.icon as keyof typeof Icons]}
-        iconLayout={args.iconLayout}
-        size={args.size}
-        onPress={() => alert("Button pressed")}
+      <div
+        style={{
+          backgroundColor: args.theme === "light" ? "#000" : "#FFF",
+          padding: "1rem",
+          width: "fit-content",
+        }}
       >
-        Example button
-      </Button>
+        <Button
+          type={args.type}
+          data-testid={args["data-testid"]}
+          disabled={args.disabled}
+          loading={args.loading}
+          theme={args.theme}
+          icon={Icons[args.icon as keyof typeof Icons]}
+          iconLayout={args.iconLayout}
+          size={args.size}
+          variant={args.variant}
+          onPress={() => alert("Button pressed")}
+        >
+          Button
+        </Button>
+      </div>
     </div>
   ),
 };
