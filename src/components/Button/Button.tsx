@@ -1,8 +1,8 @@
-import { Button as ButtonAria } from "react-aria-components";
-import type { ButtonProps } from "react-aria-components";
 import { ButtonHTMLAttributes } from "react";
-import { ButtonContainer } from "./Button.css";
+import type { ButtonProps } from "react-aria-components";
+import { Button as ButtonAria } from "react-aria-components";
 import { Body } from "../Typography";
+import { ButtonContainer } from "./Button.css";
 
 type Props = {
   children: React.ReactNode;
@@ -19,6 +19,7 @@ type Props = {
 
 export const Button = ({
   children,
+  disabled = false,
   loading = false,
   variant = "primary",
   theme = "dark",
@@ -30,11 +31,11 @@ export const Button = ({
   return (
     <ButtonAria
       {...props}
-      isDisabled={props.disabled}
+      isDisabled={disabled}
       className={ButtonContainer({ iconLayout, size, theme, variant })}
     >
-      {icon && icon}
       {loading && "loading"}
+      {!loading && icon ? icon : null}
       {!loading && (size === "small" || size === "medium") ? (
         <Body size="m" strong={true}>
           {children}
