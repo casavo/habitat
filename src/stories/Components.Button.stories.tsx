@@ -6,22 +6,10 @@ import "./../utils/reset.css";
 import { Button } from "./../components/Button";
 import { HabitatTheme } from "./../utils/theme.css";
 import { ReactNode } from "react";
-
-const BadgeIcon = () => {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M8.00568 1.33337L14.6667 5.03708V14.6667H1.33337V5.03708L8.00568 1.33337ZM8.00504 3.23921L3.00004 6.01754V13H13V6.01671L8.00504 3.23921Z" />
-    </svg>
-  );
-};
+import { DefaultIcon } from "../assets/shared/DefaultIcon";
 
 const Icons: Record<string, ReactNode> = {
-  defaultIcon: <BadgeIcon />,
+  defaultIcon: <DefaultIcon />,
   empty: undefined,
 };
 
@@ -93,28 +81,20 @@ type Story = StoryObj<typeof Button>;
 export const _Button: Story = {
   render: ({ ...args }) => (
     <div className={HabitatTheme}>
-      <div
-        style={{
-          backgroundColor: args.theme === "light" ? "#000" : "#FFF",
-          padding: "1rem",
-          width: "fit-content",
-        }}
+      <Button
+        type={args.type}
+        data-testid={args["data-testid"]}
+        disabled={args.disabled}
+        loading={args.loading}
+        theme={args.theme}
+        icon={Icons[args.icon as keyof typeof Icons]}
+        iconLayout={args.iconLayout}
+        size={args.size}
+        variant={args.variant}
+        onPress={() => alert("Button pressed")}
       >
-        <Button
-          type={args.type}
-          data-testid={args["data-testid"]}
-          disabled={args.disabled}
-          loading={args.loading}
-          theme={args.theme}
-          icon={Icons[args.icon as keyof typeof Icons]}
-          iconLayout={args.iconLayout}
-          size={args.size}
-          variant={args.variant}
-          onPress={() => alert("Button pressed")}
-        >
-          Button
-        </Button>
-      </div>
+        Button
+      </Button>
     </div>
   ),
 };
