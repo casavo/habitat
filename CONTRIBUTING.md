@@ -42,6 +42,14 @@ in the above example you have created a class that applies a different backgroun
 
 This allows consumer of the library to overwrite the values of theme without the need of editing the components source file.
 
+### How to create a Component
+
+- Create a folder and assign it the name of the component you want to create within `components`. Es. Badge folder.
+- Inside the new folder create 3 files:
+  - `index.ts` it is used for export the component.
+  - `YourComponent.tsx` (replace YourComponent with the name of component that you want create) it is used to create the component. Please check the coding guidelines.
+  - `YourComponent.css.ts` (replace YourComponent with the name of component that you want create) it is used to create the style component with vanilla extract.
+
 ### How to request changes
 
 - join the `#design-system-taskforce` channel on Slack
