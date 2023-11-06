@@ -4,29 +4,23 @@ import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import dts from "vite-plugin-dts";
 
+const id: string = "/habitat/";
+
+const isPROD: boolean = process.env.NODE_ENV === "production";
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    vanillaExtractPlugin(),
-    dts({
-      insertTypesEntry: true,
-      exclude: ["node_modules/**", "**/vite-env.d.ts"],
-      clearPureImport: true,
-    }),
-  ],
+  base: isPROD ? id : "/",
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "@casavo/habitat",
       fileName: (format, entryName) => {
         console.log(format, entryName);
         return `index.${format}.js`;
       },
       formats: ["es", "cjs"],
+      name: "@casavo/habitat",
     },
-    sourcemap: true,
-    target: "esnext",
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
@@ -36,5 +30,16 @@ export default defineConfig({
         },
       },
     },
+    sourcemap: true,
+    target: "esnext",
   },
+  plugins: [
+    react(),
+    vanillaExtractPlugin(),
+    dts({
+      clearPureImport: true,
+      exclude: ["node_modules/**", "**/vite-env.d.ts"],
+      insertTypesEntry: true,
+    }),
+  ],
 });
