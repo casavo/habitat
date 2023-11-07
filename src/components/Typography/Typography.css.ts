@@ -1,13 +1,18 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
-import { style } from "@vanilla-extract/css";
+import { fontFace, style } from "@vanilla-extract/css";
+
+const Bagoss = fontFace({
+  src: 'url("https://cdn-base-ui.casavo.com/fonts/BagossCondensed-Light.woff2")',
+});
 
 const whiteSpace = "pre-line";
 
 export const HeadingsStyle = recipe({
   base: {
-    fontFamily: "Bagoss Condensed",
+    fontFamily: Bagoss,
     fontSize: 32,
+    fontStyle: "normal",
     fontWeight: 300,
     lineHeight: 1.2,
     whiteSpace,
