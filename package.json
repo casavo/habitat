@@ -18,6 +18,15 @@
     "dist",
     "types"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "browser": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "node": "./dist/index.cjs.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run storybook",

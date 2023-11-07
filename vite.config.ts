@@ -13,9 +13,14 @@ export default defineConfig({
   base: isPROD ? id : "/",
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: [
+        path.resolve(__dirname, "src/utils/reset.css.ts"),
+        path.resolve(__dirname, "src/index.ts"),
+      ],
       fileName: (format, entryName) => {
-        console.log(format, entryName);
+        if (entryName === "reset.css.ts") {
+          return `reset.${format}.js`;
+        }
         return `index.${format}.js`;
       },
       formats: ["es", "cjs"],
@@ -31,11 +36,11 @@ export default defineConfig({
       },
     },
     sourcemap: true,
-    target: "esnext",
+    target: "modules",
   },
   plugins: [
     react(),
-    vanillaExtractPlugin(),
+    vanillaExtractPlugin({ identifiers: "short" }),
     dts({
       clearPureImport: true,
       exclude: ["node_modules/**", "**/vite-env.d.ts"],
