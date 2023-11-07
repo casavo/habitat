@@ -7,17 +7,17 @@ import { globalStyle } from "@vanilla-extract/css";
  */
 
 globalStyle("*, ::before, ::after", {
-  boxSizing: "border-box",
-  borderWidth: 0,
   borderStyle: "solid",
+  borderWidth: 0,
+  boxSizing: "border-box",
 });
 
 globalStyle("html", {
+  MozTabSize: 4,
+  WebkitTextSizeAdjust: "100%",
   fontFamily:
     "system-ui,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
   lineHeight: 1.15,
-  WebkitTextSizeAdjust: "100%",
-  MozTabSize: 4,
   tabSize: 4,
 });
 
@@ -26,8 +26,8 @@ globalStyle("body", {
 });
 
 globalStyle("hr", {
-  height: 0,
   color: "inherit",
+  height: 0,
 });
 
 globalStyle("abbr[title]", {
@@ -64,8 +64,8 @@ globalStyle("sup", {
 });
 
 globalStyle("table", {
-  textIndent: 0,
   borderColor: "inherit",
+  textIndent: 0,
 });
 
 globalStyle("button, input, optgroup, select, textarea", {
@@ -152,6 +152,6 @@ globalStyle("img, svg, video, canvas, audio, iframe, embed, object", {
 });
 
 globalStyle("img, video", {
-  maxWidth: "100%",
   height: "auto",
+  maxWidth: "100%",
 });
