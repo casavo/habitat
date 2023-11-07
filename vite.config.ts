@@ -18,7 +18,7 @@ export default defineConfig({
         path.resolve(__dirname, "src/index.ts"),
       ],
       fileName: (format, entryName) => {
-        if (entryName === "reset.css.ts") {
+        if (entryName === "reset.css") {
           return `reset.${format}.js`;
         }
         return `index.${format}.js`;
