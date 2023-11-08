@@ -36,13 +36,7 @@ export const ButtonContainer = recipe({
       light: {},
     },
     variant: {
-      primary: {
-        ":disabled": {
-          background: vars.colors.neutral[10],
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-        },
-      },
+      primary: {},
       secondary: {},
       tertiary: {},
     },
@@ -83,6 +77,11 @@ export const ButtonContainer = recipe({
         ":active": {
           background: vars.colors.neutral[80],
         },
+        ":disabled": {
+          background: vars.colors.neutral[10],
+          color: vars.colors.neutral[60],
+          fill: vars.colors.neutral[60],
+        },
       },
     },
     {
@@ -100,6 +99,11 @@ export const ButtonContainer = recipe({
         },
         ":active": {
           background: vars.colors.neutral[20],
+        },
+        ":disabled": {
+          background: vars.colors.neutral[10],
+          color: vars.colors.neutral[60],
+          fill: vars.colors.neutral[60],
         },
       },
     },
