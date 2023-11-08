@@ -39,12 +39,14 @@ export default defineConfig({
     target: "modules",
   },
   plugins: [
-    dts({
-      clearPureImport: true,
-      exclude: ["node_modules/**", "**/vite-env.d.ts"],
-      insertTypesEntry: true,
-      rollupTypes: true,
-    }),
+    // we don't need to emit the types for the components if we are building the Storybook
+    process.env.npm_lifecycle_event === "build:components" &&
+      dts({
+        clearPureImport: true,
+        exclude: ["node_modules/**", "**/vite-env.d.ts"],
+        insertTypesEntry: true,
+        rollupTypes: true,
+      }),
     react(),
     vanillaExtractPlugin({ identifiers: "short" }),
   ],
