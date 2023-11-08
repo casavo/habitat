@@ -12,6 +12,8 @@ const Icons: Record<string, ReactNode> = {
   empty: undefined,
 };
 
+const status = ["success", "error", "warning", undefined];
+
 const meta: Meta<typeof Badge> = {
   argTypes: {
     children: {
@@ -27,10 +29,18 @@ const meta: Meta<typeof Badge> = {
       options: Object.keys(Icons),
     },
     status: {
-      control: "select",
+      control: {
+        labels: {
+          error: "error",
+          success: "success",
+          undefined: "no set",
+          warning: "warning",
+        },
+        type: "select",
+      },
       defaultValue: undefined,
       description: "select the status of the badge",
-      options: ["success", "error", "warning"],
+      options: status,
     },
     theme: {
       control: "inline-radio",
