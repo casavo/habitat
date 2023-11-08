@@ -79,7 +79,7 @@ This allows consumer of the library to overwrite the values of theme without the
 
 ### Generate a preview Storybook for fix/feature branches
 
-Code pushed on any `branch` of this repo will trigger a new Storybook build that will be pushed to [Chromatic](https://www.chromatic.com/builds?appId=6492c41db7cb00cf0539e3b6). Uou can preview the changes and check the related Storybook from the Chromatic dashboard.
+Code pushed on any `branch` of this repo will trigger a new Storybook build that will be pushed to [Chromatic](https://www.chromatic.com/builds?appId=6492c41db7cb00cf0539e3b6). You can preview the changes and check the related Storybook from the Chromatic dashboard.
 
 ### Update the public Storybook
 
