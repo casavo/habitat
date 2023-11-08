@@ -39,12 +39,13 @@ export default defineConfig({
     target: "modules",
   },
   plugins: [
-    react(),
-    vanillaExtractPlugin({ identifiers: "short" }),
     dts({
       clearPureImport: true,
       exclude: ["node_modules/**", "**/vite-env.d.ts"],
       insertTypesEntry: true,
+      rollupTypes: true,
     }),
+    react(),
+    vanillaExtractPlugin({ identifiers: "short" }),
   ],
 });
