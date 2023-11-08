@@ -59,6 +59,7 @@ const meta: Meta<typeof Button> = {
     children: "Mimmo",
     disabled: false,
     icon: "empty",
+    iconLayout: "sx",
     loading: false,
     size: "medium",
     theme: "dark",

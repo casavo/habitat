@@ -3,6 +3,7 @@ import type { ButtonProps } from "react-aria-components";
 import { Button as ButtonAria } from "react-aria-components";
 import { Body } from "../Typography";
 import { ButtonContainer } from "./Button.css";
+import { Spinner } from "../Spinner/Spinner";
 
 type Props = {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ export const Button = ({
       isDisabled={disabled}
       className={ButtonContainer({ iconLayout, size, theme, variant })}
     >
-      {loading && "loading"}
+      {loading && <Spinner size={size} theme={theme} />}
       {!loading && icon ? icon : null}
       {!loading && (size === "small" || size === "medium") ? (
         <Body size="m" strong={true}>
