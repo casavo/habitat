@@ -10,7 +10,7 @@ defaults:
 
 jobs:
   publish_release:
-    name: Build & Publish Storbyook to Chromatic
+    name: Build & Publish components to NPM
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -31,4 +31,4 @@ jobs:
       - name: Build components
         run: |
           npm run build:components
-          npm publish --access private
+          npm publish --access public
