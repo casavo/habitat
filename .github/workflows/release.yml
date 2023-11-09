@@ -31,4 +31,6 @@ jobs:
       - name: Build components
         run: |
           npm run build:components
-          npm publish --access public
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
