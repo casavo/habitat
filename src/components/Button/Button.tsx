@@ -8,10 +8,10 @@ import { Spinner } from "../Spinner/Spinner";
 type Props = {
   children: React.ReactNode;
   "data-testid"?: string;
-  disabled: boolean;
+  disabled?: boolean;
   icon?: React.ReactNode;
   iconLayout?: "sx" | "dx";
-  loading: boolean;
+  loading?: boolean;
   size?: "small" | "medium" | "large";
   theme?: "light" | "dark";
   type?: ButtonHTMLAttributes<object>["type"];
