@@ -16,7 +16,7 @@ type Props = {
   theme?: "light" | "dark";
   type?: ButtonHTMLAttributes<object>["type"];
   variant?: "primary" | "secondary" | "tertiary";
-} & ButtonProps;
+} & Omit<ButtonProps, "className">;
 
 export const Button = ({
   children,
