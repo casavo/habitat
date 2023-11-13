@@ -5,6 +5,10 @@ import { Description } from "./../components/Typography";
 
 const meta: Meta<typeof Description> = {
   argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
     strong: {
       control: { type: "boolean" },
       defaultValue: false,
@@ -17,6 +21,7 @@ const meta: Meta<typeof Description> = {
     },
   },
   args: {
+    html: undefined,
     strong: false,
     underline: false,
   },
@@ -35,7 +40,11 @@ type Story = StoryObj<typeof Description>;
 
 export const _Description: Story = {
   render: ({ ...args }) => (
-    <Description strong={args.strong} underline={args.underline}>
+    <Description
+      html={args.html}
+      strong={args.strong}
+      underline={args.underline}
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam
       lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt enim.
       Phasellus et diam tincidunt est semper mattis. Ut sed nulla non leo

@@ -6,7 +6,15 @@ import "./../utils/reset.css";
 import { H4 } from "./../components/Typography";
 
 const meta: Meta<typeof H4> = {
-  argTypes: {},
+  argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
+  },
+  args: {
+    html: undefined,
+  },
   component: H4,
   title: "Typography/H4",
 };
@@ -21,8 +29,8 @@ type Story = StoryObj<typeof H4>;
  */
 
 export const _H4: Story = {
-  render: () => (
-    <H4>
+  render: ({ ...args }) => (
+    <H4 html={args.html}>
       Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris facere
     </H4>
   ),

@@ -6,7 +6,15 @@ import "./../utils/reset.css";
 import { H1 } from "./../components/Typography";
 
 const meta: Meta<typeof H1> = {
-  argTypes: {},
+  argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
+  },
+  args: {
+    html: `<a href="https://www.casavo.com">link to Casavo website</a>`,
+  },
   component: H1,
   title: "Typography/H1",
 };
@@ -21,8 +29,8 @@ type Story = StoryObj<typeof H1>;
  */
 
 export const _H1: Story = {
-  render: () => (
-    <H1>
+  render: ({ ...args }) => (
+    <H1 html={args.html}>
       Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris facere
     </H1>
   ),

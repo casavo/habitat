@@ -6,7 +6,15 @@ import "./../utils/reset.css";
 import { H3 } from "./../components/Typography";
 
 const meta: Meta<typeof H3> = {
-  argTypes: {},
+  argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
+  },
+  args: {
+    html: undefined,
+  },
   component: H3,
   title: "Typography/H3",
 };
@@ -21,8 +29,8 @@ type Story = StoryObj<typeof H3>;
  */
 
 export const _H3: Story = {
-  render: () => (
-    <H3>
+  render: ({ ...args }) => (
+    <H3 html={args.html}>
       Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris facere
     </H3>
   ),

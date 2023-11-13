@@ -5,18 +5,23 @@ import { Caption } from "./../components/Typography";
 
 const meta: Meta<typeof Caption> = {
   argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
     strong: {
+      caption: "toggle the strong/bold font type",
       control: { type: "boolean" },
       defaultValue: false,
-      caption: "toggle the strong/bold font type",
     },
     underline: {
+      caption: "toggle the underline text decoration",
       control: { type: "boolean" },
       defaultValue: false,
-      caption: "toggle the underline text decoration",
     },
   },
   args: {
+    html: undefined,
     strong: false,
     underline: false,
   },
@@ -35,7 +40,7 @@ type Story = StoryObj<typeof Caption>;
 
 export const _Caption: Story = {
   render: ({ ...args }) => (
-    <Caption strong={args.strong} underline={args.underline}>
+    <Caption html={args.html} strong={args.strong} underline={args.underline}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam
       lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt enim.
       Phasellus et diam tincidunt est semper mattis. Ut sed nulla non leo
