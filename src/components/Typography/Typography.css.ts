@@ -1,12 +1,17 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
-import { fontFace, style } from "@vanilla-extract/css";
+import { fontFace, globalStyle, style } from "@vanilla-extract/css";
 
 const Bagoss = fontFace({
   src: 'url("https://cdn-base-ui.casavo.com/fonts/BagossCondensed-Light.woff2")',
 });
 
 const whiteSpace = "pre-line";
+
+globalStyle("a", {
+  // TODO: change this to a color token when --greyscale-600-black will be available
+  color: "#1D1D1B",
+});
 
 export const HeadingsStyle = recipe({
   base: {

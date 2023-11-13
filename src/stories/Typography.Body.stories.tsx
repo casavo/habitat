@@ -5,6 +5,15 @@ import { Body } from "./../components/Typography";
 
 const meta: Meta<typeof Body> = {
   argTypes: {
+    html: {
+      control: "text",
+      description: "allow to pass HTML directly to the component",
+    },
+    size: {
+      control: { options: ["s", "m", "l"], type: "radio" },
+      defaultValue: "m",
+      description: "define the font size",
+    },
     strong: {
       control: { type: "boolean" },
       defaultValue: false,
@@ -15,15 +24,11 @@ const meta: Meta<typeof Body> = {
       defaultValue: false,
       description: "toggle the underline text decoration",
     },
-    size: {
-      control: { type: "radio", options: ["s", "m", "l"] },
-      defaultValue: "m",
-      description: "define the font size",
-    },
   },
   args: {
-    strong: false,
+    html: undefined,
     size: "m",
+    strong: false,
     underline: false,
   },
   component: Body,
@@ -41,7 +46,12 @@ type Story = StoryObj<typeof Body>;
 
 export const _Body: Story = {
   render: ({ ...args }) => (
-    <Body size={args.size} strong={args.strong} underline={args.underline}>
+    <Body
+      html={args.html}
+      size={args.size}
+      strong={args.strong}
+      underline={args.underline}
+    >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam
       lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt enim.
       Phasellus et diam tincidunt est semper mattis. Ut sed nulla non leo
