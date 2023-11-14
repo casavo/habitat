@@ -6,6 +6,8 @@ const Bagoss = fontFace({
   src: 'url("https://cdn-base-ui.casavo.com/fonts/BagossCondensed-Light.woff2")',
 });
 
+const Inter = "Inter, -apple-system, BlinkMacSystemFont, sans-serif";
+
 const whiteSpace = "pre-line";
 
 globalStyle("a", {
@@ -15,7 +17,6 @@ globalStyle("a", {
 
 export const HeadingsStyle = recipe({
   base: {
-    fontFamily: Bagoss,
     fontSize: 32,
     fontStyle: "normal",
     fontWeight: 300,
@@ -28,18 +29,21 @@ export const HeadingsStyle = recipe({
         "@media": {
           [mq.desktop]: { fontSize: 52 },
         },
+        fontFamily: Bagoss,
         fontSize: 40,
       },
       h2: {
         "@media": {
           [mq.desktop]: { fontSize: 32 },
         },
+        fontFamily: Bagoss,
         fontSize: 28,
       },
       h3: {
         "@media": {
           [mq.desktop]: { fontSize: 28 },
         },
+        fontFamily: Inter,
         fontSize: 24,
         fontWeight: 600,
       },
@@ -47,6 +51,7 @@ export const HeadingsStyle = recipe({
         "@media": {
           [mq.desktop]: { fontSize: 24 },
         },
+        fontFamily: Inter,
         fontSize: 20,
         fontWeight: 600,
       },
@@ -56,7 +61,7 @@ export const HeadingsStyle = recipe({
 
 // shared styles for non heading elements
 const base = style({
-  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+  fontFamily: Inter,
   fontWeight: 400,
   lineHeight: 1.5,
   textDecoration: "none",
