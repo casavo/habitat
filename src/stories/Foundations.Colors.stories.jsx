@@ -1,6 +1,8 @@
 import "./../utils/reset.css";
 import { H1, H2, H3, Body } from "./../components/Typography";
 import tokens from "./../utils/tokens.json";
+import { ColorBox } from "./_shared"
+import { HabitatTheme } from "../utils/theme.css";
 
 const meta = {
   argTypes: {},
@@ -18,25 +20,9 @@ const last = titles[titles.length - 1];
 const getColors = (title) => {
   const section = Object.keys(colors[title]);
 
-  return section.map((color, ii) =>
+  return section.map((color, i) =>
     typeof colors[title][color] === "string" ? (
-      <article
-        key={ii}
-        style={{
-          background: colors[title][color],
-          borderRadius: 8,
-          color: "white",
-          height: 50,
-          padding: 10,
-          textAlign: "center",
-          textShadow: "0px 0px 1px black",
-          width: 170,
-        }}
-      >
-        <Body size="l" strong={true}>
-          {color}
-        </Body>
-      </article>
+      <ColorBox key={i} colors={colors} color={color} title={title} />
     ) : (
       <></>
     )
@@ -45,25 +31,10 @@ const getColors = (title) => {
 
 const getNestedColors = (title) => {
   const section = Object.keys(colors["alertcolors"][title]);
+  const alerts = colors["alertcolors"]
 
   return section.map((color, ii) => (
-    <article
-      key={ii}
-      style={{
-        background: colors["alertcolors"][title][color],
-        borderRadius: 8,
-        color: "white",
-        height: 50,
-        padding: 10,
-        textAlign: "center",
-        textShadow: "0px 0px 1px black",
-        width: 170,
-      }}
-    >
-      <Body size="l" strong={true}>
-        {color}
-      </Body>
-    </article>
+    <ColorBox key={ii} colors={alerts} color={color} title={title} />
   ));
 };
 
@@ -77,7 +48,7 @@ const grid = {
 
 export const Colors = {
   render: () => (
-    <main>
+    <main className={HabitatTheme}>
       <H1>Colors</H1>
       <Body>These are the color tokens exported by Habitat.</Body>
       {titles
