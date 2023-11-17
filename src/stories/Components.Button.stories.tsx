@@ -2,11 +2,10 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import "./../utils/reset.css";
 import { Button } from "./../components/Button";
-import { HabitatTheme } from "./../utils/theme.css";
 import { ReactNode } from "react";
 import { DefaultIcon } from "../assets/shared/DefaultIcon";
+import { StoryLayout } from "./components/StoryLayout";
 
 const Icons: Record<string, ReactNode> = {
   defaultIcon: <DefaultIcon />,
@@ -73,15 +72,31 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
+const description = (
+  <>
+    Buttons are used to initialize an action, either in the background or
+    foreground of an experience. They are used primarily for actions on a page,
+    card, modal, or form. <br />
+    Built on top of{" "}
+    <a
+      href="https://react-spectrum.adobe.com/react-aria/Button.html"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
+      react-aria-components
+    </a>
+  </>
+);
 
 export const _Button: Story = {
   render: ({ ...args }) => (
-    <div className={HabitatTheme}>
+    <StoryLayout
+      description={description}
+      importLine={'import { Button } from "@casavo/habitat"'}
+      isComponent={true}
+      title="Components/Button"
+      usage={"<Button>Buy house!</Button>"}
+    >
       <Button
         type={args.type}
         data-testid={args["data-testid"]}
@@ -94,8 +109,8 @@ export const _Button: Story = {
         variant={args.variant}
         onPress={() => alert("Button pressed")}
       >
-        Button
+        Buy house!
       </Button>
-    </div>
+    </StoryLayout>
   ),
 };

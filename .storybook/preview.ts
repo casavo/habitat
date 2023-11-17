@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react";
 
+import { HabitatCanvas } from "./../src/stories/components/Canvas";
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -12,6 +14,11 @@ const preview: Preview = {
     options: {
       storySort: {
         order: ["Docs", "Foundations", "Typography", "Components"],
+      },
+    },
+    docs: {
+      components: {
+        Canvas: HabitatCanvas,
       },
     },
   },
