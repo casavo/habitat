@@ -1,5 +1,5 @@
-import { Body } from "../components/Typography";
-import { vars } from "../utils/theme.css";
+import { Body } from "../../components/Typography";
+import { vars } from "../../utils/theme.css";
 
 type Props = {
   color: string;

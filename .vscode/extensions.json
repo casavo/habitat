@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "figma.figma-vscode-extension",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "unifiedjs.vscode-mdx"
   ]
 }
