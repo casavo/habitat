@@ -76,15 +76,7 @@ const description = (
   <>
     Buttons are used to initialize an action, either in the background or
     foreground of an experience. They are used primarily for actions on a page,
-    card, modal, or form. <br />
-    Built on top of{" "}
-    <a
-      href="https://react-spectrum.adobe.com/react-aria/Button.html"
-      rel="noreferrer noopener"
-      target="_blank"
-    >
-      react-aria-components
-    </a>
+    card, modal, or form.
   </>
 );
 
