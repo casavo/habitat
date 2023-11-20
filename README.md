@@ -191,7 +191,7 @@ Because we prefered to release an initial version earlier and get actual feedbac
 
 > Can I use this library in a non React or Node.js environment?
 
-**Currently no** except some minor parts, but we are considering the idea of adopting [this package](https://github.com/bitovi/react-to-web-component) to export a second version of the components as standard [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components#custom_elements) that can be used in any HTML context. If you feel this might be very useful, share a feedback.
+There is a related [discussion in the issue section](https://github.com/casavo/habitat/issues/27) of this repository.
 
 > Which "parts" can be used as non-React stuff?
 
