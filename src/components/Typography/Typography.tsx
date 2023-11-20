@@ -1,5 +1,7 @@
 import React from "react";
 
+import { vars } from "../../utils/theme.css";
+
 import {
   BodyStyle,
   CaptionStyle,
@@ -22,38 +24,67 @@ type BodyProps = TextProps & {
   size?: "s" | "m" | "l";
 };
 
-const conditionalHTML = (html?: string) => {
+/**
+ * It returns an object with the attributes to be passed to the component
+ */
+const conditionalAttrs = (html?: string, color?: string) => {
   const attrs: { [key: string]: object } = {};
   html ? (attrs.dangerouslySetInnerHTML = { __html: html }) : null;
+  color ? (attrs.style = { color: getColor(color) }) : null;
   return attrs;
 };
 
-export const H1 = ({ children, html }: BaseProps) => (
-  <h1 className={HeadingsStyle({ element: "h1" })} {...conditionalHTML(html)}>
+/**
+ * Starting from a string like "neutral.0" which is the path within the Vanilla Extract color
+ * variables, it returns the corresponding color as CSS variable value
+ */
+const getColor = (color?: string) => {
+  const fallback = vars.colors.neutral["0"];
+  const paths = color?.split(".");
+  const result =
+    paths && paths.reduce((acc, path) => acc[path as never], vars.colors);
+  return result || fallback;
+};
+
+export const H1 = ({ children, color, html }: BaseProps) => (
+  <h1
+    className={HeadingsStyle({ element: "h1" })}
+    {...conditionalAttrs(html, color)}
+  >
     {!html ? children : null}
   </h1>
 );
 
-export const H2 = ({ children, html }: BaseProps) => (
-  <h2 className={HeadingsStyle({ element: "h2" })} {...conditionalHTML(html)}>
+export const H2 = ({ children, color, html }: BaseProps) => (
+  <h2
+    className={HeadingsStyle({ element: "h2" })}
+    {...conditionalAttrs(html, color)}
+  >
     {!html ? children : null}
   </h2>
 );
 
-export const H3 = ({ children, html }: BaseProps) => (
-  <h3 className={HeadingsStyle({ element: "h3" })} {...conditionalHTML(html)}>
+export const H3 = ({ children, color, html }: BaseProps) => (
+  <h3
+    className={HeadingsStyle({ element: "h3" })}
+    {...conditionalAttrs(html, color)}
+  >
     {!html ? children : null}
   </h3>
 );
 
-export const H4 = ({ children, html }: BaseProps) => (
-  <h4 className={HeadingsStyle({ element: "h4" })} {...conditionalHTML(html)}>
+export const H4 = ({ children, color, html }: BaseProps) => (
+  <h4
+    className={HeadingsStyle({ element: "h4" })}
+    {...conditionalAttrs(html, color)}
+  >
     {!html ? children : null}
   </h4>
 );
 
 export const Body = ({
   children,
+  color,
   html,
   size = "m",
   strong = false,
@@ -61,7 +92,7 @@ export const Body = ({
 }: BodyProps) => (
   <p
     className={BodyStyle({ size, strong, underline })}
-    {...conditionalHTML(html)}
+    {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </p>
@@ -69,13 +100,14 @@ export const Body = ({
 
 export const Description = ({
   children,
+  color,
   html,
   strong = false,
   underline = false,
 }: TextProps) => (
   <p
     className={DescriptionStyle({ strong, underline })}
-    {...conditionalHTML(html)}
+    {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </p>
@@ -83,11 +115,15 @@ export const Description = ({
 
 export const Caption = ({
   children,
+  color,
   html,
   strong = false,
   underline = false,
 }: TextProps) => (
-  <p className={CaptionStyle({ strong, underline })} {...conditionalHTML(html)}>
+  <p
+    className={CaptionStyle({ strong, underline })}
+    {...conditionalAttrs(html, color)}
+  >
     {!html ? children : null}
   </p>
 );
