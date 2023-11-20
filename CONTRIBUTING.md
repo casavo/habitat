@@ -46,11 +46,34 @@ This allows consumer of the library to overwrite the values of theme without the
 
 ### How to create a Component
 
-- Create a folder and assign it the name of the component you want to create within `components`. Es. Badge folder.
-- Inside the new folder create 3 files:
+- create a folder and assign it the name of the component you want to create within `src/components`. Es. Badge folder.
+- inside the new folder create 3 files:
   - `index.ts` it is used for export the component.
   - `YourComponent.tsx` (replace YourComponent with the name of component that you want create) it is used to create the component. Please check the coding guidelines.
   - `YourComponent.css.ts` (replace YourComponent with the name of component that you want create) it is used to create the style component with vanilla extract.
+- add new story in Storybook in the `src/stories` folder
+  - as naming pattern `[category][name].stories.tsx`
+  - if it is a documentation-only page, consider using the `.mdx` format
+  - document every exposed property
+  - don't use custom handler for the events, follow Storybook's guidelines
+  - in the body of your story, wrap everything within the `<StoryLayout />` component
+
+### `<StoryLayout />` quick docs
+
+It's a simple component that defines a standard layout for every story, both components and documentational, and imports Habitat style + default theme. Code example sections are rendered throught [Storybook's `<Source />` component](https://storybook.js.org/docs/react/api/doc-block-source).
+
+```tsx
+import { StoryLayout } from "./components/StoryLayout";
+```
+
+| **prop**    | **required** | **type**          | **description**                                  |
+| ----------- | ------------ | ----------------- | ------------------------------------------------ |
+| title       | `true`       | `string`          | heading of the page                              |
+| description | `false`      | `string` or `JSX` | quick explanation of the component or intro text |
+| isComponent | `false`      | `boolean`         | if you need to display the component doc layout  |
+| language    | `false`      | `string`          | code highlighting language                       |
+| importLine  | `false`      | `string`          | code example of the import                       |
+| usage       | `false`      | `string`          | code example of the component basic usage        |
 
 ### How to request changes
 
