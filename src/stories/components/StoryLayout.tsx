@@ -1,28 +1,26 @@
 import "./../../utils/reset.css";
-import { HabitatTheme, vars } from "./../../utils/theme.css";
+import { HabitatTheme } from "./../../utils/theme.css";
 import { H1, H2, H4, Body } from "./../../components/Typography";
+import { Source } from "@storybook/blocks";
 
 type Props = {
   children?: React.ReactNode;
   description?: string | React.ReactNode;
   importLine?: string;
   isComponent?: boolean;
+  language?: string;
   title: string;
   usage?: string;
 };
 
 const Spacer = () => <hr style={{ margin: "16px 0" }} />;
 
-const code = {
-  backgroundColor: vars.colors.neutral["10"],
-  padding: "7px",
-};
-
 export const StoryLayout = ({
   children,
   description,
   importLine,
   isComponent,
+  language,
   title,
   usage,
 }: Props) => (
@@ -41,15 +39,10 @@ export const StoryLayout = ({
     {isComponent && (
       <>
         <Spacer />
-        <hgroup style={{ marginBottom: 16 }}>
-          <H4>Import:</H4>
-        </hgroup>
-        <pre style={code}>{importLine}</pre>
-        <Spacer />
-        <hgroup style={{ marginBottom: 16 }}>
-          <H4>Usage:</H4>
-        </hgroup>
-        <pre style={code}>{usage}</pre>
+        <H4>Import:</H4>
+        <Source code={importLine} language={language} />
+        <H4>Usage:</H4>
+        <Source code={usage} language={language} />
       </>
     )}
   </main>
