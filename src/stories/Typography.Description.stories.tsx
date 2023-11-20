@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import "./../utils/reset.css";
 import { Description } from "./../components/Typography";
+import { StoryLayout } from "./components/StoryLayout";
 
 const meta: Meta<typeof Description> = {
   argTypes: {
@@ -32,24 +32,28 @@ const meta: Meta<typeof Description> = {
 export default meta;
 type Story = StoryObj<typeof Description>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
+const description = <>Wrapper for the {"<p>"} tag.</>;
 
 export const _Description: Story = {
   render: ({ ...args }) => (
-    <Description
-      html={args.html}
-      strong={args.strong}
-      underline={args.underline}
+    <StoryLayout
+      description={description}
+      importLine={'import { Description } from "@casavo/habitat"'}
+      isComponent={true}
+      title="Typography/Description"
+      usage={"<Description>Some text here</Description>"}
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam
-      lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt enim.
-      Phasellus et diam tincidunt est semper mattis. Ut sed nulla non leo
-      posuere aliquam eu ac velit. Cras rutrum felis est. Nam eleifend malesuada
-      purus, non finibus libero.
-    </Description>
+      <Description
+        html={args.html}
+        strong={args.strong}
+        underline={args.underline}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        diam lorem, tempor sed orci non, ornare laoreet dui. Proin nec tincidunt
+        enim. Phasellus et diam tincidunt est semper mattis. Ut sed nulla non
+        leo posuere aliquam eu ac velit. Cras rutrum felis est. Nam eleifend
+        malesuada purus, non finibus libero.
+      </Description>
+    </StoryLayout>
   ),
 };

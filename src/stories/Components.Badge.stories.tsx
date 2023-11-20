@@ -1,11 +1,10 @@
 // Badge.stories.ts|tsx
 
-import "./../utils/reset.css";
 import type { Meta, StoryObj } from "@storybook/react";
-import { HabitatTheme } from "../utils/theme.css";
 import { ReactNode } from "react";
 import { DefaultIcon } from "../assets/shared/DefaultIcon";
 import { Badge } from "../components/Badge";
+import { StoryLayout } from "./components/StoryLayout";
 
 const Icons: Record<string, ReactNode> = {
   defaultIcon: <DefaultIcon />,
@@ -50,7 +49,7 @@ const meta: Meta<typeof Badge> = {
     },
   },
   args: {
-    children: "Mimmo",
+    children: "Type: house",
     icon: "defaultIcon",
     status: undefined,
     theme: "light",
@@ -62,24 +61,24 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
-
 export const _Badge: Story = {
   render: ({ ...args }) => (
-    <div className={HabitatTheme}>
-      <div style={{ display: "flex", gap: "16px" }}>
-        <Badge
-          status={args.status}
-          theme={args.theme}
-          icon={Icons[args.icon as keyof typeof Icons]}
-        >
-          <>{args.children}</>
-        </Badge>
-      </div>
-    </div>
+    <StoryLayout
+      description={
+        <>Badge component is used to show a status or a type of an item.</>
+      }
+      importLine={'import { Badge } from "@casavo/habitat"'}
+      isComponent={true}
+      title="Components/Badge"
+      usage={"<Badge>Type: house</Badge>"}
+    >
+      <Badge
+        status={args.status}
+        theme={args.theme}
+        icon={Icons[args.icon as keyof typeof Icons]}
+      >
+        <>{args.children}</>
+      </Badge>
+    </StoryLayout>
   ),
 };

@@ -2,8 +2,8 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import "./../utils/reset.css";
-import { H1 } from "./../components/Typography";
+import { H1 } from "../components/Typography";
+import { StoryLayout } from "./components/StoryLayout";
 
 const meta: Meta<typeof H1> = {
   argTypes: {
@@ -22,16 +22,19 @@ const meta: Meta<typeof H1> = {
 export default meta;
 type Story = StoryObj<typeof H1>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
-
 export const _H1: Story = {
   render: ({ ...args }) => (
-    <H1 html={args.html}>
-      Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris facere
-    </H1>
+    <StoryLayout
+      description={<>Wrapper for the {"<h1>"} tag.</>}
+      importLine={'import { H1 } from "@casavo/habitat"'}
+      isComponent={true}
+      title="Typography/H1"
+      usage={"<H1>Some text here</H1>"}
+    >
+      <H1 html={args.html}>
+        Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris
+        facere
+      </H1>
+    </StoryLayout>
   ),
 };
