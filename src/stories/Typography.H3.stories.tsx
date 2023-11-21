@@ -4,14 +4,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { H3 } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
+import { argTypes } from "./utils/typography";
 
 const meta: Meta<typeof H3> = {
-  argTypes: {
-    html: {
-      control: "text",
-      description: "allow to pass HTML directly to the component",
-    },
-  },
+  argTypes,
   args: {
     html: undefined,
   },
@@ -31,7 +27,7 @@ export const _H3: Story = {
       title="Typography/H3"
       usage={"<H3>Some text here</H3>"}
     >
-      <H3 html={args.html}>
+      <H3 color={args.color} html={args.html}>
         Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris
         facere
       </H3>
