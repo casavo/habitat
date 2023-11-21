@@ -2,24 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Description } from "./../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
+import { bodyArgTypes as argTypes } from "./utils/typography";
 
 const meta: Meta<typeof Description> = {
-  argTypes: {
-    html: {
-      control: "text",
-      description: "allow to pass HTML directly to the component",
-    },
-    strong: {
-      control: { type: "boolean" },
-      defaultValue: false,
-      description: "toggle the strong/bold font type",
-    },
-    underline: {
-      control: { type: "boolean" },
-      defaultValue: false,
-      description: "toggle the underline text decoration",
-    },
-  },
+  argTypes,
   args: {
     html: undefined,
     strong: false,
@@ -44,6 +30,7 @@ export const _Description: Story = {
       usage={"<Description>Some text here</Description>"}
     >
       <Description
+        color={args.color}
         html={args.html}
         strong={args.strong}
         underline={args.underline}

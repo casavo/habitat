@@ -3,29 +3,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import "./../utils/reset.css";
 import { Body } from "./../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
+import { bodyArgTypes as argTypes } from "./utils/typography";
 
 const meta: Meta<typeof Body> = {
-  argTypes: {
-    html: {
-      control: "text",
-      description: "allow to pass HTML directly to the component",
-    },
-    size: {
-      control: { options: ["s", "m", "l"], type: "radio" },
-      defaultValue: "m",
-      description: "define the font size",
-    },
-    strong: {
-      control: { type: "boolean" },
-      defaultValue: false,
-      description: "toggle the strong/bold font type",
-    },
-    underline: {
-      control: { type: "boolean" },
-      defaultValue: false,
-      description: "toggle the underline text decoration",
-    },
-  },
+  argTypes,
   args: {
     html: undefined,
     size: "m",
@@ -53,6 +34,7 @@ export const _Body: Story = {
       usage={"<Body>Some text here</Body>"}
     >
       <Body
+        color={args.color}
         html={args.html}
         size={args.size}
         strong={args.strong}
