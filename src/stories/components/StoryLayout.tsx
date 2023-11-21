@@ -28,7 +28,7 @@ export const StoryLayout = ({
     <hgroup style={{ marginBottom: 16 }}>
       {isComponent ? <H2>{title}</H2> : <H1>{title}</H1>}
     </hgroup>
-    {isComponent && <Body>{description}</Body>}
+    {isComponent && description && <Body>{description}</Body>}
     <Spacer />
     {isComponent && (
       <hgroup style={{ marginBottom: 16 }}>
