@@ -21,6 +21,7 @@ const meta: Meta<typeof Checkbox> = {
       control: "text",
       description: "the error message to display",
     },
+    onChange: { action: "onChange" },
     value: {
       control: "text",
       description: "the value of the checkbox option",
@@ -64,6 +65,7 @@ export const _Checkbox: Story = {
       usage={"<Checkbox checked={false}>Has elevator</Checkbox>"}
     >
       <Checkbox
+        {...args}
         checked={args.checked}
         disabled={args.disabled}
         error={args.error}
