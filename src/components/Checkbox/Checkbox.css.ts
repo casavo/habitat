@@ -2,6 +2,7 @@ import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "../../utils/theme.css";
 import { recipe } from "@vanilla-extract/recipes";
 
+const gap = 8;
 const size = 16;
 const black = vars.colors.neutral[100];
 const grey = "#B3B3B2";
@@ -12,7 +13,8 @@ const green = vars.colors.green["100"];
 export const wrapper = style({
   alignItems: "center",
   display: "flex",
-  gap: 8,
+  flexWrap: "wrap",
+  gap: `0 ${gap}px`,
   transition: "all 200ms",
 });
 
@@ -49,6 +51,16 @@ export const checkbox = recipe({
         variant: "b2c",
       },
     },
+    {
+      style: {
+        backgroundColor: red,
+        borderColor: red,
+      },
+      variants: {
+        checked: true,
+        error: true,
+      },
+    },
   ],
   variants: {
     checked: {
@@ -61,6 +73,11 @@ export const checkbox = recipe({
       true: {
         backgroundColor: "#E8E8E8",
         borderColor: grey,
+      },
+    },
+    error: {
+      true: {
+        borderColor: red,
       },
     },
     variant: {
@@ -79,7 +96,9 @@ globalStyle(`${wrapper}[data-disabled] > p`, {
   color: grey,
 });
 
-export const message = style({
+export const messageStyle = style({
   color: red,
+  flexBasis: "100%",
   margin: 0,
+  marginLeft: size + gap,
 });

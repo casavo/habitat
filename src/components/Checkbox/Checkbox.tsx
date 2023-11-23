@@ -1,6 +1,6 @@
 import type { CheckboxProps } from "react-aria-components";
-import { Checkbox as RACheckbox } from "react-aria-components";
-import { checkbox, wrapper } from "./Checkbox.css";
+import { Checkbox as CheckboxAria } from "react-aria-components";
+import { checkbox, messageStyle, wrapper } from "./Checkbox.css";
 import { Body, Caption } from "../Typography";
 
 type Props = CheckboxProps & {
@@ -9,6 +9,7 @@ type Props = CheckboxProps & {
   disabled?: boolean;
   error?: boolean;
   message?: string;
+  onChange?: (args: { checked: boolean; value?: string }) => void;
   value?: string;
   variant?: "neutral" | "b2b" | "b2c";
 };
@@ -19,17 +20,19 @@ export const Checkbox = ({
   disabled,
   error,
   message,
+  onChange,
   value,
   variant,
 }: Props) => {
   return (
-    <RACheckbox
+    <CheckboxAria
       isDisabled={disabled}
       isSelected={checked}
       className={wrapper}
       value={value}
+      onChange={(args) => onChange && onChange(args)}
     >
-      <div className={checkbox({ checked, disabled, variant })}>
+      <div className={checkbox({ checked, disabled, error, variant })}>
         {checked && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +50,10 @@ export const Checkbox = ({
       </div>
       <Body>{children}</Body>
       {error && (
-        <div>
+        <div className={messageStyle}>
           <Caption>{message || "error message"}</Caption>
         </div>
       )}
-    </RACheckbox>
+    </CheckboxAria>
   );
 };
