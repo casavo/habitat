@@ -40,6 +40,10 @@ jobs:
         run: |
           npm ci
 
+      - name: Check the codestyle
+        run: |
+          npm run lint
+
       - name: Build the static Storybook site
         run: |
           npm run build:storybook
