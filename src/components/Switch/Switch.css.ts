@@ -1,47 +1,48 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "../../utils/theme.css";
-import { style } from '@vanilla-extract/css'
+import { style } from "@vanilla-extract/css";
 
 export const base = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '0.572rem',
-  fontSize: '1.143rem',
-  ':hover': {
-    cursor: 'pointer'
+  ":hover": {
+    cursor: "pointer",
   },
+  alignItems: "center",
+  display: "flex",
+  fontSize: "1.143rem",
+  gap: "0.572rem",
   selectors: {
-    '&[data-disabled]:hover': {
-      cursor: 'default'
-    }
-  }
-})
+    "&[data-disabled]:hover": {
+      cursor: "default",
+    },
+  },
+});
 
 const indicatorBase = style({
-  width: '40px',
-  height: '22px',
-  border: 'none',
-  background: vars.colors.neutral[40], // atm missing in vars
-  borderRadius: '11px',
-  transition: 'all 300ms',
-  '::before': {
-    content: '',
-    display: 'block',
-    margin: '0.143rem',
-    width: '18px',
-    height: '18px',
+  "::before": {
     background: vars.colors.neutral[0],
-    borderRadius: '16px',
-    transition: 'all 200ms',
+    borderRadius: "16px",
+    content: "",
+    display: "block",
+    height: "18px",
+    margin: "0.143rem",
+    transition: "all 200ms",
+    width: "18px",
   },
+  background: vars.colors.neutral[40],
+  border: "none",
+  // atm missing in vars
+  borderRadius: "11px",
+
+  height: "22px",
+
   selectors: {
-    [`${base}[data-selected] &`]:{
+    [`${base}[data-selected] &`]: {
+      background: vars.colors.neutral[100],
       borderColor: vars.colors.neutral[100],
-      background:  vars.colors.neutral[100],
     },
     [`${base}[data-selected] &:before`]: {
       background: vars.colors.neutral[0],
-      transform: 'translateX(100%)'
+      transform: "translateX(100%)",
     },
     [`${base}[data-disabled] &`]: {
       background: vars.colors.neutral[10],
@@ -51,30 +52,31 @@ const indicatorBase = style({
       background: vars.colors.neutral[60],
       borderColor: vars.colors.neutral[60],
     },
-    
-  }
-})
+  },
+  transition: "all 300ms",
+  width: "40px",
+});
 
 export const indicator = recipe({
   base: indicatorBase,
   variants: {
     size: {
       normal: {
-        width: '40px',
-        height: '22px',
-        '::before': {
-          width: '18px',
-          height: '18px'
-        }
+        "::before": {
+          height: "18px",
+          width: "18px",
+        },
+        height: "22px",
+        width: "40px",
       },
       small: {
-        width: '28px',
-        height: '16px',
-        '::before': {
-          width: '12px',
-          height: '12px'
-        }
-      }
-    }
-  }
-})
+        "::before": {
+          height: "12px",
+          width: "12px",
+        },
+        height: "16px",
+        width: "28px",
+      },
+    },
+  },
+});
