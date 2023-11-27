@@ -9,9 +9,19 @@ import {
   HeadingsStyle,
 } from "./Typography.css";
 
+import tokens from "./../../utils/tokens.json";
+
+type NestedKeyOf<ObjectType extends object> = {
+  [Key in keyof ObjectType & string]: ObjectType[Key] extends object
+    ? `${Key}.${NestedKeyOf<ObjectType[Key]>}`
+    : `${Key}`;
+}[keyof ObjectType & string];
+
+type Colors = NestedKeyOf<typeof tokens.foundations.colors>;
+
 type BaseProps = {
   children?: React.ReactNode | string;
-  color?: string;
+  color?: Colors;
   html?: string;
 };
 
