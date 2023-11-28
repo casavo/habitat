@@ -51,7 +51,9 @@ export const Checkbox = ({
       <Body>{children}</Body>
       {error && (
         <div className={messageStyle}>
-          <Caption>{message || "error message"}</Caption>
+          <Caption color={error && "alertcolors.error.100"}>
+            {message || "error message"}
+          </Caption>
         </div>
       )}
     </CheckboxAria>
