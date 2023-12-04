@@ -10,8 +10,8 @@ defaults:
     shell: bash
 
 jobs:
-  publish_release:
-    name: Build & Publish Storbyook to Chromatic
+  build:
+    name: Check the files and build
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -27,10 +27,17 @@ jobs:
         run: |
           npm ci
 
-      - name: Check the codestyle
+      - name: Check types & codestyle
         run: |
+          npx tsc
           npm run lint
 
+  deploy:
+    name: Deploy preview
+    runs-on: self-hosted
+    if: github.event.pull_request.draft == false
+    needs: [build]
+    steps:
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
