@@ -32,6 +32,11 @@ jobs:
           npx tsc
           npm run lint
 
+      - name: Build components & storybook
+        run: |
+          npm run build:components
+          npm run build:storybook
+
   deploy:
     name: Deploy preview
     runs-on: self-hosted
