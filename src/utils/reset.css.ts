@@ -25,6 +25,11 @@ globalStyle("body", {
   margin: 0,
 });
 
+globalStyle("a", {
+  color: "inherit",
+  textDecoration: "inherit",
+});
+
 globalStyle("hr", {
   color: "inherit",
   height: 0,
