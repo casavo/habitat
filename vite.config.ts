@@ -45,7 +45,6 @@ export default defineConfig({
         clearPureImport: true,
         exclude: ["node_modules/**", "**/vite-env.d.ts"],
         insertTypesEntry: true,
-        rollupTypes: true,
       }),
     react(),
     vanillaExtractPlugin({ identifiers: "short" }),
