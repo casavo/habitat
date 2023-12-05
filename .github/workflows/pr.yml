@@ -1,6 +1,9 @@
 name: Storybook preview on PR
 
 on:
+  push:
+    branches-ignore:
+      - main
   pull_request:
     branches:
       - main
