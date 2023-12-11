@@ -88,7 +88,7 @@ export const checkbox = recipe({
   },
 });
 
-globalStyle(`${checkbox} > svg`, {
+globalStyle(`div[data-id="check-icon"] > svg`, {
   fill: "none",
 });
 

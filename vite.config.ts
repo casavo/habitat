@@ -15,15 +15,10 @@ export default defineConfig({
     lib: {
       entry: [
         path.resolve(__dirname, "src/utils/reset.css.ts"),
+        path.resolve(__dirname, "src/index.d.ts"),
         path.resolve(__dirname, "src/index.ts"),
       ],
-      fileName: (format, entryName) => {
-        if (entryName === "reset.css") {
-          return `reset.${format}.js`;
-        }
-        return `index.${format}.js`;
-      },
-      formats: ["es", "cjs"],
+      formats: ["es"],
       name: "@casavo/habitat",
     },
     rollupOptions: {
@@ -42,7 +37,9 @@ export default defineConfig({
     // we don't need to emit the types for the components if we are building the Storybook
     process.env.npm_lifecycle_event === "build:components" &&
       dts({
+        clearPureImport: true,
         exclude: ["node_modules/**", "**/vite-env.d.ts"],
+        insertTypesEntry: true,
       }),
     react(),
     vanillaExtractPlugin({ identifiers: "short" }),
