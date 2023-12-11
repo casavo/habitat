@@ -32,7 +32,10 @@ export const Checkbox = ({
       value={value}
       onChange={(args) => onChange && onChange(args)}
     >
-      <div className={checkbox({ checked, disabled, error, variant })}>
+      <div
+        data-id="check-icon"
+        className={checkbox({ checked, disabled, error, variant })}
+      >
         {checked && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
