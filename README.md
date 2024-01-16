@@ -1,7 +1,5 @@
 # Habitat - Casavo Design System Library
 
-Storybook: [casavo.github.io/habitat](https://casavo.github.io/habitat/)
-
 ## 🚧🚧 v1.0 BETA - WORK IN PROGRESS 🚧🚧
 
 > Welcome to the Casavo design system repository! This is where you can find all the components, guidelines and resources to create amazing user experiences for Casavo. Whether you are a developer, a designer or a product manager, you will find everything you need to get started. Explore the repository and have fun!
@@ -157,12 +155,6 @@ the Storybook instance will automatically open in your browser at `http://localh
 
 Please refert to the [docs](docs/development.md) for in depth info on how to work locally.
 
-## v1.0-BETA dev team
-
-- [Salvatore Laisa](https://github.com/moebiusmania)
-- [Pietro Grandi](https://github.com/pietrograndi)
-- [Sergio Bergamo](https://github.com/Serse2)
-
 ## How to participate?
 
 > Before opening issues or pull requests plaese read our [code of conduct](CODE_OF_CONDUCT.md), then
@@ -170,7 +162,7 @@ Please refert to the [docs](docs/development.md) for in depth info on how to wor
 
 For information, requests, bug and inconsistencies alerts join the `#habitat-design-system` Slack channel.
 
-## Updating the Design Tokens
+## Updating the Design Tokens (WiP)
 
 This library heavily relies on a set of Design Tokens defined in the Figma board. When the tokens changes on the source board, the designers exports a new `.json` file that the developers can integrate in the repo and use by following this steps:
 
@@ -188,6 +180,17 @@ This library heavily relies on a set of Design Tokens defined in the Figma board
 > Why 1.0 `BETA`?
 
 Because we prefered to release an initial version earlier and get actual feedbacks rather than spend some other months chasing an abstract concept of perfection to then realize we were doing something wrong.
+
+> Is it possible to use Habitat in a Casavo project that is already using other styling solutions?
+
+Yes, so far we did it in project that were using Emotion and Vanilla Extract with another theme and we never got any issue. So this opens the way to a progressive adoption in your existing project.
+
+> How many Casavo projects are using it?
+
+So far very few since we are still in "beta", ideally they will grow by the end of the year
+
+- 2 new landing pages in `wine` (_Casavo B2C website_)
+- `smp-frontend`
 
 > Can I use this library in a non React or Node.js environment?
 
