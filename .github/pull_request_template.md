@@ -1,4 +1,4 @@
-## Figma reference
+## Figma reference/Github issue
 
 _link to the involved component(s) on the Figma board_
 
