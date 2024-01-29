@@ -1,5 +1,5 @@
 import "./../../utils/reset.css";
-import { HabitatTheme } from "./../../utils/theme.css";
+import { HabitatTheme, vars } from "./../../utils/theme.css";
 import { H1, H2, H4, Body } from "./../../components/Typography";
 import { Source } from "@storybook/blocks";
 
@@ -13,7 +13,10 @@ type Props = {
   usage?: string;
 };
 
-const Spacer = () => <hr style={{ margin: "16px 0" }} />;
+const Spacer = () => <hr style={{ margin: `${vars.space[200]} 0` }} />;
+const Hgroup = ({ children }: { children: React.ReactNode }) => (
+  <hgroup style={{ marginBottom: vars.space[200] }}>{children}</hgroup>
+);
 
 export const StoryLayout = ({
   children,
@@ -25,15 +28,14 @@ export const StoryLayout = ({
   usage,
 }: Props) => (
   <main className={HabitatTheme}>
-    <hgroup style={{ marginBottom: 16 }}>
-      {isComponent ? <H2>{title}</H2> : <H1>{title}</H1>}
-    </hgroup>
+    <Hgroup>
+      {isComponent ? <H2>{title}</H2> : <H1 display={true}>{title}</H1>}
+    </Hgroup>
     {isComponent && description && <Body>{description}</Body>}
-    <Spacer />
     {isComponent && (
-      <hgroup style={{ marginBottom: 16 }}>
+      <Hgroup>
         <H4>Example:</H4>
-      </hgroup>
+      </Hgroup>
     )}
     <section>{children}</section>
     {isComponent && (

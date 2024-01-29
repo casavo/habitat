@@ -2,13 +2,13 @@ import { Meta } from "@storybook/blocks";
 import { H1, Body } from "./../components/Typography";
 import { Button } from "./../components/Button";
 import { StoryLayout } from "./components/StoryLayout";
+import { vars } from "./../utils/theme.css";
 
 <Meta title="Docs/Introduction" />
 
 <div className="sb-unstyled">
   <StoryLayout title="Welcome to Habitat!">
     <Body>This comprehensive resource is designed to help you create beautiful, functional, and user-friendly designs that are consistent with our brand identity.</Body>
-    <hr style={{ margin: 8 }} />
     <Body>Here you can find a library of reusable components, guidelines, and best practices that will help you streamline your design process and improve your workflow.</Body>
     <figure style={{ margin: "24px 0" }}>
       <svg
@@ -25,6 +25,8 @@ import { StoryLayout } from "./components/StoryLayout";
       </svg>
     </figure>
     <hr style={{ margin: 24 }} />
-    <Button>Let's get started!</Button>
+    <Button><a style={{
+      color: vars.colors.neutral[0],
+    }} href="/?path=/docs/foundations-colors--docs">Let's get started!</a></Button>
   </StoryLayout>
 </div>

@@ -21,10 +21,12 @@ export const ColorBox = ({ color, colors, title }: Props) => {
         width: 170,
       }}
     >
-      <Body size="l" strong={true}>
+      <Body size="l" strong={true} noMargin={true}>
         {color}
       </Body>
-      <Body size="s">{colors[title][color]}</Body>
+      <Body size="s" noMargin={true}>
+        {colors[title][color]}
+      </Body>
     </article>
   );
 };

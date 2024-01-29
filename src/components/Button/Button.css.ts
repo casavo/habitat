@@ -19,9 +19,9 @@ export const ButtonContainer = recipe({
     alignSelf: "stretch",
     borderRadius: 4,
     display: "inline-flex",
-    gap: 8,
+    gap: vars.space[100],
     justifyContent: "center",
-    padding: "12px 16px",
+    padding: `${vars.space[150]} ${vars.space[200]}`,
     cursor: "pointer",
     ":disabled": {
       cursor: "not-allowed",

@@ -38,12 +38,12 @@ export const Button = ({
       {loading && <Spinner size={size} theme={theme} />}
       {!loading && icon ? icon : null}
       {!loading && (size === "small" || size === "medium") ? (
-        <Body size="m" strong={true}>
+        <Body size="m" strong={true} noMargin={true}>
           {children}
         </Body>
       ) : null}
       {!loading && size === "large" ? (
-        <Body size="l" strong={true}>
+        <Body size="l" strong={true} noMargin={true}>
           {children}
         </Body>
       ) : null}

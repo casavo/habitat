@@ -9,6 +9,7 @@ const meta: Meta<typeof Body> = {
   argTypes,
   args: {
     html: undefined,
+    noMargin: false,
     size: "m",
     strong: false,
     underline: false,
@@ -36,6 +37,7 @@ export const _Body: Story = {
       <Body
         color={args.color}
         html={args.html}
+        noMargin={args.noMargin}
         size={args.size}
         strong={args.strong}
         underline={args.underline}

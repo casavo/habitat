@@ -51,7 +51,7 @@ export const Checkbox = ({
           </svg>
         )}
       </div>
-      <Body>{children}</Body>
+      <Body noMargin={true}>{children}</Body>
       {error && (
         <div className={messageStyle}>
           <Caption color={error && "alertcolors.error.100"}>
