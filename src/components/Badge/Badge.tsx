@@ -33,7 +33,9 @@ export const Badge = ({
   return (
     <span className={BadgeContainer({ status, theme })}>
       {status ? statusIcon[status] : icon}
-      <Body size="s">{children}</Body>
+      <Body size="s" noMargin={true}>
+        {children}
+      </Body>
     </span>
   );
 };

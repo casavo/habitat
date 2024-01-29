@@ -7,6 +7,7 @@ import {
   CaptionStyle,
   DescriptionStyle,
   HeadingsStyle,
+  InlineStyle,
 } from "./Typography.css";
 
 import tokens from "./../../utils/tokens.json";
@@ -23,6 +24,7 @@ type BaseProps = {
   children?: React.ReactNode | string;
   color?: Colors;
   html?: string;
+  noMargin?: boolean;
 };
 
 type TextProps = BaseProps & {
@@ -32,6 +34,10 @@ type TextProps = BaseProps & {
 
 type BodyProps = TextProps & {
   size?: "s" | "m" | "l";
+};
+
+type Heading1 = BaseProps & {
+  display?: boolean;
 };
 
 /**
@@ -56,9 +62,9 @@ const getColor = (color?: string) => {
   return result || fallback;
 };
 
-export const H1 = ({ children, color, html }: BaseProps) => (
+export const H1 = ({ children, color, display, html }: Heading1) => (
   <h1
-    className={HeadingsStyle({ element: "h1" })}
+    className={HeadingsStyle({ display, element: "h1" })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
@@ -92,6 +98,24 @@ export const H4 = ({ children, color, html }: BaseProps) => (
   </h4>
 );
 
+export const H5 = ({ children, color, html }: BaseProps) => (
+  <h4
+    className={HeadingsStyle({ element: "h5" })}
+    {...conditionalAttrs(html, color)}
+  >
+    {!html ? children : null}
+  </h4>
+);
+
+export const H6 = ({ children, color, html }: BaseProps) => (
+  <h4
+    className={HeadingsStyle({ element: "h6" })}
+    {...conditionalAttrs(html, color)}
+  >
+    {!html ? children : null}
+  </h4>
+);
+
 export const Body = ({
   children,
   color,
@@ -99,13 +123,29 @@ export const Body = ({
   size = "m",
   strong = false,
   underline = false,
+  noMargin = false,
 }: BodyProps) => (
   <p
-    className={BodyStyle({ size, strong, underline })}
+    className={BodyStyle({ noMargin, size, strong, underline })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </p>
+);
+
+export const Inline = ({
+  children,
+  color,
+  html,
+  strong = false,
+  underline = false,
+}: TextProps) => (
+  <span
+    className={InlineStyle({ strong, underline })}
+    {...conditionalAttrs(html, color)}
+  >
+    {!html ? children : null}
+  </span>
 );
 
 export const Description = ({

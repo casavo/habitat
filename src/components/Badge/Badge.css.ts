@@ -7,9 +7,9 @@ export const BadgeContainer = recipe({
     alignItems: "center",
     borderRadius: 20,
     display: "inline-flex",
-    gap: 8,
+    gap: vars.space[100],
     justifyContent: "center",
-    padding: "8px 16px",
+    padding: `${vars.space[100]} ${vars.space[200]}`,
   },
   variants: {
     theme: {

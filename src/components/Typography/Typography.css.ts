@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
+import { space } from "../../utils/spacing";
 import { fontFace, globalStyle, style } from "@vanilla-extract/css";
 
 const Bagoss = fontFace({
@@ -17,27 +18,38 @@ globalStyle("a", {
 
 export const HeadingsStyle = recipe({
   base: {
-    fontSize: 32,
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: 1.2,
     whiteSpace,
   },
   variants: {
+    display: {
+      true: {
+        "@media": {
+          [mq.desktop]: { fontSize: "56px !important" },
+        },
+        fontFamily: Bagoss,
+        fontSize: "40px !important",
+        marginBottom: `${space[600]} !important`,
+      },
+    },
     element: {
       h1: {
         "@media": {
-          [mq.desktop]: { fontSize: 52 },
+          [mq.desktop]: { fontSize: 48 },
         },
         fontFamily: Bagoss,
-        fontSize: 40,
+        fontSize: 36,
+        marginBottom: space[400],
       },
       h2: {
         "@media": {
-          [mq.desktop]: { fontSize: 32 },
+          [mq.desktop]: { fontSize: 40 },
         },
         fontFamily: Bagoss,
-        fontSize: 28,
+        fontSize: 32,
+        marginBottom: space[300],
       },
       h3: {
         "@media": {
@@ -45,7 +57,9 @@ export const HeadingsStyle = recipe({
         },
         fontFamily: Inter,
         fontSize: 24,
-        fontWeight: 600,
+        fontWeight: 400,
+        lineHeight: 1.5,
+        marginBottom: space[300],
       },
       h4: {
         "@media": {
@@ -53,7 +67,26 @@ export const HeadingsStyle = recipe({
         },
         fontFamily: Inter,
         fontSize: 20,
-        fontWeight: 600,
+        fontWeight: 400,
+        lineHeight: 1.5,
+        marginBottom: space[300],
+      },
+      h5: {
+        "@media": {
+          [mq.desktop]: { fontSize: 20 },
+        },
+        fontFamily: Inter,
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 1.5,
+        marginBottom: space[200],
+      },
+      h6: {
+        fontFamily: Inter,
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 1.5,
+        marginBottom: space[200],
       },
     },
   },
@@ -64,6 +97,7 @@ const base = style({
   fontFamily: Inter,
   fontWeight: 400,
   lineHeight: 1.5,
+  marginBottom: space[200],
   textDecoration: "none",
   whiteSpace,
 });
@@ -76,9 +110,14 @@ const underline = {
   true: { textDecoration: "underline" },
 };
 
+const noMargin = {
+  true: { marginBottom: 0 },
+};
+
 export const BodyStyle = recipe({
   base,
   variants: {
+    noMargin,
     size: {
       l: {
         "@media": {
@@ -89,6 +128,13 @@ export const BodyStyle = recipe({
       m: { fontSize: 16 },
       s: { fontSize: 11 },
     },
+    strong,
+    underline,
+  },
+});
+
+export const InlineStyle = recipe({
+  variants: {
     strong,
     underline,
   },

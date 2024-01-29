@@ -37,12 +37,19 @@ export const container = style({
     },
   },
 })
-
 ```
 
 in the above example you have created a class that applies a different background color based on the resolution without specifying an hard-coded value.
 
 This allows consumer of the library to overwrite the values of theme without the need of editing the components source file.
+
+### What categories of values are exposed through `vars`?
+
+- CSS media queries (`vars.mq`)
+- Casavo brand colors (`vars.colors`)
+- spacing tokens (`vars.space`)
+
+When writing a new component and reviewing a PR in Habitat, these values **must be enforced** in the codebase.
 
 ### How to create a Component
 
