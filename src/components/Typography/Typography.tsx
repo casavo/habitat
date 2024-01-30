@@ -28,6 +28,7 @@ type BaseProps = {
 };
 
 type TextProps = BaseProps & {
+  italic?: boolean;
   strong?: boolean;
   underline?: boolean;
 };
@@ -136,12 +137,13 @@ export const Body = ({
 export const Inline = ({
   children,
   color,
+  italic = false,
   html,
   strong = false,
   underline = false,
-}: TextProps) => (
+}: Omit<TextProps, "noMargin" | "size">) => (
   <span
-    className={InlineStyle({ strong, underline })}
+    className={InlineStyle({ italic, strong, underline })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}

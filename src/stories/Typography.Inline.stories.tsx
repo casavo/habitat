@@ -9,6 +9,7 @@ const meta: Meta<typeof Inline> = {
   argTypes,
   args: {
     html: undefined,
+    italic: false,
     strong: false,
     underline: false,
   },
@@ -40,6 +41,7 @@ export const _Inline: Story = {
         <Inline
           color={args.color}
           html={args.html}
+          italic={args.italic}
           strong={args.strong}
           underline={args.underline}
         >

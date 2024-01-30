@@ -135,6 +135,9 @@ export const BodyStyle = recipe({
 
 export const InlineStyle = recipe({
   variants: {
+    italic: {
+      true: { fontStyle: "italic" },
+    },
     strong,
     underline,
   },
