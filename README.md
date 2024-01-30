@@ -187,7 +187,7 @@ Yes, so far we did it in project that were using Emotion and Vanilla Extract wit
 
 > How many Casavo projects are using it?
 
-So far very few since we are still in "beta", ideally they will grow by the end of the year
+So far very few since we are still in "beta", ideally they will grow by the end of the year (2024)
 
 - 2 new landing pages in `wine` (_Casavo B2C website_)
 - `smp-frontend`
@@ -200,6 +200,7 @@ There is a related [discussion in the issue section](https://github.com/casavo/h
 
 - the Design Tokens `.json` file
 - the CSS reset applied in the `style.css` file
+- the `vars` object exported from `/src/utils/theme.ts`
 
 ## License
 
