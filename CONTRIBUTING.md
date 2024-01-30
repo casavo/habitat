@@ -105,7 +105,7 @@ import { StoryLayout } from "./components/StoryLayout";
 - participate on the feedback loop of your PR
 - once everything is OK 🟢 the PR will automatically be merged to master
 
-### How to release a new version of Habitat
+## How to release a new version of Habitat
 
 ### Generate a preview Storybook for fix/feature branches
 
