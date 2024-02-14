@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Description } from "./../components/Typography";
+import { Description } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
 import { bodyArgTypes as argTypes } from "./utils/typography";
 

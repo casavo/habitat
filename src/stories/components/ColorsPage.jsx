@@ -1,4 +1,4 @@
-import { H3, Body, Inline } from "./../../components/Typography";
+import { H3, Body, Inline } from "../../components/Typography";
 import { space } from "./../../utils/spacing";
 import tokens from "./../../utils/tokens.json";
 import { StoryLayout } from "./StoryLayout";

@@ -1,6 +1,6 @@
 import "./../../utils/reset.css";
 import { HabitatTheme, vars } from "./../../utils/theme.css";
-import { H1, H2, H4, Body } from "./../../components/Typography";
+import { H1, H2, H4, Body } from "../../components/Typography";
 import { Source } from "@storybook/blocks";
 
 type Props = {
