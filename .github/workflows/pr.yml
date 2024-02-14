@@ -15,11 +15,11 @@ jobs:
     name: Check the files and build
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           registry-url: "https://npm.pkg.github.com"
@@ -48,11 +48,11 @@ jobs:
     if: github.event.pull_request.draft == false
     needs: [build]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           registry-url: "https://npm.pkg.github.com"
@@ -62,7 +62,7 @@ jobs:
           npm ci
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@latest
         with:
           projectToken: ${{secrets.CHROMATIC_PROJECT_TOKEN}}
           exitZeroOnChanges: true
