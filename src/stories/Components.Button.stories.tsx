@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "./../components/Button";
+import { Button } from "../components/Button";
 import { ReactNode } from "react";
 import { DefaultIcon } from "../assets/shared/DefaultIcon";
 import { StoryLayout } from "./components/StoryLayout";
