@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkbox component > renders 1`] = `
+<label
+  class="Checkbox_wrapper__1g2c7v70"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Checkbox_checkbox__1g2c7v71"
+    data-id="check-icon"
+  />
+  <p
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+  />
+</label>
+`;
+
+exports[`Checkbox component > renders as disabled 1`] = `
+<label
+  class="Checkbox_wrapper__1g2c7v70"
+  data-disabled="true"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      disabled=""
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Checkbox_checkbox__1g2c7v71 Checkbox_checkbox_disabled_true__1g2c7v73"
+    data-id="check-icon"
+  />
+  <p
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+  />
+</label>
+`;
+
+exports[`Checkbox component > renders as selected 1`] = `
+<label
+  class="Checkbox_wrapper__1g2c7v70"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Checkbox_checkbox__1g2c7v71"
+    data-id="check-icon"
+  />
+  <p
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+  />
+</label>
+`;
