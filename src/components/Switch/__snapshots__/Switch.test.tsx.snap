@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Switch component > renders 1`] = `
+<label
+  class="Switch_base__1w853300"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      role="switch"
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+  />
+</label>
+`;
+
+exports[`Switch component > renders as disabled 1`] = `
+<label
+  class="Switch_base__1w853300"
+  data-disabled="true"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      disabled=""
+      role="switch"
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+  />
+</label>
+`;
+
+exports[`Switch component > renders as selected 1`] = `
+<label
+  class="Switch_base__1w853300"
+  data-rac=""
+  data-selected="true"
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      checked=""
+      role="switch"
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+  />
+</label>
+`;
+
+exports[`Switch component > renders with a size 1`] = `
+<label
+  class="Switch_base__1w853300"
+  data-rac=""
+>
+  <span
+    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+  >
+    <input
+      role="switch"
+      type="checkbox"
+    />
+  </span>
+  <div
+    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_small__1w853304"
+  />
+</label>
+`;
