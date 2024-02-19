@@ -2,12 +2,12 @@
 
 exports[`Button component > renders 1`] = `
 <button
-  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  class="Button__1kgv65v2 Button_iconLayout_sx__1kgv65vb Button_size_medium__1kgv65v9 Button_theme_dark__1kgv65v3 Button_variant_primary__1kgv65v5 Button__compound_0__1kgv65vd"
   data-rac=""
   type="button"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd Typography_BodyStyle_strong_true__3igy4nf"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_m__3igy4nd Typography_p_strong_true__3igy4nf"
   >
     Click me
   </p>
@@ -16,14 +16,14 @@ exports[`Button component > renders 1`] = `
 
 exports[`Button component > renders with a disabled state 1`] = `
 <button
-  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  class="Button__1kgv65v2 Button_iconLayout_sx__1kgv65vb Button_size_medium__1kgv65v9 Button_theme_dark__1kgv65v3 Button_variant_primary__1kgv65v5 Button__compound_0__1kgv65vd"
   data-disabled="true"
   data-rac=""
   disabled=""
   type="button"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd Typography_BodyStyle_strong_true__3igy4nf"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_m__3igy4nd Typography_p_strong_true__3igy4nf"
   >
     Click me
   </p>
@@ -32,7 +32,7 @@ exports[`Button component > renders with a disabled state 1`] = `
 
 exports[`Button component > renders with a loading state 1`] = `
 <button
-  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  class="Button__1kgv65v2 Button_iconLayout_sx__1kgv65vb Button_size_medium__1kgv65v9 Button_theme_dark__1kgv65v3 Button_variant_primary__1kgv65v5 Button__compound_0__1kgv65vd"
   data-rac=""
   type="button"
 >
@@ -51,12 +51,12 @@ exports[`Button component > renders with a loading state 1`] = `
 
 exports[`Button component > renders with a size 1`] = `
 <button
-  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_large__1kgv65va Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  class="Button__1kgv65v2 Button_iconLayout_sx__1kgv65vb Button_size_large__1kgv65va Button_theme_dark__1kgv65v3 Button_variant_primary__1kgv65v5 Button__compound_0__1kgv65vd"
   data-rac=""
   type="button"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_l__3igy4nc Typography_BodyStyle_strong_true__3igy4nf"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_l__3igy4nc Typography_p_strong_true__3igy4nf"
   >
     Click me
   </p>
@@ -65,12 +65,12 @@ exports[`Button component > renders with a size 1`] = `
 
 exports[`Button component > renders with a theme 1`] = `
 <button
-  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  class="Button__1kgv65v2 Button_iconLayout_sx__1kgv65vb Button_size_medium__1kgv65v9 Button_theme_dark__1kgv65v3 Button_variant_primary__1kgv65v5 Button__compound_0__1kgv65vd"
   data-rac=""
   type="button"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd Typography_BodyStyle_strong_true__3igy4nf"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_m__3igy4nd Typography_p_strong_true__3igy4nf"
   >
     Click me
   </p>

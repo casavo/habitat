@@ -9,9 +9,12 @@ const rotate = keyframes({
 });
 
 // or interpolate as a shorthand:
-export const infiniteRotation = style({
-  animation: `${rotate} 0.6s ease-out infinite`,
-});
+export const infiniteRotation = style(
+  {
+    animation: `${rotate} 0.6s ease-out infinite`,
+  },
+  "rotation"
+);
 
 export const ButtonContainer = recipe(
   {

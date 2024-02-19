@@ -5,7 +5,7 @@ exports[`Badge component > renders 1`] = `
   class="Badge__lg8yeu0 Badge_theme_light__lg8yeu2"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_s__3igy4ne"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_s__3igy4ne"
   >
     Click me
   </p>
@@ -29,7 +29,7 @@ exports[`Badge component > renders with a status 1`] = `
     />
   </svg>
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_s__3igy4ne"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_s__3igy4ne"
   >
     Click me
   </p>
@@ -41,7 +41,7 @@ exports[`Badge component > renders with a theme 1`] = `
   class="Badge__lg8yeu0 Badge_theme_dark__lg8yeu1"
 >
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_s__3igy4ne"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_s__3igy4ne"
   >
     Click me
   </p>
@@ -65,7 +65,7 @@ exports[`Badge component > renders with an icon 1`] = `
     />
   </svg>
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_s__3igy4ne"
+    class="Typography__3igy4na Typography_base__3igy4n9 Typography_p_noMargin_true__3igy4nb Typography_p_size_s__3igy4ne"
   >
     Click me
   </p>

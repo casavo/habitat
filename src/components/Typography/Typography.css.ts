@@ -93,14 +93,17 @@ export const HeadingsStyle = recipe({
 });
 
 // shared styles for non heading elements
-const base = style({
-  fontFamily: Inter,
-  fontWeight: 400,
-  lineHeight: 1.5,
-  marginBottom: space[200],
-  textDecoration: "none",
-  whiteSpace,
-});
+const base = style(
+  {
+    fontFamily: Inter,
+    fontWeight: 400,
+    lineHeight: 1.5,
+    marginBottom: space[200],
+    textDecoration: "none",
+    whiteSpace,
+  },
+  "base"
+);
 
 const strong = {
   true: { fontWeight: 600 },
@@ -114,57 +117,69 @@ const noMargin = {
   true: { marginBottom: 0 },
 };
 
-export const BodyStyle = recipe({
-  base,
-  variants: {
-    noMargin,
-    size: {
-      l: {
-        "@media": {
-          [mq.desktop]: { fontSize: 20 },
+export const BodyStyle = recipe(
+  {
+    base,
+    variants: {
+      noMargin,
+      size: {
+        l: {
+          "@media": {
+            [mq.desktop]: { fontSize: 20 },
+          },
+          fontSize: 18,
         },
-        fontSize: 18,
+        m: { fontSize: 16 },
+        s: { fontSize: 11 },
       },
-      m: { fontSize: 16 },
-      s: { fontSize: 11 },
+      strong,
+      underline,
     },
-    strong,
-    underline,
   },
-});
+  "p"
+);
 
-export const InlineStyle = recipe({
-  variants: {
-    italic: {
-      true: { fontStyle: "italic" },
+export const InlineStyle = recipe(
+  {
+    variants: {
+      italic: {
+        true: { fontStyle: "italic" },
+      },
+      strong,
+      underline,
     },
-    strong,
-    underline,
   },
-});
+  "inline"
+);
 
-export const DescriptionStyle = recipe({
-  base: [
-    base,
-    {
-      fontSize: 14,
+export const DescriptionStyle = recipe(
+  {
+    base: [
+      base,
+      {
+        fontSize: 14,
+      },
+    ],
+    variants: {
+      strong,
+      underline,
     },
-  ],
-  variants: {
-    strong,
-    underline,
   },
-});
+  "description"
+);
 
-export const CaptionStyle = recipe({
-  base: [
-    base,
-    {
-      fontSize: 12,
+export const CaptionStyle = recipe(
+  {
+    base: [
+      base,
+      {
+        fontSize: 12,
+      },
+    ],
+    variants: {
+      strong,
+      underline,
     },
-  ],
-  variants: {
-    strong,
-    underline,
   },
-});
+  "caption"
+);
