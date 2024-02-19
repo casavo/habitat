@@ -13,207 +13,210 @@ export const infiniteRotation = style({
   animation: `${rotate} 0.6s ease-out infinite`,
 });
 
-export const ButtonContainer = recipe({
-  base: {
-    alignItems: "center",
-    alignSelf: "stretch",
-    borderRadius: 4,
-    display: "inline-flex",
-    gap: vars.space[100],
-    justifyContent: "center",
-    padding: `${vars.space[150]} ${vars.space[200]}`,
-    cursor: "pointer",
-    ":disabled": {
-      cursor: "not-allowed",
-    },
-    ":focus-visible": {
-      outline: "none",
-    },
-  },
-  variants: {
-    theme: {
-      dark: {},
-      light: {},
-    },
-    variant: {
-      primary: {},
-      secondary: {},
-      tertiary: {},
-    },
-    size: {
-      small: {
-        height: 40,
+export const ButtonContainer = recipe(
+  {
+    base: {
+      alignItems: "center",
+      alignSelf: "stretch",
+      borderRadius: 4,
+      display: "inline-flex",
+      gap: vars.space[100],
+      justifyContent: "center",
+      padding: `${vars.space[150]} ${vars.space[200]}`,
+      cursor: "pointer",
+      ":disabled": {
+        cursor: "not-allowed",
       },
-      medium: {
-        height: 48,
-      },
-      large: {
-        height: 54,
+      ":focus-visible": {
+        outline: "none",
       },
     },
-    iconLayout: {
-      sx: {
-        flexDirection: "row",
+    variants: {
+      theme: {
+        dark: {},
+        light: {},
       },
-      dx: {
-        flexDirection: "row-reverse",
+      variant: {
+        primary: {},
+        secondary: {},
+        tertiary: {},
       },
-    },
-  },
-  compoundVariants: [
-    {
-      variants: {
-        theme: "dark",
-        variant: "primary",
-      },
-      style: {
-        backgroundColor: vars.colors.neutral[100],
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
-        border: "none",
-        ":hover": {
-          backgroundColor: vars.colors.neutral[60],
+      size: {
+        small: {
+          height: 40,
         },
-        ":active": {
-          backgroundColor: vars.colors.neutral[80],
+        medium: {
+          height: 48,
         },
-        ":disabled": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+        large: {
+          height: 54,
+        },
+      },
+      iconLayout: {
+        sx: {
+          flexDirection: "row",
+        },
+        dx: {
+          flexDirection: "row-reverse",
         },
       },
     },
-    {
-      variants: {
-        theme: "light",
-        variant: "primary",
-      },
-      style: {
-        backgroundColor: vars.colors.neutral[0],
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
-        border: "none",
-        ":hover": {
-          backgroundColor: vars.colors.neutral[10],
+    compoundVariants: [
+      {
+        variants: {
+          theme: "dark",
+          variant: "primary",
         },
-        ":active": {
-          backgroundColor: vars.colors.neutral[20],
-        },
-        ":disabled": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "dark",
-        variant: "secondary",
-      },
-      style: {
-        backgroundColor: vars.colors.neutral[0],
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
-        border: `1px solid ${vars.colors.neutral[100]}`,
-        ":hover": {
+        style: {
           backgroundColor: vars.colors.neutral[100],
           color: vars.colors.neutral[0],
           fill: vars.colors.neutral[0],
-        },
-        ":active": {
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
-          backgroundColor: vars.colors.neutral[80],
-        },
-        ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-          backgroundColor: vars.colors.neutral[0],
-          border: `1px solid ${vars.colors.neutral[60]}`,
+          border: "none",
+          ":hover": {
+            backgroundColor: vars.colors.neutral[60],
+          },
+          ":active": {
+            backgroundColor: vars.colors.neutral[80],
+          },
+          ":disabled": {
+            backgroundColor: vars.colors.neutral[10],
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+          },
         },
       },
-    },
-    {
-      variants: {
-        theme: "light",
-        variant: "secondary",
-      },
-      style: {
-        backgroundColor: vars.colors.neutral[100],
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
-        border: `1px solid ${vars.colors.neutral[0]}`,
-        ":hover": {
+      {
+        variants: {
+          theme: "light",
+          variant: "primary",
+        },
+        style: {
           backgroundColor: vars.colors.neutral[0],
           color: vars.colors.neutral[100],
           fill: vars.colors.neutral[100],
+          border: "none",
+          ":hover": {
+            backgroundColor: vars.colors.neutral[10],
+          },
+          ":active": {
+            backgroundColor: vars.colors.neutral[20],
+          },
+          ":disabled": {
+            backgroundColor: vars.colors.neutral[10],
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+          },
         },
-        ":active": {
-          backgroundColor: vars.colors.neutral[10],
+      },
+      {
+        variants: {
+          theme: "dark",
+          variant: "secondary",
+        },
+        style: {
+          backgroundColor: vars.colors.neutral[0],
           color: vars.colors.neutral[100],
           fill: vars.colors.neutral[100],
-        },
-        ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-          backgroundColor: vars.colors.neutral[100],
-          border: `1px solid ${vars.colors.neutral[60]}`,
+          border: `1px solid ${vars.colors.neutral[100]}`,
+          ":hover": {
+            backgroundColor: vars.colors.neutral[100],
+            color: vars.colors.neutral[0],
+            fill: vars.colors.neutral[0],
+          },
+          ":active": {
+            color: vars.colors.neutral[0],
+            fill: vars.colors.neutral[0],
+            backgroundColor: vars.colors.neutral[80],
+          },
+          ":disabled": {
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+            backgroundColor: vars.colors.neutral[0],
+            border: `1px solid ${vars.colors.neutral[60]}`,
+          },
         },
       },
-    },
-    {
-      variants: {
-        theme: "dark",
-        variant: "tertiary",
-      },
-      style: {
-        backgroundColor: "transparent",
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
-        ":hover": {
+      {
+        variants: {
+          theme: "light",
+          variant: "secondary",
+        },
+        style: {
           backgroundColor: vars.colors.neutral[100],
           color: vars.colors.neutral[0],
           fill: vars.colors.neutral[0],
+          border: `1px solid ${vars.colors.neutral[0]}`,
+          ":hover": {
+            backgroundColor: vars.colors.neutral[0],
+            color: vars.colors.neutral[100],
+            fill: vars.colors.neutral[100],
+          },
+          ":active": {
+            backgroundColor: vars.colors.neutral[10],
+            color: vars.colors.neutral[100],
+            fill: vars.colors.neutral[100],
+          },
+          ":disabled": {
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+            backgroundColor: vars.colors.neutral[100],
+            border: `1px solid ${vars.colors.neutral[60]}`,
+          },
         },
-        ":active": {
-          backgroundColor: vars.colors.neutral[80],
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
+      },
+      {
+        variants: {
+          theme: "dark",
+          variant: "tertiary",
         },
-        ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+        style: {
           backgroundColor: "transparent",
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "light",
-        variant: "tertiary",
-      },
-      style: {
-        backgroundColor: "transparent",
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
-        ":hover": {
-          backgroundColor: vars.colors.neutral[0],
           color: vars.colors.neutral[100],
           fill: vars.colors.neutral[100],
+          ":hover": {
+            backgroundColor: vars.colors.neutral[100],
+            color: vars.colors.neutral[0],
+            fill: vars.colors.neutral[0],
+          },
+          ":active": {
+            backgroundColor: vars.colors.neutral[80],
+            color: vars.colors.neutral[0],
+            fill: vars.colors.neutral[0],
+          },
+          ":disabled": {
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+            backgroundColor: "transparent",
+          },
         },
-        ":active": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[100],
-          fill: vars.colors.neutral[100],
+      },
+      {
+        variants: {
+          theme: "light",
+          variant: "tertiary",
         },
-        ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+        style: {
           backgroundColor: "transparent",
+          color: vars.colors.neutral[0],
+          fill: vars.colors.neutral[0],
+          ":hover": {
+            backgroundColor: vars.colors.neutral[0],
+            color: vars.colors.neutral[100],
+            fill: vars.colors.neutral[100],
+          },
+          ":active": {
+            backgroundColor: vars.colors.neutral[10],
+            color: vars.colors.neutral[100],
+            fill: vars.colors.neutral[100],
+          },
+          ":disabled": {
+            color: vars.colors.neutral[60],
+            fill: vars.colors.neutral[60],
+            backgroundColor: "transparent",
+          },
         },
       },
-    },
-  ],
-});
+    ],
+  },
+  ""
+);

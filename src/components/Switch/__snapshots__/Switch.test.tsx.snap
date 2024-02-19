@@ -2,7 +2,7 @@
 
 exports[`Switch component > renders 1`] = `
 <label
-  class="Switch_base__1w853300"
+  class="Switch__1w853300"
   data-rac=""
 >
   <span
@@ -14,14 +14,14 @@ exports[`Switch component > renders 1`] = `
     />
   </span>
   <div
-    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+    class="Switch__1w853302 Switch_base__1w853301 Switch_indicator_size_normal__1w853303"
   />
 </label>
 `;
 
 exports[`Switch component > renders as disabled 1`] = `
 <label
-  class="Switch_base__1w853300"
+  class="Switch__1w853300"
   data-disabled="true"
   data-rac=""
 >
@@ -35,14 +35,14 @@ exports[`Switch component > renders as disabled 1`] = `
     />
   </span>
   <div
-    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+    class="Switch__1w853302 Switch_base__1w853301 Switch_indicator_size_normal__1w853303"
   />
 </label>
 `;
 
 exports[`Switch component > renders as selected 1`] = `
 <label
-  class="Switch_base__1w853300"
+  class="Switch__1w853300"
   data-rac=""
   data-selected="true"
 >
@@ -56,14 +56,14 @@ exports[`Switch component > renders as selected 1`] = `
     />
   </span>
   <div
-    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_normal__1w853303"
+    class="Switch__1w853302 Switch_base__1w853301 Switch_indicator_size_normal__1w853303"
   />
 </label>
 `;
 
 exports[`Switch component > renders with a size 1`] = `
 <label
-  class="Switch_base__1w853300"
+  class="Switch__1w853300"
   data-rac=""
 >
   <span
@@ -75,7 +75,7 @@ exports[`Switch component > renders with a size 1`] = `
     />
   </span>
   <div
-    class="Switch__1w853302 Switch_indicatorBase__1w853301 Switch_indicator_size_small__1w853304"
+    class="Switch__1w853302 Switch_base__1w853301 Switch_indicator_size_small__1w853304"
   />
 </label>
 `;

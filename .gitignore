@@ -10,6 +10,7 @@ lerna-debug.log*
 storybook-static
 node_modules
 dist
+dist-css
 dist-ssr
 *.local
 yarn.lock

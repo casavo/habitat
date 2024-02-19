@@ -37,13 +37,13 @@ exports[`Button component > renders with a loading state 1`] = `
   type="button"
 >
   <div
-    class="Spinner_Container__gbijxg1 Spinner_Container_size_medium__gbijxg3"
+    class="Spinner__gbijxg1 Spinner_size_medium__gbijxg3"
   >
     <div
-      class="Spinner_Circle__gbijxg5 Spinner_Circle_size_medium__gbijxgc Spinner_Circle_theme_dark__gbijxg6"
+      class="Spinner_circle__gbijxg5 Spinner_circle_size_medium__gbijxgc Spinner_circle_theme_dark__gbijxg6"
     />
     <div
-      class="Spinner_Spin__gbijxgi Spinner_Spin_size_medium__gbijxgp Spinner_Spin_theme_dark__gbijxgm"
+      class="Spinner_spin__gbijxgi Spinner_spin_size_medium__gbijxgp Spinner_spin_theme_dark__gbijxgm"
     />
   </div>
 </button>

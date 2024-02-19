@@ -16,50 +16,53 @@ export const wrapper = style({
   transition: "all 200ms",
 });
 
-export const checkbox = recipe({
-  base: {
-    alignItems: "center",
-    backgroundColor: vars.colors.neutral[0],
-    border: `1px solid ${grey}`,
-    borderRadius: 4,
-    display: "flex",
-    height: size,
-    justifyContent: " center",
-    transition: "all 200ms",
-    width: size,
+export const checkbox = recipe(
+  {
+    base: {
+      alignItems: "center",
+      backgroundColor: vars.colors.neutral[0],
+      border: `1px solid ${grey}`,
+      borderRadius: 4,
+      display: "flex",
+      height: size,
+      justifyContent: " center",
+      transition: "all 200ms",
+      width: size,
+    },
+    compoundVariants: [
+      {
+        style: {
+          backgroundColor: red,
+          borderColor: red,
+        },
+        variants: {
+          checked: true,
+          error: true,
+        },
+      },
+    ],
+    variants: {
+      checked: {
+        true: {
+          backgroundColor: black,
+          borderColor: black,
+        },
+      },
+      disabled: {
+        true: {
+          backgroundColor: "#E8E8E8",
+          borderColor: grey,
+        },
+      },
+      error: {
+        true: {
+          borderColor: red,
+        },
+      },
+    },
   },
-  compoundVariants: [
-    {
-      style: {
-        backgroundColor: red,
-        borderColor: red,
-      },
-      variants: {
-        checked: true,
-        error: true,
-      },
-    },
-  ],
-  variants: {
-    checked: {
-      true: {
-        backgroundColor: black,
-        borderColor: black,
-      },
-    },
-    disabled: {
-      true: {
-        backgroundColor: "#E8E8E8",
-        borderColor: grey,
-      },
-    },
-    error: {
-      true: {
-        borderColor: red,
-      },
-    },
-  },
-});
+  "base"
+);
 
 globalStyle(`div[data-id="check-icon"] > svg`, {
   fill: "none",
