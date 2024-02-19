@@ -1,0 +1,26 @@
+<link href="/habitat.css" rel="stylesheet" />
+
+import { Meta } from "@storybook/blocks";
+import { Source } from "@storybook/blocks";
+
+<Meta title="HowTo/HTML" />
+
+<div className="sb-unstyled habitat_theme">
+  <h1 className="typography typography_element_h1">Using Habitat in plain HTML</h1>
+  <p class="typography typography_base typography_p_size_l">This is an example of how to use Habitat in plain HTML. You can use the classes provided in the <code>habitat.css</code> file to style your content.</p>
+  <Source code='<link href="https://casavo.github.io/habitat/habitat.css" rel="stylesheet" />' language="html" />
+
+  <Source code='<body class="habitat_theme">
+  <!-- Your content here -->
+  </body>' language="html" />
+
+  <Source code='<h1 class="typography typography_element_h1">Some title</h1>' language="html" />
+
+  <button className="button button__compound_0">
+    <span class="typography typography_base typography_p_size_l typography_p_noMargin_true typography_p_strong_true">Habitat button</span>
+  </button>
+
+  <Source code='<button class="button button__compound_0">
+      <span class="typography typography_base typography_p_size_l typography_p_noMargin_true typography_p_strong_true">Habitat button</span>
+  </button>' language="html" />
+</div>

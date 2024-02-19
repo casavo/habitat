@@ -28,7 +28,8 @@
     "build:storybook": "storybook build",
     "build:components": "tsc && vite build ",
     "build:css": "vite build --config vite.css.config.ts",
-    "postbuild:css": "mv dist-css/style.css storybook-static/habitat.css",
+    "postbuild:storybook": "npm run build:css",
+    "postbuild:css": "mv dist-css/style.css public/habitat.css",
     "update:tokens": "style-dictionary build -c ./dictionary.config.json",
     "test:unit": "vitest run"
   },
