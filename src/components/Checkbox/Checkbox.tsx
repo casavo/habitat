@@ -11,7 +11,6 @@ type Props = CheckboxProps & {
   message?: string;
   onChange?: (args: { checked: boolean; value?: string }) => void;
   value?: string;
-  variant?: "neutral" | "b2b" | "b2c";
 };
 
 export const Checkbox = ({
@@ -22,7 +21,6 @@ export const Checkbox = ({
   message,
   onChange,
   value,
-  variant,
 }: Props) => {
   return (
     <CheckboxAria
@@ -34,7 +32,7 @@ export const Checkbox = ({
     >
       <div
         data-id="check-icon"
-        className={checkbox({ checked, disabled, error, variant })}
+        className={checkbox({ checked, disabled, error })}
       >
         {checked && (
           <svg

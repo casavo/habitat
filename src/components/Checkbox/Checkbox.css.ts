@@ -7,8 +7,6 @@ const size = 16;
 const black = vars.colors.neutral[100];
 const grey = "#B3B3B2";
 const red = vars.colors.alertcolors.error["100"];
-const orange = vars.colors.orange["100"];
-const green = vars.colors.green["100"];
 
 export const wrapper = style({
   alignItems: "center",
@@ -31,26 +29,6 @@ export const checkbox = recipe({
     width: size,
   },
   compoundVariants: [
-    {
-      style: {
-        backgroundColor: orange,
-        borderColor: orange,
-      },
-      variants: {
-        checked: true,
-        variant: "b2b",
-      },
-    },
-    {
-      style: {
-        backgroundColor: green,
-        borderColor: green,
-      },
-      variants: {
-        checked: true,
-        variant: "b2c",
-      },
-    },
     {
       style: {
         backgroundColor: red,
@@ -79,11 +57,6 @@ export const checkbox = recipe({
       true: {
         borderColor: red,
       },
-    },
-    variant: {
-      b2b: {},
-      b2c: {},
-      neutral: {},
     },
   },
 });
