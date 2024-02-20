@@ -13,8 +13,9 @@ export default defineConfig({
     lib: {
       entry: [
         path.resolve(__dirname, "src/utils/reset.css.ts"),
-        path.resolve(__dirname, "src/index.d.ts"),
-        path.resolve(__dirname, "src/index.ts"),
+        path.resolve(__dirname, "src/utils/sprinkles.css.ts"),
+        // path.resolve(__dirname, "src/index.d.ts"),
+        // path.resolve(__dirname, "src/index.ts"),
       ],
       formats: ["es"],
       name: "@casavo/habitat",
@@ -28,9 +29,12 @@ export default defineConfig({
       identifiers: ({ debugId, filePath }) => {
         const component = getComponentName(filePath);
 
+        // put the debugId in the class name if it exists
         const id = debugId && debugId.length > 0 ? `_${debugId}` : "";
         const item = `${component}${id}`;
+        // if the identifier is empty its the main theme file
         const name = item === "" ? "habitat_theme" : item;
+        // print the resulting class names when building the CSS (debug/check)
         console.log(name);
         return name;
       },
