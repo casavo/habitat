@@ -9,7 +9,7 @@ export const base = style({
   alignItems: "center",
   display: "flex",
   fontSize: "1.143rem",
-  gap: "0.572rem",
+  gap: vars.space[100],
   selectors: {
     "&[data-disabled]:hover": {
       cursor: "default",
@@ -24,7 +24,7 @@ const indicatorBase = style({
     content: "",
     display: "block",
     height: "18px",
-    margin: "0.143rem",
+    margin: vars.space[25],
     transition: "all 200ms",
     width: "18px",
   },

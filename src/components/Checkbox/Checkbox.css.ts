@@ -2,8 +2,8 @@ import { globalStyle, style } from "@vanilla-extract/css";
 import { vars } from "../../utils/theme.css";
 import { recipe } from "@vanilla-extract/recipes";
 
-const gap = 8;
-const size = 16;
+const gap = vars.space[100];
+const size = vars.space[200];
 const black = vars.colors.neutral[100];
 const grey = "#B3B3B2";
 const red = vars.colors.alertcolors.error["100"];
@@ -12,7 +12,7 @@ export const wrapper = style({
   alignItems: "center",
   display: "flex",
   flexWrap: "wrap",
-  gap: `0 ${gap}px`,
+  gap: `0 ${gap}`,
   transition: "all 200ms",
 });
 
@@ -73,5 +73,5 @@ export const messageStyle = style({
   color: red,
   flexBasis: "100%",
   margin: 0,
-  marginLeft: size + gap,
+  marginLeft: `calc(${size} + ${gap})`,
 });
