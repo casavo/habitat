@@ -26,12 +26,6 @@ const meta: Meta<typeof Checkbox> = {
       control: "text",
       description: "the value of the checkbox option",
     },
-    variant: {
-      control: "select",
-      defaultValue: "neutral",
-      description: "choose the branding variant",
-      options: ["neutral", "B2B", "B2C"],
-    },
   },
   args: {
     checked: true,
@@ -39,7 +33,6 @@ const meta: Meta<typeof Checkbox> = {
     error: false,
     message: "error message",
     value: "hasElevator",
-    variant: "neutral",
   },
   component: Checkbox,
   title: "Components/Checkbox",
@@ -71,7 +64,6 @@ export const _Checkbox: Story = {
         error={args.error}
         message={args.message}
         value={args.value}
-        variant={args.variant?.toLocaleLowerCase() as never}
       >
         Has elevator
       </Checkbox>
