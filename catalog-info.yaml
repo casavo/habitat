@@ -3,8 +3,13 @@ kind: Component
 metadata:
   name: habitat
   description: Casavo Design System
-tags:
-  language: Typescript
+  tags:
+    - typescript
+  annotations:
+    github.com/project-slug: casavo/habitat
+  links:
+    - url: https://casavo.github.io/habitat/
+      title: Production Storybook
 spec:
   type: library
   lifecycle: production
