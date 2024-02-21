@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: habitat
+  description: Casavo Design System
+tags:
+  language: Typescript
+spec:
+  type: library
+  lifecycle: production
+  owner: default/write
