@@ -1,74 +1,41 @@
-import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 
 // import { mq } from "./mediaqueries";
 // import tokens from "./tokens.json";
-// import { space } from "./spacing";
+import { space } from "./spacing";
 
-const space = {
-  large: "16px",
-  medium: "8px",
-  none: 0,
-  small: "4px",
-  // etc.
+const createObj = (cssProperty: string) => {
+  const spacingKeys = Object.keys(space);
+
+  return spacingKeys.reduce((acc, value) => {
+    return {
+      ...acc,
+      [value]: {
+        [cssProperty]: space[parseInt(value)],
+      },
+    };
+  }, {});
 };
 
-const responsiveProperties = defineProperties({
-  conditions: {
-    desktop: { "@media": "screen and (min-width: 1024px)" },
-    mobile: {},
-    tablet: { "@media": "screen and (min-width: 768px)" },
-  },
-  defaultCondition: "mobile",
+const margin = defineProperties({
   properties: {
-    alignItems: ["stretch", "flex-start", "center", "flex-end"],
-    display: ["none", "flex", "block", "inline"],
-    flexDirection: ["row", "column"],
-    justifyContent: [
-      "stretch",
-      "flex-start",
-      "center",
-      "flex-end",
-      "space-around",
-      "space-between",
-    ],
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
-    paddingTop: space,
-    // etc.
-  },
-  shorthands: {
-    padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
-    paddingX: ["paddingLeft", "paddingRight"],
-    paddingY: ["paddingTop", "paddingBottom"],
-    placeItems: ["justifyContent", "alignItems"],
+    mb: createObj("marginBottom"),
+    ml: createObj("marginLeft"),
+    mr: createObj("marginRight"),
+    mt: createObj("marginTop"),
   },
 });
 
-const colors = {
-  "blue-50": "#eff6ff",
-  "blue-100": "#dbeafe",
-  "blue-200": "#bfdbfe",
-  "gray-700": "#374151",
-  "gray-800": "#1f2937",
-  "gray-900": "#111827",
-  // etc.
-};
-
-const colorProperties = defineProperties({
-  conditions: {
-    darkMode: { "@media": "(prefers-color-scheme: dark)" },
-    lightMode: {},
-  },
-  defaultCondition: "lightMode",
+const padding = defineProperties({
   properties: {
-    background: colors,
-    color: colors,
-    // etc.
+    pb: createObj("paddingBottom"),
+    pl: createObj("paddingLeft"),
+    pr: createObj("paddingRight"),
+    pt: createObj("paddingTop"),
   },
 });
 
-export const sprinkles = createSprinkles(responsiveProperties, colorProperties);
+export const sprinkles = createSprinkles(margin, padding);
 
 // It's a good idea to export the Sprinkles type too
 export type Sprinkles = Parameters<typeof sprinkles>[0];
