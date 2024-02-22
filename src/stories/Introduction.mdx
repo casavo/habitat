@@ -7,9 +7,12 @@ import { vars } from "./../utils/theme.css";
 
 <div className="sb-unstyled">
   <StoryLayout title="Welcome to Habitat!">
+    <figure style={{ margin: `${vars.space[800]} 0`, maxWidth: "70%" }}>
+      <img src="/cdn/logo/Casavo_Wordmark_Black_MONO.svg" />
+    </figure>
     <Body>This comprehensive resource is designed to help you create beautiful, functional, and user-friendly designs that are consistent with our brand identity.</Body>
     <Body>Here you can find a library of reusable components, guidelines, and best practices that will help you streamline your design process and improve your workflow.</Body>
-    <figure style={{ margin: "24px 0" }}>
+    <figure style={{ margin: `${vars.space[400]} 0` }}>
       <svg
         width="300"
         height="73"
@@ -23,6 +26,6 @@ import { vars } from "./../utils/theme.css";
         />
       </svg>
     </figure>
-    <hr style={{ margin: 24 }} />
+    <hr style={{ margin: vars.space[400] }} />
   </StoryLayout>
 </div>
