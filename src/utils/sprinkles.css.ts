@@ -2,8 +2,24 @@ import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { CSSProperties } from "@vanilla-extract/css";
 
 // import { mq } from "./mediaqueries";
-// import tokens from "./tokens.json";
+import tokens from "./tokens.json";
 import { space } from "./spacing";
+
+const _colors = tokens.foundations.colors;
+// @ts-expect-error - TS doesn't like the delete statement
+delete _colors.alertcolors;
+
+const flatColors = Object.entries(_colors).reduce((acc, [color, shades]) => {
+  return {
+    ...acc,
+    ...Object.entries(shades).reduce((shadeAcc, [shade, value]) => {
+      return {
+        ...shadeAcc,
+        [`${color}-${shade}`]: value,
+      };
+    }, {}),
+  };
+}, {});
 
 const createObj = (cssProperty: string) => {
   const spacingKeys = Object.keys(space);
@@ -18,6 +34,20 @@ const createObj = (cssProperty: string) => {
   }, {});
 };
 
+const createColorObj = (cssProperty: string) => {
+  const colorKeys = Object.keys(flatColors);
+
+  return colorKeys.reduce((acc, value) => {
+    return {
+      ...acc,
+      [value]: {
+        // @ts-expect-error - TS doesn't like the dynamic key
+        [cssProperty]: flatColors[value],
+      },
+    };
+  }, {});
+};
+
 const createDisplayObj = (cssProperty: keyof CSSProperties) => {
   const displayValues = [
     "none",
@@ -25,13 +55,14 @@ const createDisplayObj = (cssProperty: keyof CSSProperties) => {
     "flex",
     "inline",
     "inline-block",
+    "inline-flex",
     "grid",
   ]; // Add more display values as needed
 
   return displayValues.reduce((acc, value) => {
     return {
       ...acc,
-      [value.replace("display-", "")]: {
+      [value.replace("display-", "").replace("color", "")]: {
         [cssProperty]: value,
       },
     };
@@ -68,6 +99,19 @@ const gaps = defineProperties({
   },
 });
 
-export const sprinkles = createSprinkles(margin, padding, display, gaps);
+const colors = defineProperties({
+  properties: {
+    bg: createColorObj("backgroundColor"),
+    text: createColorObj("color"),
+  },
+});
+
+export const sprinkles = createSprinkles(
+  margin,
+  padding,
+  display,
+  gaps,
+  colors
+);
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];

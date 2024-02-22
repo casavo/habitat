@@ -1,5 +1,6 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { recipe } from "@vanilla-extract/recipes";
+import { sprinkles } from "../../utils/sprinkles.css";
 import { vars } from "../../utils/theme.css";
 import { keyframes, style } from "@vanilla-extract/css";
 
@@ -18,22 +19,29 @@ export const infiniteRotation = style(
 
 export const ButtonContainer = recipe(
   {
-    base: {
-      alignItems: "center",
-      alignSelf: "stretch",
-      borderRadius: 4,
-      display: "inline-flex",
-      gap: vars.space[100],
-      justifyContent: "center",
-      padding: `${vars.space[150]} ${vars.space[200]}`,
-      cursor: "pointer",
-      ":disabled": {
-        cursor: "not-allowed",
+    base: [
+      sprinkles({
+        gap: 100,
+        pt: 150,
+        pb: 150,
+        pr: 200,
+        pl: 200,
+        d: "inline-flex",
+      }),
+      {
+        alignItems: "center",
+        alignSelf: "stretch",
+        borderRadius: 4,
+        justifyContent: "center",
+        cursor: "pointer",
+        ":disabled": {
+          cursor: "not-allowed",
+        },
+        ":focus-visible": {
+          outline: "none",
+        },
       },
-      ":focus-visible": {
-        outline: "none",
-      },
-    },
+    ],
     variants: {
       theme: {
         dark: {},
