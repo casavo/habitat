@@ -1,4 +1,5 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
+import { CSSProperties } from "@vanilla-extract/css";
 
 // import { mq } from "./mediaqueries";
 // import tokens from "./tokens.json";
@@ -16,6 +17,30 @@ const createObj = (cssProperty: string) => {
     };
   }, {});
 };
+
+const createDisplayObj = (cssProperty: keyof CSSProperties) => {
+  const displayValues = [
+    "none",
+    "block",
+    "flex",
+    "inline",
+    "inline-block",
+    "grid",
+  ]; // Add more display values as needed
+
+  return displayValues.reduce((acc, value) => {
+    return {
+      ...acc,
+      [value.replace("display-", "")]: {
+        [cssProperty]: value,
+      },
+    };
+  }, {});
+};
+
+const display = defineProperties({
+  properties: { d: createDisplayObj("display") },
+});
 
 const margin = defineProperties({
   properties: {
@@ -35,7 +60,14 @@ const padding = defineProperties({
   },
 });
 
-export const sprinkles = createSprinkles(margin, padding);
+const gaps = defineProperties({
+  properties: {
+    gap: createObj("gap"),
+    "gap-x": createObj("columnGap"),
+    "gap-y": createObj("rowGap"),
+  },
+});
 
-// It's a good idea to export the Sprinkles type too
+export const sprinkles = createSprinkles(margin, padding, display, gaps);
+
 export type Sprinkles = Parameters<typeof sprinkles>[0];

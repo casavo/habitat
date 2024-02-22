@@ -13,8 +13,6 @@ export default defineConfig({
       entry: [
         path.resolve(__dirname, "src/utils/reset.css.ts"),
         path.resolve(__dirname, "src/utils/sprinkles.css.ts"),
-        // path.resolve(__dirname, "src/index.d.ts"),
-        // path.resolve(__dirname, "src/index.ts"),
       ],
       formats: ["es"],
       name: "@casavo/habitat",
