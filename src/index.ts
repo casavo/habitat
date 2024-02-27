@@ -7,6 +7,7 @@ export {
   Body,
   Description,
   Caption,
+  Inline,
 } from "./components/Typography";
 export { Button } from "./components/Button";
 export { Badge } from "./components/Badge";
