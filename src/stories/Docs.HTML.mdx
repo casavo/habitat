@@ -14,13 +14,55 @@ import { Source } from "@storybook/blocks";
   <!-- Your content here -->
   </body>' language="html" />
 
-  <Source code='<h1 class="typography typography_element_h1">Some title</h1>' language="html" />
+{" "}
 
-  <button className="button button__compound_0">
-    <span class="typography typography_base typography_p_size_l typography_p_noMargin_true typography_p_strong_true">Habitat button</span>
-  </button>
+<Source
+  code='<h1 class="typography typography_element_h1">Some title</h1>'
+  language="html"
+/>
 
-  <Source code='<button class="button button__compound_0">
-      <span class="typography typography_base typography_p_size_l typography_p_noMargin_true typography_p_strong_true">Habitat button</span>
-  </button>' language="html" />
+{" "}
+
+<div class="d-flex gap-150">
+  <button class="btn-base btn-primary-dark btn-small">Habitat button</button>
+  <button class="btn-base btn-secondary-dark btn-medium">Habitat button</button>
+  <button class="btn-base btn-tertiary-dark btn-large">Habitat button</button>
+</div>
+
+{" "}
+
+<Source
+  code='<button class="btn-base btn-primary-dark btn-small">Habitat button</button>'
+  language="html"
+/>
+<Source
+  code='<button class="btn-base btn-secondary-dark btn-medium">Habitat button</button>'
+  language="html"
+/>
+<Source
+  code='<button class="btn-base btn-tertiary-dark btn-large">Habitat button</button>'
+  language="html"
+/>
+
+{" "}
+
+<div class="d-flex gap-150">
+  <div class="badge-base badge-dark">badge</div>
+  <div class="badge-base badge-light">badge</div>
+  <div class="badge-base badge-success">badge</div>
+  <div class="badge-base badge-warning">badge</div>
+  <div class="badge-base badge-error">badge</div>
+</div>
+
+<Source
+  code='
+  <div class="badge-base badge-dark">badge</div>
+  <div class="badge-base badge-light">badge</div>
+  <div class="badge-base badge-success">badge</div>
+  <div class="badge-base badge-warning">badge</div>
+  <div class="badge-base badge-error">badge</div>
+'
+  language="html"
+/>
+
 </div>
