@@ -18,6 +18,7 @@ describe("General utilities", () => {
     expect(vars.colors).toBeTypeOf("object");
     expect(vars.space).toBeTypeOf("object");
     expect(vars.mq).toBeTypeOf("object");
+    expect(vars.corners).toBeTypeOf("object");
   });
 
   it("expect HabitatTheme to be a class name", () => {
