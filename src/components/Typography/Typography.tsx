@@ -49,7 +49,7 @@ const conditionalAttrs = (html?: string, color?: Colors) => {
  * variables, it returns the corresponding color as CSS variable value
  */
 const getColor = (color?: Colors) => {
-  const fallback = vars.colors.neutral["0"];
+  const fallback = vars.colors.root.neutral[600];
   const paths = color?.split(".");
   const result =
     paths && paths.reduce((acc, path) => acc[path as never], vars.colors);

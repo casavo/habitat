@@ -13,7 +13,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Docs", "Foundations", "Typography", "Components"],
+        order: ["Docs", "Foundations", "Colors", "Typography", "Components"],
       },
     },
     docs: {
