@@ -3,6 +3,14 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "../../utils/theme.css";
 import { keyframes, style } from "@vanilla-extract/css";
 
+const black = vars.colors.root.neutral[600];
+const white = vars.colors.root.neutral[0];
+
+const grey1 = vars.colors.root.neutral[100];
+const grey2 = vars.colors.root.neutral[200];
+const grey3 = vars.colors.root.neutral[400];
+const grey4 = vars.colors.root.neutral[500];
+
 const rotate = keyframes({
   "0%": { transform: "rotate(0deg)" },
   "100%": { transform: "rotate(360deg)" },
@@ -67,20 +75,20 @@ export const ButtonContainer = recipe({
         variant: "primary",
       },
       style: {
-        backgroundColor: vars.colors.neutral[100],
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
+        backgroundColor: black,
+        color: white,
+        fill: white,
         border: "none",
         ":hover": {
-          backgroundColor: vars.colors.neutral[60],
+          backgroundColor: grey3,
         },
         ":active": {
-          backgroundColor: vars.colors.neutral[80],
+          backgroundColor: grey4,
         },
         ":disabled": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+          backgroundColor: grey1,
+          color: grey3,
+          fill: grey3,
         },
       },
     },
@@ -90,20 +98,20 @@ export const ButtonContainer = recipe({
         variant: "primary",
       },
       style: {
-        backgroundColor: vars.colors.neutral[0],
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
+        backgroundColor: white,
+        color: black,
+        fill: black,
         border: "none",
         ":hover": {
-          backgroundColor: vars.colors.neutral[10],
+          backgroundColor: grey1,
         },
         ":active": {
-          backgroundColor: vars.colors.neutral[20],
+          backgroundColor: grey2,
         },
         ":disabled": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+          backgroundColor: grey1,
+          color: grey3,
+          fill: grey3,
         },
       },
     },
@@ -113,25 +121,25 @@ export const ButtonContainer = recipe({
         variant: "secondary",
       },
       style: {
-        backgroundColor: vars.colors.neutral[0],
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
-        border: `1px solid ${vars.colors.neutral[100]}`,
+        backgroundColor: white,
+        color: black,
+        fill: black,
+        border: `1px solid ${black}`,
         ":hover": {
-          backgroundColor: vars.colors.neutral[100],
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
+          backgroundColor: black,
+          color: white,
+          fill: white,
         },
         ":active": {
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
-          backgroundColor: vars.colors.neutral[80],
+          color: white,
+          fill: white,
+          backgroundColor: grey4,
         },
         ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-          backgroundColor: vars.colors.neutral[0],
-          border: `1px solid ${vars.colors.neutral[60]}`,
+          color: grey3,
+          fill: grey3,
+          backgroundColor: white,
+          border: `1px solid ${grey3}`,
         },
       },
     },
@@ -141,25 +149,25 @@ export const ButtonContainer = recipe({
         variant: "secondary",
       },
       style: {
-        backgroundColor: vars.colors.neutral[100],
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
-        border: `1px solid ${vars.colors.neutral[0]}`,
+        backgroundColor: black,
+        color: white,
+        fill: white,
+        border: `1px solid ${white}`,
         ":hover": {
-          backgroundColor: vars.colors.neutral[0],
-          color: vars.colors.neutral[100],
-          fill: vars.colors.neutral[100],
+          backgroundColor: white,
+          color: black,
+          fill: black,
         },
         ":active": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[100],
-          fill: vars.colors.neutral[100],
+          backgroundColor: grey1,
+          color: black,
+          fill: black,
         },
         ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
-          backgroundColor: vars.colors.neutral[100],
-          border: `1px solid ${vars.colors.neutral[60]}`,
+          color: grey3,
+          fill: grey3,
+          backgroundColor: black,
+          border: `1px solid ${grey3}`,
         },
       },
     },
@@ -170,21 +178,21 @@ export const ButtonContainer = recipe({
       },
       style: {
         backgroundColor: "transparent",
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
+        color: black,
+        fill: black,
         ":hover": {
-          backgroundColor: vars.colors.neutral[100],
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
+          backgroundColor: black,
+          color: white,
+          fill: white,
         },
         ":active": {
-          backgroundColor: vars.colors.neutral[80],
-          color: vars.colors.neutral[0],
-          fill: vars.colors.neutral[0],
+          backgroundColor: grey4,
+          color: white,
+          fill: white,
         },
         ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+          color: grey3,
+          fill: grey3,
           backgroundColor: "transparent",
         },
       },
@@ -196,21 +204,21 @@ export const ButtonContainer = recipe({
       },
       style: {
         backgroundColor: "transparent",
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
+        color: white,
+        fill: white,
         ":hover": {
-          backgroundColor: vars.colors.neutral[0],
-          color: vars.colors.neutral[100],
-          fill: vars.colors.neutral[100],
+          backgroundColor: white,
+          color: black,
+          fill: black,
         },
         ":active": {
-          backgroundColor: vars.colors.neutral[10],
-          color: vars.colors.neutral[100],
-          fill: vars.colors.neutral[100],
+          backgroundColor: grey1,
+          color: black,
+          fill: black,
         },
         ":disabled": {
-          color: vars.colors.neutral[60],
-          fill: vars.colors.neutral[60],
+          color: grey3,
+          fill: grey3,
           backgroundColor: "transparent",
         },
       },
