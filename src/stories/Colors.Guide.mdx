@@ -1,0 +1,45 @@
+import "./../utils/reset.css";
+
+import { Meta } from "@storybook/blocks";
+import { H1, Body, Inline } from "../components/Typography";
+import { StoryLayout } from "./components/StoryLayout";
+import { vars } from "./../utils/theme.css";
+
+<Meta title="Colors/Guide" />
+
+<div className="sb-unstyled">
+  <StoryLayout title="Core brand colours">
+    <Body>
+      Our brand colours that serve as a core to the rest of the colour scheme.
+    </Body>
+
+    <hr style={{ marginTop: vars.space[1000] }} />
+
+    <H1 display>Brand</H1>
+    <Body>There are <Inline strong>three main brand colours</Inline> that we use: <Inline strong>orange (primary)</Inline> and <Inline strong>dark green (secondary)</Inline>. </Body>
+    <Body>We can also use the <Inline strong>teal</Inline> colour as an <Inline strong>accent colour</Inline>.</Body>
+    <Brand />
+
+    <hr style={{ marginTop: vars.space[1000] }} />
+
+    <H1 display>Color structure</H1>
+    <Body>To build the colours up, we’re using several layers in the design system:</Body>
+    <Body>
+      <ul>
+        <li>Primitives, <Inline strong>also known as ‘roots’</Inline>, is an individual design value from our entire catalog of brand colours, e.g. orange-100. This is the most atomic form of colour. We use that to essentially create a list or catalogue of all our existing HEX colours.</li>
+        <li>Then is <Inline strong>semantic level</Inline>, or alias tokens. Aliases are essentially nicknames that act as references for primitive design values. They give a more meaningful name to those design tokens, making it easier to understand what they stand for. Semantically, we can differentiate these, too:</li>
+        <ul>
+          <li>Brand level</li>
+          <li>Component level</li>
+        </ul>
+      </ul>
+    </Body>
+    <Body>More often than not, our components are assigned based on a simple root colour, when that root colour is part of the simple palette of neutrals, for example.</Body>
+    <Body>Sometimes, some components can be assigned based not on the root, but the brand alias. This is so in order to maintain a separation between the atomic roots and the brand palette, which might change in the future.</Body>
+    <hr style={{ marginTop: vars.space[300] }} />
+    <img loading="lazy" src="/images/color-structure.png" />
+
+  </StoryLayout>
+</div>
+import { Brand } from "./components/Brand"
+
