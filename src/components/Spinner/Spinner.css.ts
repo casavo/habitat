@@ -46,7 +46,6 @@ export const Circle = recipe({
     borderRadius: "100%",
     boxSizing: "border-box",
     display: "block",
-
     position: "absolute",
   },
 
@@ -91,7 +90,7 @@ export const Circle = recipe({
         variant: "primary",
       },
       style: {
-        borderColor: vars.colors.neutral[0],
+        borderColor: vars.colors.root.neutral[0],
       },
     },
     {
@@ -100,7 +99,7 @@ export const Circle = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderColor: vars.colors.neutral[100],
+        borderColor: vars.colors.root.neutral[600],
       },
     },
     {
@@ -109,7 +108,7 @@ export const Circle = recipe({
         variant: "primary",
       },
       style: {
-        borderColor: vars.colors.neutral[100],
+        borderColor: vars.colors.root.neutral[600],
       },
     },
     {
@@ -118,7 +117,7 @@ export const Circle = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderColor: vars.colors.neutral[0],
+        borderColor: vars.colors.root.neutral[0],
       },
     },
   ],
@@ -177,7 +176,7 @@ export const Spin = recipe({
         variant: "primary",
       },
       style: {
-        borderTopColor: vars.colors.neutral[0],
+        borderTopColor: vars.colors.root.neutral[0],
       },
     },
     {
@@ -186,7 +185,7 @@ export const Spin = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderTopColor: vars.colors.neutral[100],
+        borderTopColor: vars.colors.root.neutral[600],
       },
     },
     {
@@ -195,7 +194,7 @@ export const Spin = recipe({
         variant: "primary",
       },
       style: {
-        borderTopColor: vars.colors.neutral[100],
+        borderTopColor: vars.colors.root.neutral[600],
       },
     },
     {
@@ -204,7 +203,7 @@ export const Spin = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderTopColor: vars.colors.neutral[0],
+        borderTopColor: vars.colors.root.neutral[0],
       },
     },
   ],

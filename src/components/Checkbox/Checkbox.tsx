@@ -52,7 +52,7 @@ export const Checkbox = ({
       <Body noMargin={true}>{children}</Body>
       {error && (
         <div className={messageStyle}>
-          <Body noMargin size="s" color={error && "alertcolors.error.100"}>
+          <Body noMargin size="s" color={error && "root.red.600"}>
             {message || "error message"}
           </Body>
         </div>

@@ -4,9 +4,9 @@ import { recipe } from "@vanilla-extract/recipes";
 
 const gap = vars.space[100];
 const size = vars.space[200];
-const black = vars.colors.neutral[100];
+const black = vars.colors.root.neutral[600];
 const grey = "#B3B3B2";
-const red = vars.colors.alertcolors.error["100"];
+const red = vars.colors.root.red[600];
 
 export const wrapper = style({
   alignItems: "center",
@@ -19,7 +19,7 @@ export const wrapper = style({
 export const checkbox = recipe({
   base: {
     alignItems: "center",
-    backgroundColor: vars.colors.neutral[0],
+    backgroundColor: vars.colors.root.neutral[0],
     border: `1px solid ${grey}`,
     borderRadius: 4,
     display: "flex",
