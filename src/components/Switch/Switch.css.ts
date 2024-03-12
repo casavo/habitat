@@ -19,7 +19,7 @@ export const base = style({
 
 const indicatorBase = style({
   "::before": {
-    background: vars.colors.neutral[0],
+    background: vars.colors.root.neutral[0],
     borderRadius: "16px",
     content: "",
     display: "block",
@@ -28,7 +28,7 @@ const indicatorBase = style({
     transition: "all 200ms",
     width: "18px",
   },
-  background: vars.colors.neutral[40],
+  background: vars.colors.root.neutral[200],
   border: "none",
   // atm missing in vars
   borderRadius: "11px",
@@ -37,20 +37,20 @@ const indicatorBase = style({
 
   selectors: {
     [`${base}[data-selected] &`]: {
-      background: vars.colors.neutral[100],
-      borderColor: vars.colors.neutral[100],
+      background: vars.colors.root.neutral[600],
+      borderColor: vars.colors.root.neutral[600],
     },
     [`${base}[data-selected] &:before`]: {
-      background: vars.colors.neutral[0],
+      background: vars.colors.root.neutral[0],
       transform: "translateX(100%)",
     },
     [`${base}[data-disabled] &`]: {
-      background: vars.colors.neutral[10],
-      borderColor: vars.colors.neutral[10],
+      background: vars.colors.root.neutral[100],
+      borderColor: vars.colors.root.neutral[100],
     },
     [`${base}[data-selected][data-disabled] &`]: {
-      background: vars.colors.neutral[60],
-      borderColor: vars.colors.neutral[60],
+      background: vars.colors.root.neutral[300],
+      borderColor: vars.colors.root.neutral[300],
     },
   },
   transition: "all 300ms",
