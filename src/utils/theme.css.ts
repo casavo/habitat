@@ -11,5 +11,3 @@ export const [HabitatTheme, vars] = createTheme({
   mq,
   space,
 });
-
-console.log(vars);
