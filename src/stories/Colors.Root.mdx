@@ -1,0 +1,20 @@
+import "./../utils/reset.css";
+
+import { Meta } from "@storybook/blocks";
+import { ColorSection } from "./components/ColorsPage";
+import { Body, Inline } from "../components/Typography";
+import { StoryLayout } from "./components/StoryLayout";
+
+<Meta title="Colors/Root" />
+
+<div className="sb-unstyled">
+  <StoryLayout title="Root tokens">
+    <Body>
+      Our entire catalog of brand colours, e.g. <Inline italic={true}>orange.100</Inline>. This is the most
+      atomic form of colour.
+    </Body>
+
+    <ColorSection values="root" />
+
+  </StoryLayout>
+</div>
