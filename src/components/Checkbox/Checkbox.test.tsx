@@ -23,7 +23,6 @@ describe("Checkbox component", () => {
     const onChange = vi.fn();
     render(<Checkbox onChange={onChange} />);
     const input = screen.getByRole("checkbox");
-    console.log(input.role);
 
     fireEvent.click(input);
     expect(onChange).toHaveBeenCalledWith(true);
@@ -33,7 +32,6 @@ describe("Checkbox component", () => {
     const onChange = vi.fn();
     render(<Checkbox checked={true} onChange={onChange} />);
     const input = screen.getByRole("checkbox");
-    console.log(input.role);
 
     fireEvent.click(input);
     expect(onChange).toHaveBeenCalledWith(false);

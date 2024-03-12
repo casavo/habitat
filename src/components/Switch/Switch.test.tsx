@@ -28,7 +28,6 @@ describe("Switch component", () => {
     const onChange = vi.fn();
     render(<Switch onChange={onChange} />);
     const input = screen.getByRole("switch");
-    console.log(input.role);
 
     fireEvent.click(input);
     expect(onChange).toHaveBeenCalled();

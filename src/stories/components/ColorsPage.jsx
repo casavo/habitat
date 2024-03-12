@@ -25,7 +25,6 @@ const getHex = (root, color, value) => {
 
 export const ColorSection = ({ values }) => {
   const titles = Object.keys(colors[values]);
-  console.log(titles);
 
   return (
     <>
