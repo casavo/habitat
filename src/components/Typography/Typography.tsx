@@ -14,7 +14,8 @@ import tokens from "./../../utils/tokens.json";
 
 type NestedKeyOf<ObjectType extends object> = {
   [Key in keyof ObjectType & string]: ObjectType[Key] extends object
-    ? `${Key}.${NestedKeyOf<ObjectType[Key]>}`
+    ? // @ts-ignore TODO: we need to re-evaluate this after the new color tokens will be in place
+      `${Key}.${NestedKeyOf<ObjectType[Key]>}`
     : `${Key}`;
 }[keyof ObjectType & string];
 
@@ -100,21 +101,21 @@ export const H4 = ({ children, color, html }: BaseProps) => (
 );
 
 export const H5 = ({ children, color, html }: BaseProps) => (
-  <h4
+  <h5
     className={HeadingsStyle({ element: "h5" })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
-  </h4>
+  </h5>
 );
 
 export const H6 = ({ children, color, html }: BaseProps) => (
-  <h4
+  <h6
     className={HeadingsStyle({ element: "h6" })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
-  </h4>
+  </h6>
 );
 
 export const Body = ({
