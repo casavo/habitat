@@ -56,5 +56,6 @@ module.exports = {
         natural: true,
       },
     ],
+    "@typescript-eslint/ban-ts-comment": false,
   },
 };
