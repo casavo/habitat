@@ -2,13 +2,14 @@ import "./../../utils/reset.css";
 import { HabitatTheme, vars } from "./../../utils/theme.css";
 import { H1, H2, H4, Body } from "../../components/Typography";
 import { Source } from "@storybook/blocks";
+import { SupportedLanguage } from "@storybook/components";
 
 type Props = {
   children?: React.ReactNode;
   description?: string | React.ReactNode;
   importLine?: string;
   isComponent?: boolean;
-  language?: string;
+  language?: SupportedLanguage;
   title: string;
   usage?: string;
 };
