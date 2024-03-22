@@ -4,7 +4,9 @@ metadata:
   name: habitat
   description: Casavo Design System
   tags:
-    - typescript
+    - language:typescript
+    - npm
+    - ui
   annotations:
     github.com/project-slug: casavo/habitat
   links:
