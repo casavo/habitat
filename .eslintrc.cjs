@@ -22,6 +22,7 @@ module.exports = {
     "sort-destructure-keys",
   ],
   rules: {
+    "@typescript-eslint/ban-ts-comment": 0,
     "react/jsx-sort-props": [
       "error",
       {
@@ -56,6 +57,5 @@ module.exports = {
         natural: true,
       },
     ],
-    "@typescript-eslint/ban-ts-comment": 0,
   },
 };
