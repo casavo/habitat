@@ -1,7 +1,7 @@
 import "./../../utils/reset.css";
 import { HabitatTheme, vars } from "./../../utils/theme.css";
 import { H1, H2, H4, Body } from "../../components/Typography";
-import { Source } from "@storybook/blocks";
+// import { Source } from "@storybook/blocks";
 import { SupportedLanguage } from "@storybook/components";
 
 type Props = {
@@ -19,12 +19,16 @@ const Hgroup = ({ children }: { children: React.ReactNode }) => (
   <hgroup style={{ marginBottom: vars.space[200] }}>{children}</hgroup>
 );
 
+/**
+ * TODO: remove the <pre> tags and revert to <Source> component as soon as it stop breaking (issue from Storybook v8)
+ */
+
 export const StoryLayout = ({
   children,
   description,
   importLine,
   isComponent,
-  language,
+  // language,
   title,
   usage,
 }: Props) => (
@@ -43,9 +47,11 @@ export const StoryLayout = ({
       <>
         <Spacer />
         <H4>Import:</H4>
-        <Source code={importLine} language={language} />
+        {/* <Source code={importLine} language={language} /> */}
+        <pre style={{ marginBottom: 32 }}>{importLine}</pre>
         <H4>Usage:</H4>
-        <Source code={usage} language={language} />
+        {/* <Source code={usage} language={language} /> */}
+        <pre>{usage}</pre>
       </>
     )}
   </main>
