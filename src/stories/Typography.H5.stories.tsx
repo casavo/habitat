@@ -8,6 +8,7 @@ const meta: Meta<typeof H5> = {
   argTypes,
   args: {
     html: undefined,
+    noMargin: false,
   },
   component: H5,
   title: "Typography/H5",
@@ -25,7 +26,7 @@ export const _H5: Story = {
       title="Typography/H5"
       usage={"<H5>Some text here</H5>"}
     >
-      <H5 color={args.color} html={args.html}>
+      <H5 color={args.color} html={args.html} noMargin={args.noMargin}>
         Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris
         facere
       </H5>
