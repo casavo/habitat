@@ -64,54 +64,54 @@ const getColor = (color?: string) => {
   return result || fallback;
 };
 
-export const H1 = ({ children, color, display, html }: Heading1) => (
+export const H1 = ({ children, color, display, html, noMargin }: Heading1) => (
   <h1
-    className={HeadingsStyle({ display, element: "h1" })}
+    className={HeadingsStyle({ display, element: "h1", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </h1>
 );
 
-export const H2 = ({ children, color, html }: BaseProps) => (
+export const H2 = ({ children, color, html, noMargin }: BaseProps) => (
   <h2
-    className={HeadingsStyle({ element: "h2" })}
+    className={HeadingsStyle({ element: "h2", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </h2>
 );
 
-export const H3 = ({ children, color, html }: BaseProps) => (
+export const H3 = ({ children, color, html, noMargin }: BaseProps) => (
   <h3
-    className={HeadingsStyle({ element: "h3" })}
+    className={HeadingsStyle({ element: "h3", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </h3>
 );
 
-export const H4 = ({ children, color, html }: BaseProps) => (
+export const H4 = ({ children, color, html, noMargin }: BaseProps) => (
   <h4
-    className={HeadingsStyle({ element: "h4" })}
+    className={HeadingsStyle({ element: "h4", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </h4>
 );
 
-export const H5 = ({ children, color, html }: BaseProps) => (
+export const H5 = ({ children, color, html, noMargin }: BaseProps) => (
   <h5
-    className={HeadingsStyle({ element: "h5" })}
+    className={HeadingsStyle({ element: "h5", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}
   </h5>
 );
 
-export const H6 = ({ children, color, html }: BaseProps) => (
+export const H6 = ({ children, color, html, noMargin }: BaseProps) => (
   <h6
-    className={HeadingsStyle({ element: "h6" })}
+    className={HeadingsStyle({ element: "h6", noMargin })}
     {...conditionalAttrs(html, color)}
   >
     {!html ? children : null}

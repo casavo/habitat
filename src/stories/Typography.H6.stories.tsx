@@ -8,6 +8,7 @@ const meta: Meta<typeof H6> = {
   argTypes,
   args: {
     html: undefined,
+    noMargin: false,
   },
   component: H6,
   title: "Typography/H6",
@@ -25,7 +26,7 @@ export const _H6: Story = {
       title="Typography/H6"
       usage={"<H6>Some text here</H6>"}
     >
-      <H6 color={args.color} html={args.html}>
+      <H6 color={args.color} html={args.html} noMargin={args.noMargin}>
         Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris
         facere
       </H6>

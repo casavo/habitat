@@ -11,6 +11,10 @@ const Inter = "Inter, -apple-system, BlinkMacSystemFont, sans-serif";
 
 const whiteSpace = "pre-line";
 
+const noMargin = {
+  true: { marginBottom: 0 },
+};
+
 globalStyle("a", {
   // TODO: change this to a color token when --greyscale-600-black will be available
   color: "#1D1D1B",
@@ -89,6 +93,7 @@ export const HeadingsStyle = recipe({
         marginBottom: space[200],
       },
     },
+    noMargin,
   },
 });
 
@@ -108,10 +113,6 @@ const strong = {
 
 const underline = {
   true: { textDecoration: "underline" },
-};
-
-const noMargin = {
-  true: { marginBottom: 0 },
 };
 
 export const BodyStyle = recipe({

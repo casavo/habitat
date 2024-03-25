@@ -11,6 +11,7 @@ const meta: Meta<typeof H1> = {
   args: {
     display: false,
     html: `<a href="https://www.casavo.com">link to Casavo website</a>`,
+    noMargin: false,
   },
   component: H1,
   title: "Typography/H1",
@@ -28,7 +29,12 @@ export const _H1: Story = {
       title="Typography/H1"
       usage={"<H1>Some text here</H1>"}
     >
-      <H1 display={args.display} color={args.color} html={args.html}>
+      <H1
+        display={args.display}
+        color={args.color}
+        html={args.html}
+        noMargin={args.noMargin}
+      >
         Idque Caesaris facere voluntate liceret: sese habere. dque Caesaris
         facere
       </H1>
