@@ -17,7 +17,7 @@ exports[`Checkbox component > renders 1`] = `
     data-id="check-icon"
   />
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne"
   />
 </label>
 `;
@@ -41,7 +41,7 @@ exports[`Checkbox component > renders as disabled 1`] = `
     data-id="check-icon"
   />
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne"
   />
 </label>
 `;
@@ -63,7 +63,7 @@ exports[`Checkbox component > renders as selected 1`] = `
     data-id="check-icon"
   />
   <p
-    class="Typography__3igy4na Typography_base__3igy4n9 Typography_BodyStyle_noMargin_true__3igy4nb Typography_BodyStyle_size_m__3igy4nd"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne"
   />
 </label>
 `;
