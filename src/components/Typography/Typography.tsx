@@ -10,8 +10,6 @@ import {
   InlineStyle,
 } from "./Typography.css";
 
-import tokens from "./../../utils/tokens.json";
-
 type NestedKeyOf<ObjectType extends object> = {
   [Key in keyof ObjectType & string]: ObjectType[Key] extends object
     ? // @ts-ignore TODO: we need to re-evaluate this after the new color tokens will be in place
@@ -19,7 +17,7 @@ type NestedKeyOf<ObjectType extends object> = {
     : `${Key}`;
 }[keyof ObjectType & string];
 
-type Colors = NestedKeyOf<typeof tokens.foundations.colors>;
+type Colors = NestedKeyOf<typeof vars.colors>;
 
 type BaseProps = {
   children?: React.ReactNode | string;
@@ -57,7 +55,7 @@ const conditionalAttrs = (html?: string, color?: string) => {
  * variables, it returns the corresponding color as CSS variable value
  */
 const getColor = (color?: string) => {
-  const fallback = vars.colors.neutral["0"];
+  const fallback = vars.colors.root.neutral[600];
   const paths = color?.split(".");
   const result =
     paths && paths.reduce((acc, path) => acc[path as never], vars.colors);

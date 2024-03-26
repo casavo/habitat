@@ -5,7 +5,7 @@ import { vars } from "../../utils/theme.css";
 export const BadgeContainer = recipe({
   base: {
     alignItems: "center",
-    borderRadius: 20,
+    borderRadius: vars.corners[300],
     display: "inline-flex",
     gap: vars.space[100],
     justifyContent: "center",
@@ -14,28 +14,28 @@ export const BadgeContainer = recipe({
   variants: {
     theme: {
       dark: {
-        backgroundColor: vars.colors.deepgreen[100],
-        color: vars.colors.neutral[0],
-        fill: vars.colors.neutral[0],
+        backgroundColor: vars.colors.root.darkgreen[700],
+        color: vars.colors.root.neutral[0],
+        fill: vars.colors.root.neutral[0],
       },
       light: {
-        backgroundColor: vars.colors.offwhite[100],
-        color: vars.colors.neutral[100],
-        fill: vars.colors.neutral[100],
+        backgroundColor: vars.colors.root.offwhite[100],
+        color: vars.colors.root.neutral[600],
+        fill: vars.colors.root.neutral[600],
       },
     },
     status: {
       error: {
-        backgroundColor: vars.colors.alertcolors.error[40],
-        color: vars.colors.neutral[100],
+        backgroundColor: vars.colors.root.red[200],
+        color: vars.colors.root.red[600],
       },
       success: {
-        backgroundColor: vars.colors.alertcolors.success[40],
-        color: vars.colors.neutral[100],
+        backgroundColor: vars.colors.root.green[200],
+        color: vars.colors.root.green[600],
       },
       warning: {
-        backgroundColor: vars.colors.alertcolors.warning[40],
-        color: vars.colors.neutral[100],
+        backgroundColor: vars.colors.root.yellow[200],
+        color: vars.colors.root.yellow[600],
       },
     },
   },

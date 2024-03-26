@@ -1,10 +1,12 @@
+import tokens from "./tokens.json";
+
+const _space = tokens.foundations.space;
+
 // Base spacing unit in pixels
 const BASE: number = 8;
 
 // The spacing values that we want to generate
-const values: Array<number> = [
-  0, 25, 50, 75, 100, 125, 150, 200, 300, 400, 600, 800, 1000, 1800,
-];
+const values: Array<number> = Object.keys(_space).map(Number);
 
 // Get the type of the elements in the values array
 type SpacingKeys = (typeof values)[number];
