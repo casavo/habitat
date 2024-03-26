@@ -10,8 +10,6 @@ import {
   InlineStyle,
 } from "./Typography.css";
 
-import tokens from "./../../utils/tokens.json";
-
 type NestedKeyOf<ObjectType extends object> = {
   [Key in keyof ObjectType & string]: ObjectType[Key] extends object
     ? // @ts-ignore TODO: we need to re-evaluate this after the new color tokens will be in place
@@ -19,7 +17,7 @@ type NestedKeyOf<ObjectType extends object> = {
     : `${Key}`;
 }[keyof ObjectType & string];
 
-type Colors = NestedKeyOf<typeof tokens.foundations.colors>;
+type Colors = NestedKeyOf<typeof vars.colors>;
 
 type BaseProps = {
   children?: React.ReactNode | string;
@@ -45,7 +43,7 @@ type Heading1 = BaseProps & {
 /**
  * It returns an object with the attributes to be passed to the component
  */
-const conditionalAttrs = (html?: string, color?: string) => {
+const conditionalAttrs = (html?: string, color?: Colors) => {
   const attrs: { [key: string]: object } = {};
   html ? (attrs.dangerouslySetInnerHTML = { __html: html }) : null;
   color ? (attrs.style = { color: getColor(color) }) : null;
@@ -56,7 +54,7 @@ const conditionalAttrs = (html?: string, color?: string) => {
  * Starting from a string like "neutral.0" which is the path within the Vanilla Extract color
  * variables, it returns the corresponding color as CSS variable value
  */
-const getColor = (color?: string) => {
+const getColor = (color?: Colors) => {
   const fallback = vars.colors.neutral["0"];
   const paths = color?.split(".");
   const result =

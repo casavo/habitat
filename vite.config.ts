@@ -15,7 +15,6 @@ export default defineConfig({
     lib: {
       entry: [
         path.resolve(__dirname, "src/utils/reset.css.ts"),
-        path.resolve(__dirname, "src/index.d.ts"),
         path.resolve(__dirname, "src/index.ts"),
       ],
       formats: ["es"],
@@ -37,7 +36,7 @@ export default defineConfig({
     // we don't need to emit the types for the components if we are building the Storybook
     process.env.npm_lifecycle_event === "build:components" &&
       dts({
-        clearPureImport: true,
+        clearPureImport: false,
         exclude: ["node_modules/**", "**/vite-env.d.ts"],
         insertTypesEntry: true,
       }),
