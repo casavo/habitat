@@ -7,7 +7,7 @@ exports[`Button component > renders 1`] = `
   type="button"
 >
   <p
-    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4ng"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4nh"
   >
     Click me
   </p>
@@ -23,7 +23,7 @@ exports[`Button component > renders with a disabled state 1`] = `
   type="button"
 >
   <p
-    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4ng"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4nh"
   >
     Click me
   </p>
@@ -56,7 +56,7 @@ exports[`Button component > renders with a size 1`] = `
   type="button"
 >
   <p
-    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_l__3igy4nd Typography_BodyStyle_strong_true__3igy4ng"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_l__3igy4nd Typography_BodyStyle_strong_true__3igy4nh"
   >
     Click me
   </p>
@@ -70,7 +70,7 @@ exports[`Button component > renders with a theme 1`] = `
   type="button"
 >
   <p
-    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4ng"
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4nh"
   >
     Click me
   </p>
