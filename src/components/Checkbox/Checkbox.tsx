@@ -1,7 +1,7 @@
 import type { CheckboxProps } from "react-aria-components";
 import { Checkbox as CheckboxAria } from "react-aria-components";
 import { checkbox, messageStyle, wrapper } from "./Checkbox.css";
-import { Body, Caption } from "../Typography";
+import { Body } from "../Typography";
 
 type Props = CheckboxProps & {
   checked?: boolean;
@@ -52,9 +52,9 @@ export const Checkbox = ({
       <Body noMargin={true}>{children}</Body>
       {error && (
         <div className={messageStyle}>
-          <Caption color={error && "alertcolors.error.100"}>
+          <Body noMargin size="s" color={error && "alertcolors.error.100"}>
             {message || "error message"}
-          </Caption>
+          </Body>
         </div>
       )}
     </CheckboxAria>

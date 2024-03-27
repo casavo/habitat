@@ -2,13 +2,7 @@ import React from "react";
 
 import { vars } from "../../utils/theme.css";
 
-import {
-  BodyStyle,
-  CaptionStyle,
-  DescriptionStyle,
-  HeadingsStyle,
-  InlineStyle,
-} from "./Typography.css";
+import { BodyStyle, HeadingsStyle, InlineStyle } from "./Typography.css";
 
 type NestedKeyOf<ObjectType extends object> = {
   [Key in keyof ObjectType & string]: ObjectType[Key] extends object
@@ -33,7 +27,7 @@ type TextProps = BaseProps & {
 };
 
 type BodyProps = TextProps & {
-  size?: "s" | "m" | "l";
+  size?: "l" | "m" | "s" | "xs";
 };
 
 type Heading1 = BaseProps & {
@@ -147,34 +141,4 @@ export const Inline = ({
   >
     {!html ? children : null}
   </span>
-);
-
-export const Description = ({
-  children,
-  color,
-  html,
-  strong = false,
-  underline = false,
-}: TextProps) => (
-  <p
-    className={DescriptionStyle({ strong, underline })}
-    {...conditionalAttrs(html, color)}
-  >
-    {!html ? children : null}
-  </p>
-);
-
-export const Caption = ({
-  children,
-  color,
-  html,
-  strong = false,
-  underline = false,
-}: TextProps) => (
-  <p
-    className={CaptionStyle({ strong, underline })}
-    {...conditionalAttrs(html, color)}
-  >
-    {!html ? children : null}
-  </p>
 );
