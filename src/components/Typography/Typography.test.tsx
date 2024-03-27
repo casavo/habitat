@@ -1,16 +1,5 @@
 import { render } from "@testing-library/react";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  Body,
-  Inline,
-  Description,
-  Caption,
-} from "./Typography.tsx";
+import { H1, H2, H3, H4, H5, H6, Body, Inline } from "./Typography.tsx";
 import { expect, describe } from "vitest";
 
 describe("Typography components", () => {
@@ -56,25 +45,9 @@ describe("Typography components", () => {
     expect(textElement).toBeInTheDocument();
   });
 
-  test("Caption renders correct text", () => {
-    const { getByText } = render(
-      <Caption color="neutral.100">Test Text</Caption>
-    );
-    const textElement = getByText(/Test Text/i);
-    expect(textElement).toBeInTheDocument();
-  });
-
   test("Inline renders correct text", () => {
     const { getByText } = render(
       <Inline color="neutral.100">Test Text</Inline>
-    );
-    const textElement = getByText(/Test Text/i);
-    expect(textElement).toBeInTheDocument();
-  });
-
-  test("Description renders correct text", () => {
-    const { getByText } = render(
-      <Description color="neutral.100">Test Text</Description>
     );
     const textElement = getByText(/Test Text/i);
     expect(textElement).toBeInTheDocument();

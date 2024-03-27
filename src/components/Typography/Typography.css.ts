@@ -120,14 +120,10 @@ export const BodyStyle = recipe({
   variants: {
     noMargin,
     size: {
-      l: {
-        "@media": {
-          [mq.desktop]: { fontSize: 20 },
-        },
-        fontSize: 18,
-      },
+      l: { fontSize: 18 },
       m: { fontSize: 16 },
-      s: { fontSize: 11 },
+      s: { fontSize: 14 },
+      xs: { fontSize: 12 },
     },
     strong,
     underline,
@@ -139,32 +135,6 @@ export const InlineStyle = recipe({
     italic: {
       true: { fontStyle: "italic" },
     },
-    strong,
-    underline,
-  },
-});
-
-export const DescriptionStyle = recipe({
-  base: [
-    base,
-    {
-      fontSize: 14,
-    },
-  ],
-  variants: {
-    strong,
-    underline,
-  },
-});
-
-export const CaptionStyle = recipe({
-  base: [
-    base,
-    {
-      fontSize: 12,
-    },
-  ],
-  variants: {
     strong,
     underline,
   },
