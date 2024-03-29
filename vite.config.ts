@@ -17,7 +17,7 @@ export default defineConfig({
         path.resolve(__dirname, "src/utils/reset.css.ts"),
         path.resolve(__dirname, "src/index.ts"),
       ],
-      formats: ["es"],
+      formats: ["es","cjs"],
       name: "@casavo/habitat",
     },
     rollupOptions: {
