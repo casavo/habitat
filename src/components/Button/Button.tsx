@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import React, {ButtonHTMLAttributes, forwardRef} from "react";
 import type { ButtonProps } from "react-aria-components";
 import { Button as ButtonAria } from "react-aria-components";
 import { Body } from "../Typography";
@@ -18,7 +18,7 @@ type Props = {
   variant?: "primary" | "secondary" | "tertiary";
 } & Omit<ButtonProps, "className">;
 
-export const Button = ({
+export const Button:React.FC<Props> =forwardRef<HTMLButtonElement,Props>(({
   children,
   disabled = false,
   loading = false,
@@ -28,10 +28,11 @@ export const Button = ({
   iconLayout = "sx",
   size = "medium",
   ...props
-}: Props) => {
+}: Props,ref) => {
   return (
     <ButtonAria
       {...props}
+      ref={ref}
       isDisabled={disabled}
       className={ButtonContainer({ iconLayout, size, theme, variant })}
     >
@@ -49,4 +50,6 @@ export const Button = ({
       ) : null}
     </ButtonAria>
   );
-};
+});
+
+Button.displayName = "Button"
