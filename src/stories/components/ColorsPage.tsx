@@ -27,7 +27,6 @@ const getHex = (key: object, color: string, value: string) => {
 };
 
 export const ColorSection = ({ values }: { values: string }) => {
-  console.log(values);
   const multi = values.split(".");
   // @ts-ignore
   const key = multi.length > 1 ? colors[multi[0]][multi[1]] : colors[values];
