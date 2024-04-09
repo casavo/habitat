@@ -1,13 +1,4 @@
-import { createTheme } from "@vanilla-extract/css";
+import { createHabitatTheme } from "./createHabitatTheme";
+import tokens from "./tokens.json";
 
-import { mq } from "./mediaqueries";
-import { corners } from "./corners";
-import { space } from "./spacing";
-import { colors } from "./colors";
-
-export const [HabitatTheme, vars] = createTheme({
-  colors,
-  corners,
-  mq,
-  space,
-});
+export const [HabitatTheme, vars] = createHabitatTheme(tokens);
