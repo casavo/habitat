@@ -18,7 +18,7 @@ type Props = {
   variant?: "primary" | "secondary" | "tertiary";
 } & Omit<ButtonProps, "className">;
 
-export const Button:React.FC<Props> =forwardRef<HTMLButtonElement,Props>(({
+export const Button = forwardRef<HTMLButtonElement, Props>(({
   children,
   disabled = false,
   loading = false,
@@ -28,7 +28,7 @@ export const Button:React.FC<Props> =forwardRef<HTMLButtonElement,Props>(({
   iconLayout = "sx",
   size = "medium",
   ...props
-}: Props,ref) => {
+}, ref) => {
   return (
     <ButtonAria
       {...props}
