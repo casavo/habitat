@@ -3,13 +3,13 @@ import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "../../utils/theme.css";
 import { keyframes, style } from "@vanilla-extract/css";
 
-const black = vars.colors.root.neutral[600];
-const white = vars.colors.root.neutral[0];
+const black = vars.colors.buttons.light.background.default;
+const white = vars.colors.buttons.dark.background.default;
 
-const grey1 = vars.colors.root.neutral[100];
-const grey2 = vars.colors.root.neutral[200];
-const grey3 = vars.colors.root.neutral[400];
-const grey4 = vars.colors.root.neutral[500];
+const background = vars.colors.buttons.dark.background.disabled;
+const activeDark = vars.colors.buttons.dark.background["active, pressed"];
+const disabled = vars.colors.buttons.dark.text.disabled;
+const activeLight = vars.colors.buttons.light.background["active, pressed"];
 
 const rotate = keyframes({
   "0%": { transform: "rotate(0deg)" },
@@ -80,15 +80,15 @@ export const ButtonContainer = recipe({
         fill: white,
         border: "none",
         ":hover": {
-          backgroundColor: grey3,
+          backgroundColor: disabled,
         },
         ":active": {
-          backgroundColor: grey4,
+          backgroundColor: activeLight,
         },
         ":disabled": {
-          backgroundColor: grey1,
-          color: grey3,
-          fill: grey3,
+          backgroundColor: background,
+          color: disabled,
+          fill: disabled,
         },
       },
     },
@@ -103,15 +103,15 @@ export const ButtonContainer = recipe({
         fill: black,
         border: "none",
         ":hover": {
-          backgroundColor: grey1,
+          backgroundColor: background,
         },
         ":active": {
-          backgroundColor: grey2,
+          backgroundColor: activeDark,
         },
         ":disabled": {
-          backgroundColor: grey1,
-          color: grey3,
-          fill: grey3,
+          backgroundColor: background,
+          color: disabled,
+          fill: disabled,
         },
       },
     },
@@ -133,13 +133,13 @@ export const ButtonContainer = recipe({
         ":active": {
           color: white,
           fill: white,
-          backgroundColor: grey4,
+          backgroundColor: activeLight,
         },
         ":disabled": {
-          color: grey3,
-          fill: grey3,
+          color: disabled,
+          fill: disabled,
           backgroundColor: white,
-          border: `1px solid ${grey3}`,
+          border: `1px solid ${disabled}`,
         },
       },
     },
@@ -159,15 +159,15 @@ export const ButtonContainer = recipe({
           fill: black,
         },
         ":active": {
-          backgroundColor: grey1,
+          backgroundColor: background,
           color: black,
           fill: black,
         },
         ":disabled": {
-          color: grey3,
-          fill: grey3,
+          color: disabled,
+          fill: disabled,
           backgroundColor: black,
-          border: `1px solid ${grey3}`,
+          border: `1px solid ${disabled}`,
         },
       },
     },
@@ -186,13 +186,13 @@ export const ButtonContainer = recipe({
           fill: white,
         },
         ":active": {
-          backgroundColor: grey4,
+          backgroundColor: activeLight,
           color: white,
           fill: white,
         },
         ":disabled": {
-          color: grey3,
-          fill: grey3,
+          color: disabled,
+          fill: disabled,
           backgroundColor: "transparent",
         },
       },
@@ -212,13 +212,13 @@ export const ButtonContainer = recipe({
           fill: black,
         },
         ":active": {
-          backgroundColor: grey1,
+          backgroundColor: background,
           color: black,
           fill: black,
         },
         ":disabled": {
-          color: grey3,
-          fill: grey3,
+          color: disabled,
+          fill: disabled,
           backgroundColor: "transparent",
         },
       },
