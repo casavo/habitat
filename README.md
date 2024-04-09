@@ -1,7 +1,5 @@
 # Habitat - Casavo Design System Library
 
-## 🚧🚧 v1.0 BETA - WORK IN PROGRESS 🚧🚧
-
 > Welcome to the Casavo design system repository! This is where you can find all the components, guidelines and resources to create amazing user experiences for Casavo. Whether you are a developer, a designer or a product manager, you will find everything you need to get started. Explore the repository and have fun!
 
 ![docs/images/meme.png](docs/images/meme.png)
@@ -177,20 +175,41 @@ This library heavily relies on a set of Design Tokens defined in the Figma board
 
 ## (Very short) FAQ
 
-> Why 1.0 `BETA`?
+> How to use i18n strings that includes HTML entities?
 
-Because we prefered to release an initial version earlier and get actual feedbacks rather than spend some other months chasing an abstract concept of perfection to then realize we were doing something wrong.
+With `next-translate` we already have a dedicated component that handles the HTML interpolation, you can use it as children to any of our components as following:
+
+```jsx
+import { Body, Inline } from "@casavo/habitat"
+import Trans from "next-translate/Trans"
+
+<Body>
+  <Trans
+    components={{
+      strong: <Inline strong />,
+    }}
+    i18nKey={"context:my-text"}
+  />
+</Body>
+```
+
+so as you can see we are correctly rendering the HTML markup inside the component and also mapping any `<strong>` tag defined in the i18n string with an `<Inline>` Habitat component.
+
+In the case where you are **not** receiving the `i18nKey` string but just a string with HTML content within, you can use the `html=""` prop that we added in every typography components:
+
+```jsx
+import { Body } from "@casavo/habitat"
+
+const HTMLstring = `Some <strong>text</strong> with HTML entities. <br /> Enjoy!`;
+
+<Body html={HTMLstring} />
+```
+
+that prop is a wrapper for React's [dangerouslySetInnerHTML](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html), and should be used as a last resort.
 
 > Is it possible to use Habitat in a Casavo project that is already using other styling solutions?
 
 Yes, so far we did it in project that were using Emotion and Vanilla Extract with another theme and we never got any issue. So this opens the way to a progressive adoption in your existing project.
-
-> How many Casavo projects are using it?
-
-So far very few since we are still in "beta", ideally they will grow by the end of the year (2024)
-
-- 2 new landing pages in `wine` (_Casavo B2C website_)
-- `smp-frontend`
 
 > Can I use this library in a non React or Node.js environment?
 
