@@ -1,5 +1,19 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Button component > passing a ref works as expected 1`] = `
+<button
+  class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
+  data-rac=""
+  type="button"
+>
+  <p
+    class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne Typography_BodyStyle_strong_true__3igy4nh"
+  >
+    Click me
+  </p>
+</button>
+`;
+
 exports[`Button component > renders 1`] = `
 <button
   class="Button_ButtonContainer__1kgv65v2 Button_ButtonContainer_iconLayout_sx__1kgv65vb Button_ButtonContainer_size_medium__1kgv65v9 Button_ButtonContainer_theme_dark__1kgv65v3 Button_ButtonContainer_variant_primary__1kgv65v5 Button_ButtonContainer_compound_0__1kgv65vd"
