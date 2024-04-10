@@ -40,7 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(({
       {!loading && icon ? icon : null}
       {!loading && (size === "small" || size === "medium") ? (
         <Body size="m" strong={true} noMargin={true}>
-          dev {children}
+          {children}
         </Body>
       ) : null}
       {!loading && size === "large" ? (
