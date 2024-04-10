@@ -6,46 +6,59 @@
 
 ## Design first
 
-This project is a design driven project, which means we care a lot about the user experience and the aesthetics of our product. We want to create something that is beautiful, functional and easy to use.
+This project is a design driven project, which means we care a lot about the user experience and the aesthetics of our
+product. We want to create something that is beautiful, functional and easy to use.
 
-Everything in this codebase is a reflection of what has been defined on the related [Figma board](https://www.figma.com/file/0vYcLbHGHFIJ44hFI45WQJ/%F0%9F%9A%80-Habitat?type=design).
+Everything in this codebase is a reflection of what has been defined on the
+related [Figma board](https://www.figma.com/file/0vYcLbHGHFIJ44hFI45WQJ/%F0%9F%9A%80-Habitat?type=design).
 
 ## Built on top of
 
-- [React](https://react.dev/) + [Typescript](https://www.typescriptlang.org/) - the library for web and native user interfaces
+- [React](https://react.dev/) + [Typescript](https://www.typescriptlang.org/) - the library for web and native user
+  interfaces
 - [Vanilla Extract](https://vanilla-extract.style/) / Emotion - zero-runtime stylesheets in typeScript
 - [Storybook](https://storybook.js.org/) - frontend workshop for building UI components and pages in isolation
 - [Vite.js](https://vitejs.dev/) - next Generation Frontend Tooling
 
 ## What's included?
 
-You can check the [public Storybook](https://casavo.github.io/habitat) to test and experiment with the currently available components.
+You can check the [public Storybook](https://casavo.github.io/habitat) to test and experiment with the currently
+available components.
 
-To sneak peek the incoming new features or components and participate in the discussions you can [visit the issue section](https://github.com/casavo/habitat/issues) of this repo, or you can checkout [the project's board](https://github.com/orgs/casavo/projects/20) to have a quick overview of the development status.
+To sneak peek the incoming new features or components and participate in the discussions you
+can [visit the issue section](https://github.com/casavo/habitat/issues) of this repo, or you can
+checkout [the project's board](https://github.com/orgs/casavo/projects/20) to have a quick overview of the development
+status.
 
 ## Using Habitat in your project
 
-> **HEADS UP!** currently you need to [add the Casavo private NPM registry token](https://github.com/casavo/community-of-practice/blob/master/frontend/best-practices/setup-project.md#package-registry), but we are planning to release this package as a public NPM one in the near future.
+> **HEADS UP!** currently you need
+>
+to [add the Casavo private NPM registry token](https://github.com/casavo/community-of-practice/blob/master/frontend/best-practices/setup-project.md#package-registry),
+> but we are planning to release this package as a public NPM one in the near future.
 
 install the package in your project (_you can use whatever package manager you prefer_)
 
 ```bash
-$ npm i @casavo/habitat
+npm i @casavo/habitat
 ```
 
 import the `style.css` and `HabitatTheme` global class and apply it to top level node of you application.
 
-> **HEADS UP!** the `@casavo/habitat/style.css` file will also apply a global CSS reset/normalise, it is suggested to remove existing reset solutions.
+> **HEADS UP!** the `@casavo/habitat/style.css` file will also apply a global CSS reset/normalise, it is suggested to
+> remove existing reset solutions.
 
-```jsx
+```typescript jsx
 // src/pages/index.tsx - assuming it is a Next.js application
 import Head from "next/head";
-import { FC } from "react";
+import {FC} from "react";
 
 import "@casavo/habitat/style.css";
-import { HabitatTheme } from "@casavo/habitat";
+import {HabitatTheme} from "@casavo/habitat";
 
-export default function Home(): FC => {
+export default function Home(): FC
+=>
+{
   return (
     <>
       <Head>
@@ -56,14 +69,15 @@ export default function Home(): FC => {
       </main>
     </>
   );
-};
+}
+;
 ```
 
 then import and use the components that you need in yout code
 
-```jsx
+```typescript jsx
 // MyComponent.tsx
-import { Button } from "@casavo/habitat";
+import {Button} from "@casavo/habitat";
 
 export const MyComponent = (): FC => {
   const variant: string = "secondary";
@@ -72,11 +86,30 @@ export const MyComponent = (): FC => {
 
   return (
     <div>
-      <Button variant={variant} onClick={doSomething} />
+      <Button variant={variant} onClick={doSomething}/>
     </div>
   );
 };
 ```
+
+you can also import a specific component directly
+
+```typescript jsx
+import {Badge} from "@casavo/habitat/badge"
+import {Button} from "@casavo/habitat/button"
+import {Checkbox} from "@casavo/habitat/checkbox"
+import {Spinner} from "@casavo/habitat/spinner"
+import {Switch} from "@casavo/habitat/switch"
+import { H1, H2, H3, H4, H5, H6, Body, Inline } from "@casavo/habitat/typography"
+```
+
+| Habitat Component | [RSC](https://www.plasmic.app/blog/how-react-server-components-work) |
+|-------------------|----------------------------------------------------------------------|
+| Badge             | ✅                                                                    |
+| Button            | ❌                                                                    |
+| Checkbox          | ❌                                                                    |
+| Spinner           | ❌                                                                    |
+| Typography        | ✅                                                                    |
 
 <!--
 ## 🚧🚧 WIP 🚧🚧 - How to override the base theme
@@ -133,20 +166,20 @@ export default function Home(): FC => {
 Clone the repo and cd into it
 
 ```bash
-$ git clone git@github.com:casavo/habitat.git
-$ cd habitat
+git clone git@github.com:casavo/habitat.git
+cd habitat
 ```
 
 install the NPM dependencies
 
 ```bash
-$ npm ci
+npm ci
 ```
 
 start the Storybook development server
 
 ```bash
-$ npm run dev
+npm run dev
 ```
 
 the Storybook instance will automatically open in your browser at `http://localhost:6006/`.
@@ -162,12 +195,14 @@ For information, requests, bug and inconsistencies alerts join the `#habitat-des
 
 ## Updating the Design Tokens (WiP)
 
-This library heavily relies on a set of Design Tokens defined in the Figma board. When the tokens changes on the source board, the designers exports a new `.json` file that the developers can integrate in the repo and use by following this steps:
+This library heavily relies on a set of Design Tokens defined in the Figma board. When the tokens changes on the source
+board, the designers exports a new `.json` file that the developers can integrate in the repo and use by following this
+steps:
 
 1. copy the `.json` generated by Figma in the root folder of the project
 
-   - if the file has the same name of the existing one just overwrite it
-   - if the file name change delete the existing one and update the `source` value in the `dictionary.config.json` file
+    - if the file has the same name of the existing one just overwrite it
+    - if the file name change delete the existing one and update the `source` value in the `dictionary.config.json` file
 
 2. from the terminal execute `$ npm run update:tokens`
 3. this will generate a new plain `.json` token file in the `src/utils` folder
@@ -205,11 +240,12 @@ const HTMLstring = `Some <strong>text</strong> with HTML entities. <br /> Enjoy!
 <Body html={HTMLstring} />
 ```
 
-that prop is a wrapper for React's [dangerouslySetInnerHTML](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html), and should be used as a last resort.
+that prop is a wrapper for React's [dangerouslySetInnerHTML](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html), and should be used as a last resort
 
 > Is it possible to use Habitat in a Casavo project that is already using other styling solutions?
 
-Yes, so far we did it in project that were using Emotion and Vanilla Extract with another theme and we never got any issue. So this opens the way to a progressive adoption in your existing project.
+Yes, so far we did it in project that were using Emotion and Vanilla Extract with another theme and we never got any
+issue. So this opens the way to a progressive adoption in your existing project.
 
 > Can I use this library in a non React or Node.js environment?
 

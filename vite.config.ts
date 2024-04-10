@@ -37,6 +37,7 @@ export default defineConfig({
       },
     },
     sourcemap: true,
+    ssrManifest: true,
     target: "modules",
   },
   plugins: [
