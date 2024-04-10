@@ -17,12 +17,10 @@
     "dist"
   ],
   "exports": {
-    // ".": {
-    //   "import": "./dist/index.js",
-    //   "require": "./dist/index.cjs"
-    // },
-    // "./style.css": "./dist/style.css"
-    ".": "./dist/index.js",
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
     "./style.css": "./dist/style.css",
     "./badge": "./dist/badge.js",
     "./button": "./dist/button.js",

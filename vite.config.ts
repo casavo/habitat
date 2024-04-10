@@ -24,7 +24,7 @@ export default defineConfig({
         theme: resolve(__dirname, "src/utils/theme.ts"),
         typography: resolve(__dirname, "src/components/Typography"),
       },
-      formats: ["es"],
+      formats: ["es","cjs"],
       name: "@casavo/habitat",
     },
     rollupOptions: {
