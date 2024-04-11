@@ -16,7 +16,7 @@ type Props = {
   theme?: "light" | "dark";
   type?: ButtonHTMLAttributes<object>["type"];
   variant?: "primary" | "secondary" | "tertiary";
-} & Omit<ButtonProps, "className">;
+} & Omit<ButtonProps, "className"|"isDisabled">;
 
 export const Button = forwardRef<HTMLButtonElement, Props>(({
   children,
