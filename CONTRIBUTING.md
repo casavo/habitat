@@ -9,14 +9,18 @@
 - styles are defined using [Vanilla Extract](https://vanilla-extract.style/)
   - for complex/dynamic classes take a look at [Recipes](https://vanilla-extract.style/documentation/packages/recipes/)
   - in-line styles should only be considered as a last resort
-- new components **must** be built on top of the [react-aria](https://react-spectrum.adobe.com/react-aria/) package
+- new components that extends native HTML elements **must** be built on top of the [react-aria](https://react-spectrum.adobe.com/react-aria/) package
 - being low level components, the resulting `HTML` code must be the most semantic as possible
   - always refer to the [official HTML tags reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   - generic tags like `<div>` and `<span>` should be always used as a last resort
-- this repo is shared with many teams, before adding a new NPM package, double check if its really necessary
+- this repo is shared between different teams, before adding a new NPM package, double check if its really necessary:
   - if the same result can be obtained in few lines of JS code, avoid adding extra packages
   - if the package is really proving to be time-saver, please detail the use case in the PR
   - when in doubt, you can always ask in the `#cop-frontend` Slack channel
+- lets try to keep the dependencies updated on the go rather than bulk update everything every 1-2 years:
+  - you can use `npm-check` utility to discover updated packages
+  - beside the type of dependency update (patch, minor, major) always run the build and test process to have a first feedback about possible breaking functionality
+  - if the dependencies updates works without issues just commit them, otherwise feel free to revert the change and [open an issue](https://github.com/casavo/habitat/issues/new) to warn other devs about breaking updates
 
 ### How to use theme values
 
@@ -30,10 +34,10 @@ import { style } from "@vanilla-extract/css"
 import { vars } from "@/utils/theme.css"
 
 export const container = style({
-  backgroundColor: vars.colors.green.60
+  backgroundColor: vars.colors.root.orange[500]
   "@media": {
     [vars.mq.desktop]: {
-      backgroundColor: vars.colors.orange.20
+      backgroundColor: vars.colors.root.darkgreen[400]
     },
   },
 })
@@ -45,9 +49,12 @@ This allows consumer of the library to overwrite the values of theme without the
 
 ### What categories of values are exposed through `vars`?
 
-- CSS media queries (`vars.mq`)
-- Casavo brand colors (`vars.colors`)
-- spacing tokens (`vars.space`)
+| Properties | Tokens key | 
+|--|--|
+| CSS media queris | `vars.mq` |
+| Casavo brand colors | `vars.colors` |
+| Spacing | `vars.space` |
+| Border radius | `vars.corners` | 
 
 When writing a new component and reviewing a PR in Habitat, these values **must be enforced** in the codebase.
 
@@ -56,8 +63,8 @@ When writing a new component and reviewing a PR in Habitat, these values **must 
 - create a folder and assign it the name of the component you want to create within `src/components`. Es. Badge folder.
 - inside the new folder create 3 files:
   - `index.ts` it is used for export the component.
-  - `YourComponent.tsx` (replace YourComponent with the name of component that you want create) it is used to create the component. Please check the coding guidelines.
-  - `YourComponent.css.ts` (replace YourComponent with the name of component that you want create) it is used to create the style component with vanilla extract.
+  - `YourComponent.tsx` (_replace YourComponent with the name of component that you want create_) it is used to create the component. Please check the coding guidelines.
+  - `YourComponent.css.ts` (_replace YourComponent with the name of component that you want create_) it is used to create the style component with vanilla extract.
 - add new story in Storybook in the `src/stories` folder
   - as naming pattern `[category][name].stories.tsx`
   - if it is a documentation-only page, consider using the `.mdx` format
@@ -82,7 +89,7 @@ import { StoryLayout } from "./components/StoryLayout";
 | importLine  | `false`      | `string`          | code example of the import                       |
 | usage       | `false`      | `string`          | code example of the component basic usage        |
 
-### How to request changes
+### How to request changes to the Design System
 
 - join the `#design-system-taskforce` channel on Slack
 - explain your proposal using one of the following templates: **TBD**
