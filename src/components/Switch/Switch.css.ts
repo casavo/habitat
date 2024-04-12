@@ -24,7 +24,7 @@ const indicatorBase = style({
     content: "",
     display: "block",
     height: "18px",
-    margin: vars.space[25],
+    margin: vars.space['025'],
     transition: "all 200ms",
     width: "18px",
   },

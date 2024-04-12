@@ -40,7 +40,7 @@ export const ColorSection = ({ values }: { values: string }) => {
           <table
             style={{
               border: `1px solid #ccc`,
-              borderRadius: space[50],
+              borderRadius: space['050'],
               textAlign: "left",
               width: "100%",
             }}
