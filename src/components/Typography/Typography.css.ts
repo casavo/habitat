@@ -1,6 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
-import { space } from "../../utils/spacing";
+import { vars } from "../../utils/theme.css";
 import { fontFace, globalStyle, style } from "@vanilla-extract/css";
 
 const Bagoss = fontFace({
@@ -16,8 +16,7 @@ const noMargin = {
 };
 
 globalStyle("a", {
-  // TODO: change this to a color token when --greyscale-600-black will be available
-  color: "#1D1D1B",
+  color: vars.colors.root.neutral[600],
 });
 
 export const HeadingsStyle = recipe({
@@ -35,7 +34,7 @@ export const HeadingsStyle = recipe({
         },
         fontFamily: Bagoss,
         fontSize: "40px !important",
-        marginBottom: `${space[600]} !important`,
+        marginBottom: `${vars.space[600]} !important`,
       },
     },
     element: {
@@ -45,7 +44,7 @@ export const HeadingsStyle = recipe({
         },
         fontFamily: Bagoss,
         fontSize: 36,
-        marginBottom: space[400],
+        marginBottom: vars.space[400],
       },
       h2: {
         "@media": {
@@ -53,7 +52,7 @@ export const HeadingsStyle = recipe({
         },
         fontFamily: Bagoss,
         fontSize: 32,
-        marginBottom: space[300],
+        marginBottom: vars.space[300],
       },
       h3: {
         "@media": {
@@ -63,7 +62,7 @@ export const HeadingsStyle = recipe({
         fontSize: 24,
         fontWeight: 400,
         lineHeight: 1.5,
-        marginBottom: space[300],
+        marginBottom: vars.space[300],
       },
       h4: {
         "@media": {
@@ -73,7 +72,7 @@ export const HeadingsStyle = recipe({
         fontSize: 20,
         fontWeight: 400,
         lineHeight: 1.5,
-        marginBottom: space[300],
+        marginBottom: vars.space[300],
       },
       h5: {
         "@media": {
@@ -83,14 +82,14 @@ export const HeadingsStyle = recipe({
         fontSize: 16,
         fontWeight: 400,
         lineHeight: 1.5,
-        marginBottom: space[200],
+        marginBottom: vars.space[200],
       },
       h6: {
         fontFamily: Inter,
         fontSize: 16,
         fontWeight: 400,
         lineHeight: 1.5,
-        marginBottom: space[200],
+        marginBottom: vars.space[200],
       },
     },
     noMargin,
@@ -102,7 +101,7 @@ const base = style({
   fontFamily: Inter,
   fontWeight: 400,
   lineHeight: 1.5,
-  marginBottom: space[200],
+  marginBottom: vars.space[200],
   textDecoration: "none",
   whiteSpace,
 });
