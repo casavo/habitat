@@ -25,7 +25,7 @@ export const ButtonContainer = recipe({
   base: {
     alignItems: "center",
     alignSelf: "stretch",
-    borderRadius: vars.corners["050"],
+    borderRadius: vars.corners[50],
     display: "inline-flex",
     gap: vars.space[100],
     justifyContent: "center",

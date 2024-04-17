@@ -1,9 +1,13 @@
 import tokens from "./tokens.json";
+import {RemoveLeadingZeroFromList} from "./typeUtils.ts";
+
 
 const _space = tokens.foundations.space;
 
 // Get the type of the elements in the values array
-type SpacingKeys = keyof typeof _space;
+type RawSpacingKeys = keyof typeof _space;
+
+type SpacingKeys = RemoveLeadingZeroFromList<RawSpacingKeys>
 
 const values = [...Object.values(_space)].map(String);
 
