@@ -1,9 +1,12 @@
 import tokens from "./tokens.json";
+import {RemoveLeadingZeroFromList} from "./typeUtils.ts";
 
 const _corner = tokens.foundations.corner;
 
 // Get the type of the elements in the values array
-type CornerKeys = keyof (typeof _corner);
+type RawCornerKeys = keyof (typeof _corner);
+
+type CornerKeys = RemoveLeadingZeroFromList<RawCornerKeys>
 
 type Corners = {
   [K in CornerKeys]: string;
