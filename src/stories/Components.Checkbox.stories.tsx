@@ -2,8 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Checkbox } from "../components/Checkbox";
 import { StoryLayout } from "./components/StoryLayout";
+import {ComponentProps} from "react";
 
-const meta: Meta<typeof Checkbox> = {
+type StoryProps = ComponentProps<typeof Checkbox> &{ text:string} 
+
+const meta: Meta<StoryProps> = {
   argTypes: {
     checked: {
       control: "boolean",
@@ -32,7 +35,8 @@ const meta: Meta<typeof Checkbox> = {
     disabled: false,
     error: false,
     message: "error message",
-    value: "hasElevator",
+    text: "Has elevator",
+    value: "hasElevator"
   },
   component: Checkbox,
   title: "Components/Checkbox",
@@ -46,7 +50,7 @@ const description = (
 );
 
 export default meta;
-type Story = StoryObj<typeof Checkbox>;
+type Story = StoryObj<StoryProps>;
 
 export const _Checkbox: Story = {
   render: ({ ...args }) => (
@@ -58,14 +62,13 @@ export const _Checkbox: Story = {
       usage={"<Checkbox checked={false}>Has elevator</Checkbox>"}
     >
       <Checkbox
-        {...args}
         checked={args.checked}
         disabled={args.disabled}
         error={args.error}
         message={args.message}
         value={args.value}
       >
-        Has elevator
+        {args.text}
       </Checkbox>
     </StoryLayout>
   ),
