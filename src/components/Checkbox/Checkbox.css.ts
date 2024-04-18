@@ -11,7 +11,6 @@ const red = vars.colors.root.red[600];
 export const wrapper = style({
   alignItems: "center",
   display: "flex",
-  flexWrap: "wrap",
   gap: `0 ${gap}`,
   transition: "all 200ms",
 });

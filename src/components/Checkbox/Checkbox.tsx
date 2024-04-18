@@ -3,15 +3,12 @@ import { Checkbox as CheckboxAria } from "react-aria-components";
 import { checkbox, messageStyle, wrapper } from "./Checkbox.css";
 import { Body } from "../Typography";
 
-type Props = CheckboxProps & {
+type Props = React.PropsWithChildren<{
   checked?: boolean;
-  children?: React.ReactNode;
   disabled?: boolean;
   error?: boolean;
   message?: string;
-  onChange?: (args: { checked: boolean; value?: string }) => void;
-  value?: string;
-};
+} & Omit<CheckboxProps,"isSelected"|"isDisabled"|"children"|"className">>  ;
 
 export const Checkbox = ({
   checked,
@@ -19,16 +16,14 @@ export const Checkbox = ({
   disabled,
   error,
   message,
-  onChange,
-  value,
+    ...props
 }: Props) => {
   return (
     <CheckboxAria
+        {...props}
       isDisabled={disabled}
       isSelected={checked}
       className={wrapper}
-      value={value}
-      onChange={(args) => onChange && onChange(args)}
     >
       <div
         data-id="check-icon"
