@@ -5,7 +5,8 @@ import { recipe } from "@vanilla-extract/recipes";
 const gap = vars.space[100];
 const size = vars.space[200];
 const black = vars.colors.root.neutral[600];
-const grey = "#B3B3B2";
+const grey = vars.colors.root.neutral[300];
+const white = vars.colors.root.neutral[100]
 const red = vars.colors.root.red[600];
 
 export const wrapper = style({
@@ -48,7 +49,7 @@ export const checkbox = recipe({
     },
     disabled: {
       true: {
-        backgroundColor: "#E8E8E8",
+        backgroundColor: white,
         borderColor: grey,
       },
     },
