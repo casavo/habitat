@@ -4,14 +4,10 @@ import { Checkbox } from "../components/Checkbox";
 import { StoryLayout } from "./components/StoryLayout";
 import {ComponentProps} from "react";
 
-type StoryProps = ComponentProps<typeof Checkbox> &{ text:string} 
+type StoryProps = Omit<ComponentProps<typeof Checkbox>,'checked'> &{ text:string}
 
 const meta: Meta<StoryProps> = {
   argTypes: {
-    checked: {
-      control: "boolean",
-      description: "toggle the state",
-    },
     disabled: {
       control: "boolean",
       description: "toggle the standard disabled state",
@@ -31,7 +27,6 @@ const meta: Meta<StoryProps> = {
     },
   },
   args: {
-    checked: true,
     disabled: false,
     error: false,
     message: "error message",
@@ -61,8 +56,8 @@ export const _Checkbox: Story = {
       title="Components/Checkbox"
       usage={"<Checkbox checked={false}>Has elevator</Checkbox>"}
     >
-      <Checkbox
-        checked={args.checked}
+            <Checkbox
+        checked={false}
         disabled={args.disabled}
         error={args.error}
         message={args.message}
@@ -70,6 +65,16 @@ export const _Checkbox: Story = {
       >
         {args.text}
       </Checkbox>
+        <Checkbox
+            checked={true}
+            disabled={args.disabled}
+            error={args.error}
+            message={args.message}
+            value={args.value}
+        >
+          {args.text}
+        </Checkbox>
+
     </StoryLayout>
   ),
 };
