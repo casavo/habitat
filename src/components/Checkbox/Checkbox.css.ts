@@ -23,6 +23,7 @@ export const checkbox = recipe({
     border: `1px solid ${grey}`,
     borderRadius: 4,
     display: "flex",
+    flexShrink:0,
     height: size,
     justifyContent: " center",
     transition: "all 200ms",
