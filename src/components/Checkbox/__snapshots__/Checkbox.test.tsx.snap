@@ -15,20 +15,7 @@ exports[`Checkbox component > renders 1`] = `
   <div
     class="Checkbox_checkbox__1g2c7v71"
     data-id="check-icon"
-  >
-    <svg
-      fill="none"
-      height="16"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4.35982 7.39202L2.87769 8.73317L6.5114 12.7572L13.5542 5.70712L12.1414 4.29291L6.58447 9.85565L4.35982 7.39202Z"
-        fill="none"
-      />
-    </svg>
-  </div>
+  />
   <p
     class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne"
   />
@@ -52,20 +39,7 @@ exports[`Checkbox component > renders as disabled 1`] = `
   <div
     class="Checkbox_checkbox__1g2c7v71 Checkbox_checkbox_disabled_true__1g2c7v73"
     data-id="check-icon"
-  >
-    <svg
-      fill="none"
-      height="16"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4.35982 7.39202L2.87769 8.73317L6.5114 12.7572L13.5542 5.70712L12.1414 4.29291L6.58447 9.85565L4.35982 7.39202Z"
-        fill="none"
-      />
-    </svg>
-  </div>
+  />
   <p
     class="Typography__3igy4nb Typography_base__3igy4na Typography_BodyStyle_noMargin_true__3igy4nc Typography_BodyStyle_size_m__3igy4ne"
   />
