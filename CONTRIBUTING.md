@@ -1,5 +1,15 @@
 # Contributing to Habitat
 
+### How to request changes to the Design System
+
+- join the `#design-system-taskforce` channel on Slack
+- explain your proposal using one of the following templates: **TBD**
+- you can check the designer proposal workflow from this [Miro board](https://miro.com/app/board/uXjVMYRtpog=/?moveToWidget=3458764554126497351&cot=14&share_link_id=980567127227)
+
+### How to propose code changes
+
+Check the [related doc](docs/changes.md).
+
 ### Coding guidelines
 
 > ⚠️ **this project uses the `main` branch as a primary one instead of `master`!** ⚠️
@@ -49,12 +59,12 @@ This allows consumer of the library to overwrite the values of theme without the
 
 ### What categories of values are exposed through `vars`?
 
-| Properties | Tokens key | 
-|--|--|
-| CSS media queris | `vars.mq` |
-| Casavo brand colors | `vars.colors` |
-| Spacing | `vars.space` |
-| Border radius | `vars.corners` | 
+| Properties          | Tokens key     |
+| ------------------- | -------------- |
+| CSS media queris    | `vars.mq`      |
+| Casavo brand colors | `vars.colors`  |
+| Spacing             | `vars.space`   |
+| Border radius       | `vars.corners` |
 
 When writing a new component and reviewing a PR in Habitat, these values **must be enforced** in the codebase.
 
@@ -88,12 +98,6 @@ import { StoryLayout } from "./components/StoryLayout";
 | language    | `false`      | `string`          | code highlighting language                       |
 | importLine  | `false`      | `string`          | code example of the import                       |
 | usage       | `false`      | `string`          | code example of the component basic usage        |
-
-### How to request changes to the Design System
-
-- join the `#design-system-taskforce` channel on Slack
-- explain your proposal using one of the following templates: **TBD**
-- you can check the designer proposal workflow from this [Miro board](https://miro.com/app/board/uXjVMYRtpog=/?moveToWidget=3458764554126497351&cot=14&share_link_id=980567127227)
 
 ### How to submit code changes
 
