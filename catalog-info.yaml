@@ -15,4 +15,4 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: default/write
+  owner: default/platform-enablement
