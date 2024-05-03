@@ -4,7 +4,7 @@ metadata:
   name: habitat
   description: Casavo Design System
   tags:
-    - language:typescript
+    - typescript
     - npm
     - ui
   annotations:
