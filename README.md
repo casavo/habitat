@@ -98,7 +98,6 @@ you can also import a specific component directly
 import {Badge} from "@casavo/habitat/badge"
 import {Button} from "@casavo/habitat/button"
 import {Checkbox} from "@casavo/habitat/checkbox"
-import {Spinner} from "@casavo/habitat/spinner"
 import {Switch} from "@casavo/habitat/switch"
 import { H1, H2, H3, H4, H5, H6, Body, Inline } from "@casavo/habitat/typography"
 ```
