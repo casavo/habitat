@@ -1,43 +1,43 @@
 import "./../utils/reset.css";
-import { space }from  "./../utils/spacing";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  Body,
-} from "../components/Typography";
+import { space } from "./../utils/spacing";
+import { H2, H3, H4, H5, H6, Body } from "../components/Typography";
 import { Table } from "./components/Spacings";
 
 import { Meta } from "@storybook/blocks";
+import { StoryLayout } from "./components/StoryLayout";
 
 <Meta title="Foundations/Spacings" />
 
 <div className="sb-unstyled">
-  <H1 display={true}>Spacings</H1>
+<StoryLayout title="Spacings">
   <Body size="l">This is used to define the space between things inside a layout. Positioning UI should be with done including the empty space between components. This is what creates relationships and hierarchy.</Body>
 
 {" "}
 
 <H3>Base unit = 8px</H3>
 <Body size="l">
-  The spacing system can also be built around a base unit of 8px. This way, it’s quite easy to scale up and down and maintain consistency.
+  The spacing system can also be built around a base unit of 8px. This way, it’s
+  quite easy to scale up and down and maintain consistency.
 </Body>
 
 {" "}
 
 <H2>Space tokens</H2>
 <Body size="l">
-  In this case, 8px serves as a basis and is therefore 100%. Its token would then be, for example, Space/100. Every token is a multiple of this base unit, where the number represents the percentage of the base unit. For example, Space/200 is 200% of the size of the base unit, therefore represents 16px.
+  In this case, 8px serves as a basis and is therefore 100%. Its token would
+  then be, for example, Space/100. Every token is a multiple of this base unit,
+  where the number represents the percentage of the base unit. For example,
+  Space/200 is 200% of the size of the base unit, therefore represents 16px.
 </Body>
 
-<Table titles={["Token", "JS Token", "Base unit multiplier", "REM", "PX", "Example" ]} />
+<Table
+  titles={["Token", "JS Token", "Base unit multiplier", "REM", "PX", "Example"]}
+/>
 
 <H2>Usage & Examples</H2>
 <Body size="l">
-  Different use cases require different ranges of spacing units to achieve the best outcomes. Here are a few examples:
+  Different use cases require different ranges of spacing units to achieve the
+  best outcomes. Here are a few examples:
 </Body>
 
 <figure style={{
@@ -45,5 +45,5 @@ import { Meta } from "@storybook/blocks";
 }}>
   <img src="/images/spacing.svg" alt="" loading="lazy" />
 </figure>
-
+</StoryLayout>
 </div>

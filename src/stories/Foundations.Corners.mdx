@@ -1,32 +1,24 @@
 import "./../utils/reset.css";
-import { space }from  "./../utils/spacing";
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  Body,
-} from "../components/Typography";
+import { H2, H3, H4, H5, H6, Body } from "../components/Typography";
 import { Table } from "./components/Corners";
-
 import { Meta } from "@storybook/blocks";
+import { StoryLayout } from "./components/StoryLayout";
 
 <Meta title="Foundations/Corners" />
 
 <div className="sb-unstyled">
-  <H1 display={true}>Corners / Borders</H1>
+<StoryLayout title="Corners / Borders">
   <Body size="l">This is used to define the corner radius of a component. It’s similar to spaces, as it also uses the same 8px base unit system.</Body>
 
 {" "}
 
-  <H2>Corner tokens</H2>
-  <Body size="l">
-    In the same case as with spacers, 8px serves as a basis and is therefore 100%. Its token would then be, for example, corner-100. 
-  </Body>
+{" "}
+<H2>Corner tokens</H2>
+<Body size="l">
+  In the same case as with spacers, 8px serves as a basis and is therefore 100%.
+  Its token would then be, for example, corner-100.
+</Body>
 
   <Table titles={["Token", "JS Token", "Base unit multiplier", "REM", "PX", "Use case" ]} />
-
+</StoryLayout>
 </div>
-
