@@ -31,7 +31,6 @@
       "@casavo/habitat/badge": ["./src/components/Badge"],
       "@casavo/habitat/button": ["./src/components/Button"],
       "@casavo/habitat/checkbox": ["./src/components/Checkbox"],
-      "@casavo/habitat/spinner": ["./src/components/Spinner"],
       "@casavo/habitat/switch": ["./src/components/Switch"],
       "@casavo/habitat/typography": ["./src/components/Typography"],
       "@casavo/habitat/utils": ["./src/components/utils"]

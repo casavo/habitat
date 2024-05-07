@@ -25,7 +25,6 @@
     "./badge": "./dist/badge.js",
     "./button": "./dist/button.js",
     "./checkbox": "./dist/checkbox.js",
-    "./spinner": "./dist/spinner.js",
     "./switch": "./dist/switch.js",
     "./theme": "./dist/theme.js",
     "./reset": "./dist/reset.js",

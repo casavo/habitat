@@ -19,7 +19,6 @@ export default defineConfig({
         checkbox: resolve(__dirname, "src/components/Checkbox"),
         index: resolve(__dirname, "src/index.ts"),
         reset: resolve(__dirname, "src/utils/reset.css.ts"),
-        spinner: resolve(__dirname, "src/components/Spinner"),
         switch: resolve(__dirname, "src/components/Switch"),
         theme: resolve(__dirname, "src/utils/theme.ts"),
         typography: resolve(__dirname, "src/components/Typography"),
