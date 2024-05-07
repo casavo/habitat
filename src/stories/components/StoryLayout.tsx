@@ -10,7 +10,7 @@ type Props = {
   importLine?: string;
   isComponent?: boolean;
   language?: SupportedLanguage;
-  title: string;
+  title?: string;
   usage?: string;
 };
 
@@ -33,9 +33,11 @@ export const StoryLayout = ({
   usage,
 }: Props) => (
   <main className={HabitatTheme}>
-    <Hgroup>
-      {isComponent ? <H2>{title}</H2> : <H1 display={true}>{title}</H1>}
-    </Hgroup>
+    {title && (
+      <Hgroup>
+        {isComponent ? <H2>{title}</H2> : <H1 display={true}>{title}</H1>}
+      </Hgroup>
+    )}
     {isComponent && description && <Body>{description}</Body>}
     {isComponent && (
       <Hgroup>
