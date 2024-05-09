@@ -56,9 +56,7 @@ import {FC} from "react";
 import "@casavo/habitat/style.css";
 import {HabitatTheme} from "@casavo/habitat";
 
-export default function Home(): FC
-=>
-{
+export default function Home(): FC => {
   return (
     <>
       <Head>
@@ -69,8 +67,7 @@ export default function Home(): FC
       </main>
     </>
   );
-}
-;
+};
 ```
 
 then import and use the components that you need in yout code
@@ -102,7 +99,7 @@ import {Switch} from "@casavo/habitat/switch"
 import { H1, H2, H3, H4, H5, H6, Body, Inline } from "@casavo/habitat/typography"
 ```
 
-| Habitat Component | [RSC](https://www.plasmic.app/blog/how-react-server-components-work) |
+| Habitat Components | [RSC](https://www.plasmic.app/blog/how-react-server-components-work) |
 |-------------------|----------------------------------------------------------------------|
 | Badge             | ✅                                                                    |
 | Button            | ❌                                                                    |

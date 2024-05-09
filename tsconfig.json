@@ -28,11 +28,11 @@
     ],
     "paths": {
       "@casavo/habitat": ["./src/index.ts"],
-      "@casavo/habitat/badge": ["./src/components/Badge"],
-      "@casavo/habitat/button": ["./src/components/Button"],
-      "@casavo/habitat/checkbox": ["./src/components/Checkbox"],
-      "@casavo/habitat/switch": ["./src/components/Switch"],
-      "@casavo/habitat/typography": ["./src/components/Typography"],
+      "@casavo/habitat/Badge": ["./src/components/Badge"],
+      "@casavo/habitat/Button": ["./src/components/Button"],
+      "@casavo/habitat/Checkbox": ["./src/components/Checkbox"],
+      "@casavo/habitat/Switch": ["./src/components/Switch"],
+      "@casavo/habitat/Typography": ["./src/components/Typography"],
       "@casavo/habitat/utils": ["./src/components/utils"]
     }
   },
