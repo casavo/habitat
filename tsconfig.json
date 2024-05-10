@@ -25,11 +25,18 @@
     "noFallthroughCasesInSwitch": true,
     "types": [
       "@testing-library/jest-dom"
-    ]
+    ],
+    "paths": {
+      "@casavo/habitat": ["./src/index.ts"],
+      "@casavo/habitat/Badge": ["./src/components/Badge"],
+      "@casavo/habitat/Button": ["./src/components/Button"],
+      "@casavo/habitat/Checkbox": ["./src/components/Checkbox"],
+      "@casavo/habitat/Switch": ["./src/components/Switch"],
+      "@casavo/habitat/Typography": ["./src/components/Typography"],
+      "@casavo/habitat/utils": ["./src/components/utils"]
+    }
   },
-  "include": [
-    "src"
-  ],
+  "exclude": ["node_modules", "dist"],
   "references": [
     {
       "path": "./tsconfig.node.json"

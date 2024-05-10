@@ -1,4 +1,4 @@
-import path from "node:path";
+import {resolve} from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
@@ -13,10 +13,16 @@ export default defineConfig({
   base: isPROD ? id : "/",
   build: {
     lib: {
-      entry: [
-        path.resolve(__dirname, "src/utils/reset.css.ts"),
-        path.resolve(__dirname, "src/index.ts"),
-      ],
+      entry: {
+        badge: resolve(__dirname, "src/components/Badge"),
+        button: resolve(__dirname, "src/components/Button"),
+        checkbox: resolve(__dirname, "src/components/Checkbox"),
+        index: resolve(__dirname, "src/index.ts"),
+        reset: resolve(__dirname, "src/utils/reset.css.ts"),
+        switch: resolve(__dirname, "src/components/Switch"),
+        theme: resolve(__dirname, "src/utils/theme.ts"),
+        typography: resolve(__dirname, "src/components/Typography"),
+      },
       formats: ["es","cjs"],
       name: "@casavo/habitat",
     },
@@ -30,6 +36,7 @@ export default defineConfig({
       },
     },
     sourcemap: true,
+    ssrManifest: true,
     target: "modules",
   },
   plugins: [
