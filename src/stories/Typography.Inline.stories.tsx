@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import "./../utils/reset.css";
 import { Body, Inline } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
-import { bodyArgTypes as argTypes } from "./utils/typography";
+import { inlineArgTypes as argTypes } from "./utils/typography";
 
 const meta: Meta<typeof Inline> = {
   argTypes,
