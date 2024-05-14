@@ -45,7 +45,7 @@ jobs:
   deploy:
     name: Deploy preview
     runs-on: self-hosted
-    if: github.event.pull_request.draft == false
+    if: github.event.pull_request.draft == false && contains(github.event.pull_request.labels.*.name, 'chromatic-deploy')
     needs: [build]
     steps:
       - uses: actions/checkout@v4
