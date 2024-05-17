@@ -49,8 +49,8 @@ const indicatorBase = style({
       borderColor: vars.colors.root.neutral[100],
     },
     [`${base}[data-selected][data-disabled] &`]: {
-      background: vars.colors.root.orange[400],
-      borderColor: vars.colors.root.orange[400],
+      background: "#FFC279",
+      borderColor: "#FFC279",
     },
   },
   transition: "all 300ms",
