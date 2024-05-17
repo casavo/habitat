@@ -45,7 +45,7 @@ export const Checkbox = ({
           >
             <path
               d="M4.35982 7.39202L2.87769 8.73317L6.5114 12.7572L13.5542 5.70712L12.1414 4.29291L6.58447 9.85565L4.35982 7.39202Z"
-              fill={vars.colors.root.neutral[0]}
+              fill={disabled ? vars.colors.root.neutral[300] : vars.colors.root.neutral[0]}
             />
           </svg>
         )}
