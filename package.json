@@ -39,7 +39,8 @@
     "prebuild:components": "rm -rf ./dist && rm -rf ./storybook-static",
     "build:components": " tsc && vite build ",
     "update:tokens": "style-dictionary build -c ./dictionary.config.json",
-    "test:unit": "vitest run"
+    "test:unit": "vitest run",
+    "validate-ts": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@vanilla-extract/css": "1.15.2",
