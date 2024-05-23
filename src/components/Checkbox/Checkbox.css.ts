@@ -4,10 +4,10 @@ import { recipe } from "@vanilla-extract/recipes";
 
 const gap = vars.space[100];
 const size = vars.space[200];
-const black = vars.colors.root.neutral[600];
+const checked = vars.colors.root.orange[500];
 const grey = vars.colors.root.neutral[300];
 const white = vars.colors.root.neutral[100]
-const red = vars.colors.root.red[600];
+const error = vars.colors.root.red[600];
 
 export const wrapper = style({
   alignItems: "center",
@@ -32,8 +32,8 @@ export const checkbox = recipe({
   compoundVariants: [
     {
       style: {
-        backgroundColor: red,
-        borderColor: red,
+        backgroundColor: error,
+        borderColor: error,
       },
       variants: {
         checked: true,
@@ -44,8 +44,8 @@ export const checkbox = recipe({
   variants: {
     checked: {
       true: {
-        backgroundColor: black,
-        borderColor: black,
+        backgroundColor: checked,
+        borderColor: checked,
       },
     },
     disabled: {
@@ -56,7 +56,7 @@ export const checkbox = recipe({
     },
     error: {
       true: {
-        borderColor: red,
+        borderColor: error,
       },
     },
   },
@@ -71,7 +71,7 @@ globalStyle(`${wrapper}[data-disabled] > p`, {
 });
 
 export const messageStyle = style({
-  color: red,
+  color: error,
   flexBasis: "100%",
   margin: 0,
   marginLeft: `calc(${size} + ${gap})`,
