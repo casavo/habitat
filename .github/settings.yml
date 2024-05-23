@@ -1,0 +1,22 @@
+# see https://github.com/repository-settings/app/blob/master/docs/configuration.md for details
+repository:
+  private: false
+  default_branch: main
+  has_wiki: false
+  delete_branch_on_merge: true
+
+collaborators:
+  - username: pietrograndi
+    permission: admin
+
+teams:
+  # "legacy" teams
+  - name: read
+    permissions: pull
+  # new teams
+  - name: product
+    permission: triage
+  - name: engineering
+    permission: push
+  - name: platform-enablement
+    permission: maintain
