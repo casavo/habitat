@@ -37,8 +37,8 @@
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "prebuild:components": "rm -rf ./dist && rm -rf ./storybook-static",
-    "build:components": " tsc && vite build ",
-    "update:tokens": "style-dictionary build -c ./dictionary.config.json",
+    "build:components": "rm -rf ./dist && tsc && vite build ",
+    "update:tokens": "node ./build.js",
     "test:unit": "vitest run",
     "validate-ts": "tsc -p tsconfig.json"
   },
