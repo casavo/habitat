@@ -2,7 +2,7 @@
   "name": "@casavo/habitat",
   "description": "Casavo Design System Library",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "license": "Apache-2.0",
   "homepage": "https://github.com/casavo/habitat",
@@ -44,9 +44,11 @@
   "dependencies": {
     "@vanilla-extract/css": "1.15.2",
     "@vanilla-extract/recipes": "0.5.3",
-    "react": "18.3.1",
-    "react-aria-components": "1.0.0-beta.1",
-    "react-dom": "18.3.1"
+    "react-aria-components": "1.0.0-beta.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "8.1.6",
