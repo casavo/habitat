@@ -4,7 +4,7 @@ import { Meta } from "@storybook/blocks";
 import { ColorSection } from "./components/ColorsPage";
 import { H2, Body, Inline } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
-import { vars } from "./../utils/theme.css";
+import { themeContract } from "./../utils/theme.css";
 
 <Meta title="Colors/Semantic" />
 
@@ -18,17 +18,17 @@ import { vars } from "./../utils/theme.css";
       It is also on this level when we distinguish between our different themes: B2C & B2B. Essentially, only the primary colours differ here, while the rest — secondary, as well as body (typography), borders, dividers, and other colours — remain the same.
     </Body>
 
-    <hr style={{ marginTop: vars.space[1800] }} />
+    <hr style={{ marginTop: themeContract.space[1800] }} />
     <H2>Background (Surface)</H2>
     <Body>Background, sometimes referred to as “surface”, is the the background colour of either individual UI elements (e.g. cards, input forms, etc) and whole sections or bodies of content (e.g. a whole mobile frame and/or sections within that frame).</Body>
     <ColorSection values="background" />
 
-    <hr style={{ marginTop: vars.space[1000] }} />
+    <hr style={{ marginTop: themeContract.space[1000] }} />
     <H2>Foreground</H2>
     <Body>Foreground is essentially applied to any text, icons, and any UI elements that sit on top, or on the front, of a background.</Body>
     <ColorSection values="foreground" />
 
-    <hr style={{ marginTop: vars.space[1000] }} />
+    <hr style={{ marginTop: themeContract.space[1000] }} />
     <H2>Buttons (interactive)</H2>
     <Body>Most commonly, “interactive” are your buttons. These are further broken down into hierarchies—primary, secondary, and tertiary. Each has their own states — <Inline strong>default</Inline>, <Inline strong>hover</Inline>, <Inline strong>active</Inline>, <Inline strong>disabled</Inline>, and <Inline strong>inverted</Inline> (for dark mode).</Body>
     <ColorSection values="buttons.dark" />
