@@ -1,4 +1,8 @@
-export { HabitatTheme, vars } from "./utils/theme.css";
+export {
+  HabitatTheme,
+  themeContract as vars,
+  defaultThemeValues,
+} from "./utils/theme.css";
 export { H1, H2, H3, H4, H5, H6, Body, Inline } from "./components/Typography";
 export { Button } from "./components/Button";
 export { Badge } from "./components/Badge";

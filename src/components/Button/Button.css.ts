@@ -1,15 +1,17 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { recipe } from "@vanilla-extract/recipes";
-import { vars } from "../../utils/theme.css";
+import { themeContract } from "../../utils/theme.css";
 import { keyframes, style } from "@vanilla-extract/css";
 
-const black = vars.colors.buttons.light.background.default;
-const white = vars.colors.buttons.dark.background.default;
+const black = themeContract.colors.buttons.light.background.default;
+const white = themeContract.colors.buttons.dark.background.default;
 
-const background = vars.colors.buttons.dark.background.disabled;
-const activeDark = vars.colors.buttons.dark.background["active, pressed"];
-const disabled = vars.colors.buttons.dark.text.disabled;
-const activeLight = vars.colors.buttons.light.background["active, pressed"];
+const background = themeContract.colors.buttons.dark.background.disabled;
+const activeDark =
+  themeContract.colors.buttons.dark.background["active, pressed"];
+const disabled = themeContract.colors.buttons.dark.text.disabled;
+const activeLight =
+  themeContract.colors.buttons.light.background["active, pressed"];
 
 const rotate = keyframes({
   "0%": { transform: "rotate(0deg)" },
@@ -25,11 +27,11 @@ export const ButtonContainer = recipe({
   base: {
     alignItems: "center",
     alignSelf: "stretch",
-    borderRadius: vars.corners[50],
+    borderRadius: themeContract.corners[50],
     display: "inline-flex",
-    gap: vars.space[100],
+    gap: themeContract.space[100],
     justifyContent: "center",
-    padding: `${vars.space[150]} ${vars.space[200]}`,
+    padding: `${themeContract.space[150]} ${themeContract.space[200]}`,
     cursor: "pointer",
     ":disabled": {
       cursor: "not-allowed",

@@ -1,1 +1,1 @@
-export { HabitatTheme, vars } from "./theme.css";
+export { HabitatTheme, themeContract as vars } from "./theme.css";

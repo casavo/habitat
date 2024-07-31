@@ -1,4 +1,4 @@
-import { vars } from "../../utils/theme.css";
+import { themeContract } from "../../utils/theme.css";
 
 const findKeys = (obj: never, prefix: string = ""): string[] => {
   const keys = Object.keys(obj).map((key) => {
@@ -12,5 +12,5 @@ const findKeys = (obj: never, prefix: string = ""): string[] => {
 };
 
 export const getColors = (): string[] => {
-  return findKeys(vars.colors as never);
+  return findKeys(themeContract.colors as never);
 };

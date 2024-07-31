@@ -1,6 +1,6 @@
 import React from "react";
 
-import { vars } from "../../utils/theme.css";
+import { themeContract } from "../../utils/theme.css";
 
 import { BodyStyle, HeadingsStyle, InlineStyle } from "./Typography.css";
 
@@ -11,7 +11,7 @@ type NestedKeyOf<ObjectType extends object> = {
     : `${Key}`;
 }[keyof ObjectType & string];
 
-type Colors = NestedKeyOf<typeof vars.colors>;
+type Colors = NestedKeyOf<typeof themeContract.colors>;
 
 type BaseProps = {
   children?: React.ReactNode | string;
@@ -49,10 +49,11 @@ const conditionalAttrs = (html?: string, color?: Colors) => {
  * variables, it returns the corresponding color as CSS variable value
  */
 const getColor = (color?: Colors) => {
-  const fallback = vars.colors.root.neutral[600];
+  const fallback = themeContract.colors.root.neutral[600];
   const paths = color?.split(".");
   const result =
-    paths && paths.reduce((acc, path) => acc[path as never], vars.colors);
+    paths &&
+    paths.reduce((acc, path) => acc[path as never], themeContract.colors);
   return result || fallback;
 };
 
