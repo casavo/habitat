@@ -1,4 +1,4 @@
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 
 const findKeys = (obj: never, prefix: string = ""): string[] => {
   const keys = Object.keys(obj).map((key) => {

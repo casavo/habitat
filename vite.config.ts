@@ -1,4 +1,4 @@
-import {resolve} from "node:path";
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
@@ -20,10 +20,10 @@ export default defineConfig({
         index: resolve(__dirname, "src/index.ts"),
         reset: resolve(__dirname, "src/utils/reset.css.ts"),
         switch: resolve(__dirname, "src/components/Switch"),
-        theme: resolve(__dirname, "src/utils/theme.ts"),
+        theme: resolve(__dirname, "src/utils/themes/index.ts"),
         typography: resolve(__dirname, "src/components/Typography"),
       },
-      formats: ["es","cjs"],
+      formats: ["es", "cjs"],
       name: "@casavo/habitat",
     },
     rollupOptions: {

@@ -1,5 +1,5 @@
 import "./../../utils/reset.css";
-import { HabitatTheme, themeContract } from "./../../utils/theme.css";
+import { CasavoHabitatTheme, themeContract } from "./../../utils/themes";
 import { H1, H2, H4, Body } from "../../components/Typography";
 // import { Source } from "@storybook/blocks";
 import { SupportedLanguage } from "@storybook/components";
@@ -32,7 +32,7 @@ export const StoryLayout = ({
   title,
   usage,
 }: Props) => (
-  <main className={HabitatTheme}>
+  <main className={CasavoHabitatTheme}>
     {title && (
       <Hgroup>
         {isComponent ? <H2>{title}</H2> : <H1 display={true}>{title}</H1>}

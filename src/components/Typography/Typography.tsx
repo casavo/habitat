@@ -1,6 +1,6 @@
 import React from "react";
 
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 
 import { BodyStyle, HeadingsStyle, InlineStyle } from "./Typography.css";
 

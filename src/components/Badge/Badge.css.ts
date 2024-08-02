@@ -1,6 +1,6 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { recipe } from "@vanilla-extract/recipes";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 
 export const BadgeContainer = recipe({
   base: {

@@ -1,7 +1,7 @@
 import { describe, expect } from "vitest";
 
 import { mq } from "./mediaqueries";
-import { themeContract, HabitatTheme } from "./theme.css";
+import { themeContract, CasavoHabitatTheme } from "../utils/themes";
 
 describe("General utilities", () => {
   it("expect media queries to have correct values", () => {
@@ -22,6 +22,6 @@ describe("General utilities", () => {
   });
 
   it("expect HabitatTheme to be a class name", () => {
-    expect(HabitatTheme).toBeTypeOf("string");
+    expect(CasavoHabitatTheme).toBeTypeOf("string");
   });
 });

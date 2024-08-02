@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { keyframes } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 
 const sizes: Record<"large" | "medium" | "small", number> = {
   large: 28,

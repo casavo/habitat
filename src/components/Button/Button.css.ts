@@ -1,6 +1,6 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { recipe } from "@vanilla-extract/recipes";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 import { keyframes, style } from "@vanilla-extract/css";
 
 const black = themeContract.colors.buttons.light.background.default;

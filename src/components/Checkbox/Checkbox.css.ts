@@ -1,5 +1,5 @@
 import { globalStyle, style } from "@vanilla-extract/css";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 import { recipe } from "@vanilla-extract/recipes";
 
 const gap = themeContract.space[100];

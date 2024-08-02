@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 import { style } from "@vanilla-extract/css";
 
 export const base = style({

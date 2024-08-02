@@ -1,6 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { mq } from "../../utils/mediaqueries";
-import { themeContract } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 import { fontFace, globalStyle, style } from "@vanilla-extract/css";
 
 const Bagoss = fontFace({
