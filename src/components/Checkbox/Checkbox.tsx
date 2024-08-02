@@ -2,7 +2,7 @@ import type { CheckboxProps } from "react-aria-components";
 import { Checkbox as CheckboxAria } from "react-aria-components";
 import { checkbox, messageStyle, wrapper } from "./Checkbox.css";
 import { Body } from "../Typography";
-import { themeContract } from "../../utils/theme.css.ts";
+import { themeContract } from "../../utils/themes/themeContract.css.ts";
 
 type Props = React.PropsWithChildren<
   {

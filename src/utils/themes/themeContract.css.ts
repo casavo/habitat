@@ -1,9 +1,9 @@
-import { createTheme, createThemeContract } from "@vanilla-extract/css";
+import { createThemeContract } from "@vanilla-extract/css";
 
-import { mq } from "./mediaqueries";
-import { corners } from "./corners";
-import { space } from "./spacing";
-import { colors } from "./colors";
+import { colors } from "../colors";
+import { corners } from "../corners";
+import { mq } from "../mediaqueries";
+import { space } from "../spacing";
 
 type ThemeJsonValue = string | { [key: string]: ThemeJsonValue };
 
@@ -17,6 +17,13 @@ type NullifiyJsonObject<T> = {
 
 type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K];
+};
+
+export const defaultThemeValues = {
+  colors,
+  corners,
+  mq,
+  space,
 };
 
 const nullifyThemeLeaves = <T extends ThemeJsonObject>(
@@ -34,14 +41,6 @@ const nullifyThemeLeaves = <T extends ThemeJsonObject>(
   ) as NullifiyJsonObject<T>;
 };
 
-export const defaultThemeValues = {
-  colors,
-  corners,
-  mq,
-  space,
-};
-
 const contractSkeleton = nullifyThemeLeaves(defaultThemeValues);
-export const themeContract = createThemeContract(contractSkeleton);
 
-export const HabitatTheme = createTheme(themeContract, defaultThemeValues);
+export const themeContract = createThemeContract(contractSkeleton);
