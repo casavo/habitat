@@ -43,11 +43,6 @@ const meta: Meta<typeof Button> = {
       description: "Choose the size",
       options: ["small", "medium", "large"],
     },
-    theme: {
-      control: "radio",
-      description: "Choose the theme",
-      options: ["light", "dark"],
-    },
     type: {
       control: "select",
       description: "the standard HTML button types",
@@ -61,7 +56,6 @@ const meta: Meta<typeof Button> = {
     iconLayout: "sx",
     loading: false,
     size: "medium",
-    theme: "dark",
     type: "button",
     variant: "primary",
   },
@@ -94,7 +88,6 @@ export const _Button: Story = {
         data-testid={args["data-testid"]}
         disabled={args.disabled}
         loading={args.loading}
-        theme={args.theme}
         icon={Icons[args.icon as keyof typeof Icons]}
         iconLayout={args.iconLayout}
         size={args.size}

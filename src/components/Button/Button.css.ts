@@ -3,16 +3,6 @@ import { recipe } from "@vanilla-extract/recipes";
 import { themeContract } from "../../utils/themes";
 import { keyframes, style } from "@vanilla-extract/css";
 
-const black = themeContract.colors.buttons.light.background.default;
-const white = themeContract.colors.buttons.dark.background.default;
-
-const background = themeContract.colors.buttons.dark.background.disabled;
-const activeDark =
-  themeContract.colors.buttons.dark.background["active, pressed"];
-const disabled = themeContract.colors.buttons.dark.text.disabled;
-const activeLight =
-  themeContract.colors.buttons.light.background["active, pressed"];
-
 const rotate = keyframes({
   "0%": { transform: "rotate(0deg)" },
   "100%": { transform: "rotate(360deg)" },
@@ -41,14 +31,71 @@ export const ButtonContainer = recipe({
     },
   },
   variants: {
-    theme: {
-      dark: {},
-      light: {},
-    },
     variant: {
-      primary: {},
-      secondary: {},
-      tertiary: {},
+      primary: {
+        backgroundColor: themeContract.colors.buttons.background.default,
+        color: themeContract.colors.buttons.text.inverted,
+        fill: themeContract.colors.buttons.text.inverted,
+        border: `1px solid ${themeContract.colors.buttons.border.default}`,
+        ":hover": {
+          backgroundColor: themeContract.colors.buttons.background.hover,
+          border: `1px solid ${themeContract.colors.buttons.border.hover}`,
+        },
+        ":active": {
+          backgroundColor:
+            themeContract.colors.buttons.background["active, pressed"],
+          border: `1px solid ${themeContract.colors.buttons.border["active, pressed"]}`,
+        },
+        ":disabled": {
+          backgroundColor: themeContract.colors.buttons.background.disabled,
+          border: `1px solid ${themeContract.colors.buttons.border.disabled}`,
+          color: themeContract.colors.buttons.text.disabled,
+          fill: themeContract.colors.buttons.text.disabled,
+        },
+      },
+      secondary: {
+        backgroundColor: "transparent",
+        color: themeContract.colors.buttons.text.primary,
+        fill: themeContract.colors.buttons.text.primary,
+        border: `1px solid ${themeContract.colors.buttons.border.default}`,
+        ":hover": {
+          backgroundColor: themeContract.colors.buttons.background.default,
+          color: themeContract.colors.buttons.text.inverted,
+          fill: themeContract.colors.buttons.text.inverted,
+        },
+        ":active": {
+          backgroundColor:
+            themeContract.colors.buttons.background["active, pressed"],
+          color: themeContract.colors.buttons.text.inverted,
+          border: `1px solid ${themeContract.colors.buttons.border["active, pressed"]}`,
+        },
+        ":disabled": {
+          backgroundColor: themeContract.colors.buttons.background.disabled,
+          border: `1px solid ${themeContract.colors.buttons.border.disabled}`,
+          color: themeContract.colors.buttons.text.disabled,
+          fill: themeContract.colors.buttons.text.disabled,
+        },
+      },
+      tertiary: {
+        backgroundColor: "transparent",
+        border: "none",
+        color: themeContract.colors.buttons.text.primary,
+        fill: themeContract.colors.buttons.text.primary,
+        ":hover": {
+          backgroundColor:
+            themeContract.colors.buttons.background["hover-tertiary"],
+          border: themeContract.colors.buttons.border["hover-tertiary"],
+        },
+        ":active": {
+          backgroundColor:
+            themeContract.colors.buttons.background["hover-tertiary"],
+          border: `1px solid ${themeContract.colors.buttons.border["active, pressed"]}`,
+        },
+        ":disabled": {
+          color: themeContract.colors.buttons.text.disabled,
+          fill: themeContract.colors.buttons.text.disabled,
+        },
+      },
     },
     size: {
       small: {
@@ -70,160 +117,4 @@ export const ButtonContainer = recipe({
       },
     },
   },
-  compoundVariants: [
-    {
-      variants: {
-        theme: "dark",
-        variant: "primary",
-      },
-      style: {
-        backgroundColor: black,
-        color: white,
-        fill: white,
-        border: "none",
-        ":hover": {
-          backgroundColor: disabled,
-        },
-        ":active": {
-          backgroundColor: activeLight,
-        },
-        ":disabled": {
-          backgroundColor: background,
-          color: disabled,
-          fill: disabled,
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "light",
-        variant: "primary",
-      },
-      style: {
-        backgroundColor: white,
-        color: black,
-        fill: black,
-        border: "none",
-        ":hover": {
-          backgroundColor: background,
-        },
-        ":active": {
-          backgroundColor: activeDark,
-        },
-        ":disabled": {
-          backgroundColor: background,
-          color: disabled,
-          fill: disabled,
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "dark",
-        variant: "secondary",
-      },
-      style: {
-        backgroundColor: white,
-        color: black,
-        fill: black,
-        border: `1px solid ${black}`,
-        ":hover": {
-          backgroundColor: black,
-          color: white,
-          fill: white,
-        },
-        ":active": {
-          color: white,
-          fill: white,
-          backgroundColor: activeLight,
-        },
-        ":disabled": {
-          color: disabled,
-          fill: disabled,
-          backgroundColor: white,
-          border: `1px solid ${disabled}`,
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "light",
-        variant: "secondary",
-      },
-      style: {
-        backgroundColor: black,
-        color: white,
-        fill: white,
-        border: `1px solid ${white}`,
-        ":hover": {
-          backgroundColor: white,
-          color: black,
-          fill: black,
-        },
-        ":active": {
-          backgroundColor: background,
-          color: black,
-          fill: black,
-        },
-        ":disabled": {
-          color: disabled,
-          fill: disabled,
-          backgroundColor: black,
-          border: `1px solid ${disabled}`,
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "dark",
-        variant: "tertiary",
-      },
-      style: {
-        backgroundColor: "transparent",
-        color: black,
-        fill: black,
-        ":hover": {
-          backgroundColor: black,
-          color: white,
-          fill: white,
-        },
-        ":active": {
-          backgroundColor: activeLight,
-          color: white,
-          fill: white,
-        },
-        ":disabled": {
-          color: disabled,
-          fill: disabled,
-          backgroundColor: "transparent",
-        },
-      },
-    },
-    {
-      variants: {
-        theme: "light",
-        variant: "tertiary",
-      },
-      style: {
-        backgroundColor: "transparent",
-        color: white,
-        fill: white,
-        ":hover": {
-          backgroundColor: white,
-          color: black,
-          fill: black,
-        },
-        ":active": {
-          backgroundColor: background,
-          color: black,
-          fill: black,
-        },
-        ":disabled": {
-          color: disabled,
-          fill: disabled,
-          backgroundColor: "transparent",
-        },
-      },
-    },
-  ],
 });
