@@ -1,7 +1,7 @@
 import { describe, expect } from "vitest";
 
 import { mq } from "./mediaqueries";
-import { vars, HabitatTheme } from "./theme.css";
+import { themeContract, CasavoHabitatTheme } from "../utils/themes";
 
 describe("General utilities", () => {
   it("expect media queries to have correct values", () => {
@@ -15,13 +15,13 @@ describe("General utilities", () => {
   });
 
   it("expect theme vars to have been created correctly", () => {
-    expect(vars.colors).toBeTypeOf("object");
-    expect(vars.space).toBeTypeOf("object");
-    expect(vars.mq).toBeTypeOf("object");
-    expect(vars.corners).toBeTypeOf("object");
+    expect(themeContract.colors).toBeTypeOf("object");
+    expect(themeContract.space).toBeTypeOf("object");
+    expect(themeContract.mq).toBeTypeOf("object");
+    expect(themeContract.corners).toBeTypeOf("object");
   });
 
   it("expect HabitatTheme to be a class name", () => {
-    expect(HabitatTheme).toBeTypeOf("string");
+    expect(CasavoHabitatTheme).toBeTypeOf("string");
   });
 });

@@ -1,14 +1,22 @@
 import { Meta } from "@storybook/blocks";
 import { H1, Body } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
-import { vars } from "./../utils/theme.css";
+import { themeContract } from "./../utils/themes";
 
 <Meta title="Docs/Introduction" />
 
 <div className="sb-unstyled">
   <StoryLayout title="Welcome to Habitat!">
-    <Body>This comprehensive resource is designed to help you create beautiful, functional, and user-friendly designs that are consistent with our brand identity.</Body>
-    <Body>Here you can find a library of reusable components, guidelines, and best practices that will help you streamline your design process and improve your workflow.</Body>
+    <Body>
+      This comprehensive resource is designed to help you create beautiful,
+      functional, and user-friendly designs that are consistent with our brand
+      identity.
+    </Body>
+    <Body>
+      Here you can find a library of reusable components, guidelines, and best
+      practices that will help you streamline your design process and improve
+      your workflow.
+    </Body>
     <figure style={{ margin: "24px 0" }}>
       <svg
         width="300"

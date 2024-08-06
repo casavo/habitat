@@ -3,7 +3,7 @@ import "./../utils/reset.css";
 import { Meta } from "@storybook/blocks";
 import { H1, Body, Inline } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
-import { vars } from "./../utils/theme.css";
+import { themeContract } from "./../utils/themes";
 
 <Meta title="Colors/Guide" />
 
@@ -13,14 +13,14 @@ import { vars } from "./../utils/theme.css";
       Our brand colours that serve as a core to the rest of the colour scheme.
     </Body>
 
-    <hr style={{ marginTop: vars.space[1000] }} />
+    <hr style={{ marginTop: themeContract.space[1000] }} />
 
     <H1 display>Brand</H1>
     <Body>There are <Inline strong>three main brand colours</Inline> that we use: <Inline strong>orange (primary)</Inline> and <Inline strong>dark green (secondary)</Inline>. </Body>
     <Body>We can also use the <Inline strong>teal</Inline> colour as an <Inline strong>accent colour</Inline>.</Body>
     <Brand />
 
-    <hr style={{ marginTop: vars.space[1000] }} />
+    <hr style={{ marginTop: themeContract.space[1000] }} />
 
     <H1 display>Color structure</H1>
     <Body>To build the colours up, we’re using several layers in the design system:</Body>
@@ -36,10 +36,9 @@ import { vars } from "./../utils/theme.css";
     </Body>
     <Body>More often than not, our components are assigned based on a simple root colour, when that root colour is part of the simple palette of neutrals, for example.</Body>
     <Body>Sometimes, some components can be assigned based not on the root, but the brand alias. This is so in order to maintain a separation between the atomic roots and the brand palette, which might change in the future.</Body>
-    <hr style={{ marginTop: vars.space[300] }} />
+    <hr style={{ marginTop: themeContract.space[300] }} />
     <img loading="lazy" src="/images/color-structure.png" />
 
   </StoryLayout>
 </div>
 import { Brand } from "./components/Brand"
-

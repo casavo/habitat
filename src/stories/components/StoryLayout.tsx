@@ -1,5 +1,5 @@
 import "./../../utils/reset.css";
-import { HabitatTheme, vars } from "./../../utils/theme.css";
+import { CasavoHabitatTheme, themeContract } from "./../../utils/themes";
 import { H1, H2, H4, Body } from "../../components/Typography";
 // import { Source } from "@storybook/blocks";
 import { SupportedLanguage } from "@storybook/components";
@@ -14,9 +14,9 @@ type Props = {
   usage?: string;
 };
 
-const Spacer = () => <hr style={{ margin: `${vars.space[200]} 0` }} />;
+const Spacer = () => <hr style={{ margin: `${themeContract.space[200]} 0` }} />;
 const Hgroup = ({ children }: { children: React.ReactNode }) => (
-  <hgroup style={{ marginBottom: vars.space[200] }}>{children}</hgroup>
+  <hgroup style={{ marginBottom: themeContract.space[200] }}>{children}</hgroup>
 );
 
 /**
@@ -32,7 +32,7 @@ export const StoryLayout = ({
   title,
   usage,
 }: Props) => (
-  <main className={HabitatTheme}>
+  <main className={CasavoHabitatTheme}>
     {title && (
       <Hgroup>
         {isComponent ? <H2>{title}</H2> : <H1 display={true}>{title}</H1>}

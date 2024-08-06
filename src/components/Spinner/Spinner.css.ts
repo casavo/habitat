@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { keyframes } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
-import { vars } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 
 const sizes: Record<"large" | "medium" | "small", number> = {
   large: 28,
@@ -90,7 +90,7 @@ export const Circle = recipe({
         variant: "primary",
       },
       style: {
-        borderColor: vars.colors.root.neutral[0],
+        borderColor: themeContract.colors.root.neutral[0],
       },
     },
     {
@@ -99,7 +99,7 @@ export const Circle = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderColor: vars.colors.root.neutral[600],
+        borderColor: themeContract.colors.root.neutral[600],
       },
     },
     {
@@ -108,7 +108,7 @@ export const Circle = recipe({
         variant: "primary",
       },
       style: {
-        borderColor: vars.colors.root.neutral[600],
+        borderColor: themeContract.colors.root.neutral[600],
       },
     },
     {
@@ -117,7 +117,7 @@ export const Circle = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderColor: vars.colors.root.neutral[0],
+        borderColor: themeContract.colors.root.neutral[0],
       },
     },
   ],
@@ -176,7 +176,7 @@ export const Spin = recipe({
         variant: "primary",
       },
       style: {
-        borderTopColor: vars.colors.root.neutral[0],
+        borderTopColor: themeContract.colors.root.neutral[0],
       },
     },
     {
@@ -185,7 +185,7 @@ export const Spin = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderTopColor: vars.colors.root.neutral[600],
+        borderTopColor: themeContract.colors.root.neutral[600],
       },
     },
     {
@@ -194,7 +194,7 @@ export const Spin = recipe({
         variant: "primary",
       },
       style: {
-        borderTopColor: vars.colors.root.neutral[600],
+        borderTopColor: themeContract.colors.root.neutral[600],
       },
     },
     {
@@ -203,7 +203,7 @@ export const Spin = recipe({
         variant: "secondary" || "tertiary",
       },
       style: {
-        borderTopColor: vars.colors.root.neutral[0],
+        borderTopColor: themeContract.colors.root.neutral[0],
       },
     },
   ],

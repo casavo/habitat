@@ -1,7 +1,7 @@
 import { Meta } from "@storybook/blocks";
 import { H1, Body } from "../components/Typography";
 import { StoryLayout } from "./components/StoryLayout";
-import { vars } from "./../utils/theme.css";
+import { themeContract } from "./../utils/themes";
 
 <Meta title="Docs/Brand" />
 
@@ -9,7 +9,10 @@ import { vars } from "./../utils/theme.css";
   <StoryLayout title="Brand">
     <Body>Out brand guidelines.</Body>
     <div style={{ height: "600px" }}>
-      <iframe style={{width: "100%", height: "100%" }} src="https://casavo.hypedev.23x.me/" />
+      <iframe
+        style={{ width: "100%", height: "100%" }}
+        src="https://casavo.hypedev.23x.me/"
+      />
     </div>
   </StoryLayout>
 </div>

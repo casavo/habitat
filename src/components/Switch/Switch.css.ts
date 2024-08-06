@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { vars } from "../../utils/theme.css";
+import { themeContract } from "../../utils/themes";
 import { style } from "@vanilla-extract/css";
 
 export const base = style({
@@ -9,7 +9,7 @@ export const base = style({
   alignItems: "center",
   display: "flex",
   fontSize: "1.143rem",
-  gap: vars.space[100],
+  gap: themeContract.space[100],
   selectors: {
     "&[data-disabled]:hover": {
       cursor: "default",
@@ -19,16 +19,16 @@ export const base = style({
 
 const indicatorBase = style({
   "::before": {
-    background: vars.colors.root.neutral[0],
+    background: themeContract.colors.root.neutral[0],
     borderRadius: "16px",
     content: "",
     display: "block",
     height: "18px",
-    margin: vars.space[25],
+    margin: themeContract.space[25],
     transition: "all 200ms",
     width: "18px",
   },
-  background: vars.colors.root.neutral[300],
+  background: themeContract.colors.root.neutral[300],
   border: "none",
   // atm missing in vars
   borderRadius: "11px",
@@ -37,20 +37,20 @@ const indicatorBase = style({
 
   selectors: {
     [`${base}[data-selected] &`]: {
-      background: vars.colors.brand.primary,
-      borderColor: vars.colors.brand.primary,
+      background: themeContract.colors.brand.primary,
+      borderColor: themeContract.colors.brand.primary,
     },
     [`${base}[data-selected] &:before`]: {
-      background: vars.colors.root.neutral[0],
+      background: themeContract.colors.root.neutral[0],
       transform: "translateX(100%)",
     },
     [`${base}[data-disabled] &`]: {
-      background: vars.colors.root.neutral[100],
-      borderColor: vars.colors.root.neutral[100],
+      background: themeContract.colors.root.neutral[100],
+      borderColor: themeContract.colors.root.neutral[100],
     },
     [`${base}[data-selected][data-disabled] &`]: {
-      background: vars.colors.root.orange[400],
-      borderColor: vars.colors.root.orange[400]
+      background: themeContract.colors.root.orange[400],
+      borderColor: themeContract.colors.root.orange[400],
     },
   },
   transition: "all 300ms",
