@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import tokens from "./tokens.json";
-import {RemoveLeadingZeroFromList} from "./typeUtils.ts";
-
+import { RemoveLeadingZeroFromList } from "./typeUtils.ts";
 
 const _space = tokens.foundations.space;
 
 // Get the type of the elements in the values array
 type RawSpacingKeys = keyof typeof _space;
 
-type SpacingKeys = RemoveLeadingZeroFromList<RawSpacingKeys>
+type SpacingKeys = RemoveLeadingZeroFromList<RawSpacingKeys>;
 
 const values = [...Object.values(_space)].map(String);
 
