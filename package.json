@@ -69,7 +69,7 @@
     "@vanilla-extract/vite-plugin": "4.0.16",
     "@vitejs/plugin-react": "4.3.3",
     "chromatic": "11.12.6",
-    "eslint": "9.13.0",
+    "eslint": "8.57.1",
     "eslint-plugin-react": "7.37.1",
     "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-react-refresh": "0.4.13",
