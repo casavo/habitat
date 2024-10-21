@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "target": "ES2018",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2018",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": [
+      "@testing-library/jest-dom"
+    ],
+    "paths": {
+      "@casavo/habitat": [
+        "./src/index.ts"
+      ],
+      "@casavo/habitat/Badge": [
+        "./src/components/Badge"
+      ],
+      "@casavo/habitat/Button": [
+        "./src/components/Button"
+      ],
+      "@casavo/habitat/Checkbox": [
+        "./src/components/Checkbox"
+      ],
+      "@casavo/habitat/Switch": [
+        "./src/components/Switch"
+      ],
+      "@casavo/habitat/Typography": [
+        "./src/components/Typography"
+      ],
+      "@casavo/habitat/utils": [
+        "./src/components/utils"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+}
