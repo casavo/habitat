@@ -2,7 +2,7 @@
   "name": "@casavo/habitat",
   "description": "Casavo Design System Library",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "license": "Apache-2.0",
   "homepage": "https://github.com/casavo/habitat",
