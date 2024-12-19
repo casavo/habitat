@@ -96,7 +96,7 @@ export const Circle = recipe({
     {
       variants: {
         theme: "dark",
-        variant: "secondary" || "tertiary",
+        variant: "secondary",
       },
       style: {
         borderColor: vars.colors.root.neutral[600],
@@ -114,7 +114,7 @@ export const Circle = recipe({
     {
       variants: {
         theme: "light",
-        variant: "secondary" || "tertiary",
+        variant: "secondary",
       },
       style: {
         borderColor: vars.colors.root.neutral[0],
@@ -182,7 +182,7 @@ export const Spin = recipe({
     {
       variants: {
         theme: "dark",
-        variant: "secondary" || "tertiary",
+        variant: "secondary",
       },
       style: {
         borderTopColor: vars.colors.root.neutral[600],
@@ -200,7 +200,7 @@ export const Spin = recipe({
     {
       variants: {
         theme: "light",
-        variant: "secondary" || "tertiary",
+        variant: "secondary",
       },
       style: {
         borderTopColor: vars.colors.root.neutral[0],

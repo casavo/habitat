@@ -2,10 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { expect, describe, vi } from "vitest";
 
 import { Checkbox } from "./Checkbox.tsx";
-import {ComponentProps} from "react";
 
-
-type onChangeType = NonNullable<ComponentProps<typeof Checkbox>['onChange']>
 describe("Checkbox component", () => {
   it("renders", () => {
     const { container } = render(<Checkbox />);
@@ -23,7 +20,7 @@ describe("Checkbox component", () => {
   });
 
   it("calls onChange", async () => {
-    const onChange = vi.fn<Parameters<onChangeType>,void>();
+    const onChange = vi.fn();
     render(<Checkbox onChange={onChange} />);
     const input = screen.getByRole("checkbox");
 
@@ -32,8 +29,7 @@ describe("Checkbox component", () => {
   });
 
   it("calls onChange when is already checked", async () => {
-
-    const onChange = vi.fn<Parameters<onChangeType>,void>();
+    const onChange = vi.fn();
     render(<Checkbox checked={true} onChange={onChange} />);
     const input = screen.getByRole("checkbox");
 

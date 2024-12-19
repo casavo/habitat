@@ -9,6 +9,7 @@ exports[`Checkbox component > renders 1`] = `
     style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
   >
     <input
+      title=""
       type="checkbox"
     />
   </span>
@@ -33,6 +34,7 @@ exports[`Checkbox component > renders as disabled 1`] = `
   >
     <input
       disabled=""
+      title=""
       type="checkbox"
     />
   </span>
@@ -57,6 +59,7 @@ exports[`Checkbox component > renders as selected 1`] = `
   >
     <input
       checked=""
+      title=""
       type="checkbox"
     />
   </span>
