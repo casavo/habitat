@@ -1,0 +1,30 @@
+name: Chromatic Deploy
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  deploy:
+    name: Deploy to Chromatic
+    runs-on: self-hosted
+    if: github.event.label.name == 'deploy-chromatic'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Storybook
+        run: npm run build:storybook
+      - name: Deploy to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
+          exitOnceUploaded: true
+          buildScriptName: "build:storybook"
+

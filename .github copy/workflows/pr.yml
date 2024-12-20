@@ -1,0 +1,43 @@
+name: Storybook preview on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [ready_for_review, synchronize]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Check the files and build
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Check types & codestyle
+        run: |
+          npx tsc
+          npm run lint
+
+      - name: Run unit test
+        run: |
+          npm run test:unit
+
+      - name: Build components & storybook
+        run: |
+          npm run build:components
+          npm run build:storybook
