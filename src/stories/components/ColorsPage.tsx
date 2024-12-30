@@ -1,14 +1,13 @@
 import { H3, Body } from "../../components/Typography";
-import { space } from "../../utils/spacing";
 import { colors } from "../../utils/colors";
 
 const padding = {
-  padding: space[200],
+  padding: "var(--space-200)",
 };
 
 const cell = {
   ...padding,
-  borderBottom: `1px solid ${colors.root.neutral[200]}`,
+  borderBottom: `1px solid var(--neutral-200)`,
 };
 
 const isLast = (index: number, list: string[]) => index === list.length - 1;
@@ -35,12 +34,12 @@ export const ColorSection = ({ values }: { values: string }) => {
   return (
     <>
       {titles.map((title: string, index: number) => (
-        <section key={index} style={{ margin: `${space[300]} 0` }}>
+        <section key={index} style={{ margin: `var(--space-300) 0` }}>
           <H3>{title.charAt(0).toUpperCase() + title.slice(1)}</H3>
           <table
             style={{
               border: `1px solid #ccc`,
-              borderRadius: space[50],
+              borderRadius: "var(--space-50)",
               textAlign: "left",
               width: "100%",
             }}
@@ -97,9 +96,9 @@ export const ColorSection = ({ values }: { values: string }) => {
                           style={{
                             backgroundColor: getHex(key, title, list[ii]),
                             display: "inline-block",
-                            height: space[200],
-                            marginRight: space[200],
-                            width: space[200],
+                            height: "var(--space-200)",
+                            marginRight: "var(--space-200)",
+                            width: "var(--space-200)",
                           }}
                         ></span>
                         {getHex(key, title, list[ii])}

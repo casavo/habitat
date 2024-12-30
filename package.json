@@ -38,7 +38,7 @@
     "build:storybook": "storybook build",
     "prebuild:components": "rm -rf ./dist && rm -rf ./storybook-static",
     "build:components": " tsc && vite build ",
-    "update:tokens": "style-dictionary build -c ./dictionary.config.json",
+    "update:tokens": "style-dictionary build -c ./dictionary.config.js",
     "test:unit": "vitest run"
   },
   "dependencies": {

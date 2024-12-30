@@ -1,5 +1,4 @@
 import { Body } from "../../components/Typography";
-import { space } from "../../utils/spacing";
 
 export const Label = ({ children }: { children: React.ReactNode }) => (
   <span
@@ -40,7 +39,7 @@ export const Table = ({ titles }: { titles: string[] }) => {
   return (
     <table
       style={{
-        marginBottom: space[300],
+        marginBottom: "var(--space-300)",
         textAlign: "left",
         width: "100%",
       }}

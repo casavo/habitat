@@ -1,7 +1,4 @@
 import { H3, Body } from "../../components/Typography";
-import { space } from "./../../utils/spacing";
-import { colors } from "./../../utils/colors";
-import { corners } from "./../../utils/corners";
 
 const data = [
   {
@@ -32,7 +29,7 @@ export const Brand = () => {
     <section
       style={{
         display: "grid",
-        gap: space[300],
+        gap: "var(--space-300)",
         gridTemplateColumns: "repeat(3, 260px)",
       }}
     >
@@ -43,17 +40,17 @@ export const Brand = () => {
             <article
               key={index}
               style={{
-                border: `1px solid ${colors.root.neutral[300]}`,
-                borderRadius: corners[100],
-                padding: space[300],
+                border: `1px solid var(--neutral-300)`,
+                borderRadius: "var(--corner-100)",
+                padding: "var(--space-300)",
               }}
             >
               <div
                 style={{
                   backgroundColor: item.hex,
-                  borderRadius: corners[100],
+                  borderRadius: "var(--corner-100)",
                   height: 80,
-                  marginBottom: space[100],
+                  marginBottom: "var(--space-100)",
                   width: 80,
                 }}
               ></div>
