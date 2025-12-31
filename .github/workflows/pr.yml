@@ -14,6 +14,9 @@ jobs:
   build:
     name: Check the files and build
     runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [20, 21, 22, 23, 24]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,8 +24,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node-version }}
           registry-url: "https://npm.pkg.github.com"
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: |
@@ -38,6 +43,7 @@ jobs:
           npm run test:unit
 
       - name: Build components & storybook
+        if: matrix.node-version == '24'
         run: |
           npm run build:components
           npm run build:storybook

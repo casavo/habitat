@@ -8,7 +8,7 @@
   "homepage": "https://github.com/casavo/habitat",
   "author": "Casavo Developers <info@casavo.com>",
   "engines": {
-    "node": "^18 || ^20 || ^22"
+    "node": ">=20 <25"
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
