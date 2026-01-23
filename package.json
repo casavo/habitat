@@ -48,8 +48,8 @@
     "react-aria-components": "1.5.0"
   },
   "peerDependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "8.4.7",
