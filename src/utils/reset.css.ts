@@ -8,7 +8,7 @@ import { globalStyle } from "@vanilla-extract/css";
 
 globalStyle("*, ::before, ::after", {
   borderStyle: "solid",
-  borderWidth: 0,
+  // borderWidth: 0,
   boxSizing: "border-box",
 });
 
@@ -25,10 +25,10 @@ globalStyle("body", {
   margin: 0,
 });
 
-globalStyle("a", {
-  color: "inherit",
-  textDecoration: "inherit",
-});
+// globalStyle("a", {
+//   color: "inherit",
+//   textDecoration: "inherit",
+// });
 
 globalStyle("hr", {
   color: "inherit",
